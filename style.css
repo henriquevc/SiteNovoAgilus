@@ -2,16 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
+body {
+    font-family: 'Inter', Helvetica, sans-serif, Arial;
+}
 .container {
     max-width: 980px;
     margin: 0 auto;
-}
-
-header nav {
-    
-} 
-
-ul {
-    list-style-type: none;
 }

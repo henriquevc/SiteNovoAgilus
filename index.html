@@ -4,37 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            100: '#DDD2FA',
+                            200: '#BDA8F1',
+                            300: '#9F7EE4',
+                            400: '#8154D2',
+                            500: '#642BBD',
+                            600: '#480DA3',
+                            700: '#3F0696',
+                            800: '#360189',
+                            900: '#2E0079'
+                        },
+                        secondary: {
+                            100: '#FDE3F4',
+                            200: '#FFBFED',
+                            300: '#FFA5E2',
+                            400: '#FF8ED7',
+                            500: '#F67CCA',
+                            600: '#ea6cbd',
+                            700: '#D55CAA',
+                            800: '#BE4C96',
+                            900: '#A73E82'
+                        },
+                        dark: '#2d2d2d',
+                        background: '#333333',
+                        accent: '#909090'
+                    }
+                },
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Agilus</title>
 </head>
-<body>
-    <header>
-        <nav class="container mx-auto px-8 my-8 flex items-center justify-between font-bold">
-            <a href="#" class="w-2/12 text-3xl">Agilus</a>
-            <ul class="flex justify-between sm:w-full lg:w-4/12">
+<body class="text-dark">
+    <header class="container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 my-8 bg-grey-500">
+        <nav class="flex items-center justify-between font-bold">
+            <div class="w-2/12">
+                <a href="#">
+                    <img src="/images/logo-agilus.svg" alt="Logo da Agilus">
+                </a>
+            </div>
+            <ul class="flex justify-center w-full">
                 <li class="mx-9">Produtos</li>
                 <li class="mx-9">Preços</li>
                 <li class="mx-9">Empresa</li>
                 <li class="mx-9">Contato</li>
             </ul>
-            <div class="w-2/12">
-                <a href="#/login" class="px-20 py-2 bg-pink-100 text-pink-600">Login</a>
+            <div>
+                <a href="#/login" class="px-12 xl:px-20 py-4 bg-primary-100 text-primary-600">Login</a>
             </div>
         </nav>
     </header>
-    <section class="container mx-auto sm:pt-24 flex">
-        <aside class="max-w-4xl w-1/2">
-            <h1 class="text-7xl font-bold mb-6">Platarforma completa para sua empresa crescer <span class="underline decoration-pink-500">mais rápido.</span></h1>
-            <p class="text-xl mb-6">Obtenha paz para seu financeiro através de controle, visibilidade, autonomia e descentralização dos processos para sua empresa e mais um pouco de texto para preencher o parágrafo.</p>
-            <div>
-                <button class="mr-8 px-8 py-4 bg-pink-600 text-white">Vamos começar</button>
-                <button class="px-8 py-4 bg-pink-100 text-pink-800"> Fale com a gente</button>
+    <section class="container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 sm:pt-24 flex space-x-8">
+        <aside class="max-w-4xl w-1/2" data-aos="fade-right">
+            <h1 class="text-6xl font-black mb-8">Platarforma completa para sua empresa crescer <span class="underline decoration-primary-600">mais rápido.</span></h1>
+            <p class="text-xl mb-8">Obtenha paz para seu financeiro através de controle, visibilidade, autonomia e descentralização dos processos para sua empresa e mais um pouco de texto para preencher o parágrafo.</p>
+            <div class="flex space-x-8">
+                <button class="px-8 py-4 bg-primary-600 text-white">Vamos começar</button>
+                <button class="px-8 py-4 bg-primary-100 text-primary-800"> Fale com a gente</button>
             </div>
         </aside>
-        <aside class="w-1/2 bg-neutral-300 mx-8">
-            <img src="" alt="">
+        <aside class="w-1/2">
+            <img src="./images/pexels-jopwell-2422282.jpg" alt="Imagem do sistema" class="w-full" data-aos="fade-up">
         </aside>
-        
     </section>
+    <section class="container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 sm:pt-24 flex">
+        <div class="bg-secondary-100 w-full p-24 flex space-x-16">
+            <aside class="w-5/12" data-aos="fade-down">
+                <h2 class="text-5xl font-bold mb-8">Uma completa solucão para sua empresa e que entende seu negócio.</h2>
+                <p class="text-lg mb-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque deleniti est cupiditate, assumenda recusandae pariatur nemo libero vero consectetur error, ad quia.</p>
+                <p class="text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque deleniti est cupiditate, assumenda recusandae pariatur nemo libero vero consectetur error, ad quia.</p>
+            </aside>
+            <aside class="w-7/12">
+                <img src="./images/pexels-markus-spiske-225767.jpg" alt="Imagem do sistema 2" class="w-full h-full" data-aos="fade-left">
+            </aside>
+        </div>
+    </section>
+    <section class="container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 sm:pt-24">
+        <div class="font-medium">RECURSOS</div>
+        <h3 class="text-3xl font-bold mt-6">Lorem ipsum dolor</h2>
+        <p class="w-1/2 mt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae optio recusandae sunt beatae cupiditate animi, dolor maiores ratione magni eius, quibusdam ipsam quis molestias cumque, omnis neque voluptatum impedit tempora!</p>
+        <section class="flex mt-8 space-x-10">
+            <div class="bg-neutral-100 px-12 py-16 w-1/3">
+                <h4 class="text-2xl font-bold">Lorem ipsum dolor sit amet</h4>
+                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, reiciendis atque, porro ullam fuga ad, esse laborum enim</p>
+            </div>
+            <div class="bg-neutral-100 px-12 py-16 w-1/3">
+                <h4 class="text-2xl font-bold">Lorem ipsum dolor sit amet</h4>
+                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, reiciendis atque, porro ullam fuga ad, esse laborum enim</p>
+            </div>
+            <div class="bg-neutral-100 px-12 py-16 w-1/3">
+                <h4 class="text-2xl font-bold">Lorem ipsum dolor sit amet</h4>
+                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, reiciendis atque, porro ullam fuga ad, esse laborum enim</p>
+            </div>
+        </section>
+    </section>
+    <footer class="w-full mt-24 pb-16 bg-dark h-144 flex text-white">
+        <section class="container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 sm:pt-24 flex space-x-8">
+            <aside class="w-1/3">
+                <h3 class="text-3xl font-bold">Lorem ipsum dolor</h3>
+                <p class="mt-8 text-md">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit alias error similique dignissimos, harum laborum rerum asperiores itaque est. Suscipit, veritatis? Doloremque, quam. Ad pariatur laudantium, beatae nihil totam iusto!</p>
+            </aside>
+            <aside class="w-2/3">
+                <img src="./images/logo-agilus-dark.png" alt="">
+                <div class="flex mt-16">
+                    <div class="ml-1.5 w-1/3">
+                        <h5 class="text-xl font-semibold mb-6">Produto</h5>
+                        <ul class="space-y-4">
+                            <li>Controle financeiro</li>
+                            <li>Comissionamento</li>
+                            <li>Integrações</li>
+                            <li>Notificações</li>
+                            <li>Relatórios</li>
+                        </ul>
+                    </div>
+                    <div class="w-1/3">
+                        <h5 class="text-xl font-semibold mb-6">Empresa</h5>
+                        <ul class="space-y-4">
+                            <li>Sobre</li>
+                            <li>Time</li>
+                            <li>Trabalhe conosco</li>
+                        </ul>
+                    </div>
+                    <div class="w-1/3">
+                        <h5 class="text-xl font-semibold mb-6">Social</h5>
+                        <ul class="space-y-4">
+                            <li>Linkedin</li>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            
+        </section>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
