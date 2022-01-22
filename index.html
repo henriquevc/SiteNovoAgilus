@@ -7,48 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            100: '#DDD2FA',
-                            200: '#BDA8F1',
-                            300: '#9F7EE4',
-                            400: '#8154D2',
-                            500: '#642BBD',
-                            600: '#480DA3',
-                            700: '#3F0696',
-                            800: '#360189',
-                            900: '#2E0079'
-                        },
-                        secondary: {
-                            100: '#FDE3F4',
-                            200: '#FFBFED',
-                            300: '#FFA5E2',
-                            400: '#FF8ED7',
-                            500: '#F67CCA',
-                            600: '#ea6cbd',
-                            700: '#D55CAA',
-                            800: '#BE4C96',
-                            900: '#A73E82'
-                        },
-                        dark: '#2d2d2d',
-                        background: '#333333',
-                        accent: '#909090'
-                    }
-                },
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Agilus</title>
 </head>
 <body class="text-dark">
-    <header class="container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 my-8 bg-grey-500">
+    <header class="container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 my-8">
         <nav class="flex items-center justify-between font-bold">
             <div class="w-2/12">
                 <a href="#">
@@ -57,12 +21,12 @@
             </div>
             <ul class="flex justify-center w-full">
                 <li class="mx-9">Produtos</li>
-                <li class="mx-9">Preços</li>
+                <li class="mx-9"><a href="./precos.html">Preços</a></li>
                 <li class="mx-9">Empresa</li>
                 <li class="mx-9">Contato</li>
             </ul>
             <div>
-                <a href="#/login" class="px-12 xl:px-20 py-4 bg-primary-100 text-primary-600">Login</a>
+                <a href="https://agiluscrm.com.br/#/login" class="px-12 xl:px-20 py-4 bg-primary-100 text-primary-600">Login</a>
             </div>
         </nav>
     </header>
@@ -71,8 +35,8 @@
             <h1 class="text-6xl font-black mb-8">Platarforma completa para sua empresa crescer <span class="underline decoration-primary-600">mais rápido.</span></h1>
             <p class="text-xl mb-8">Obtenha paz para seu financeiro através de controle, visibilidade, autonomia e descentralização dos processos para sua empresa e mais um pouco de texto para preencher o parágrafo.</p>
             <div class="flex space-x-8">
-                <button class="px-8 py-4 bg-primary-600 text-white">Vamos começar</button>
-                <button class="px-8 py-4 bg-primary-100 text-primary-800"> Fale com a gente</button>
+                <button class="px-8 py-4 bg-primary-600 text-white font-bold">Vamos começar</button>
+                <button class="px-8 py-4 bg-primary-100 text-primary-800 font-semibold"> Fale com a gente</button>
             </div>
         </aside>
         <aside class="w-1/2">
