@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../dist/output.css">
     <title>Agilus</title>
 </head>
-<body class="text-gray-800">
-    <header class="container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 my-8">
+<body class="text-neutral-700">
+    <header class="sticky top-0 bg-white z-10 container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 my-8">
         <nav class="flex items-center justify-between font-bold">
             <div class="w-2/12">
                 <a href="./index.html">
@@ -30,99 +30,153 @@
             </div>
         </nav>
     </header>
-    <main class="container mx-auto px-4 md:px-12 lg:px-12 xl:px-20 sm:pt-24 pb-36 bg-secondary-100" data-aos="fade-up" data-aos-duration="800">
-        <section class="w-full mb-16 flex flex-col items-center" data-aos="fade-down">
+    <main class="container mx-auto px-4 md:px-12 lg:px-16 xl:px-20 pt-24" data-aos="fade-up" data-aos-duration="800">
+        <section class="w-full mb-16 py-24 flex flex-col items-center bg-secondary-50" data-aos="fade-down">
             <h3 class="text-4xl font-bold w-full mb-8 text-center">Planos e preços</h3>
-            <p class="w-1/4 text-center text-lg">Escolha um dos nossos planos e começe agora mesmo a evolução da sua empresa.</p>
-        </section>
-        <section class="mb-24 flex flex-col justify-center items-center">
-            <div class="flex flex-col justify-center items-center mb-12">
-                <div class="text-lg font-medium">Quantidade de usuários</div>
-                <div class="ring ring-primary-800 h-8 mt-2 rounded-full">
-                    <button class="bg-primary-800 text-white px-3 h-full rounded-l-full -ml-px">-</button>
-                    <span class="px-3">5</span>
-                    <button class="bg-primary-800 text-white px-3 h-full rounded-r-full -mr-px">+</button>
-                </div>
-            </div>
-            <div class="text-lg flex space-x-3 font-medium">
-                <span class="block">pago por mês</span>
-                <label for="toggle" class="flex items-center cursor-pointer">
-                <!-- toggle -->
-                    <div class="relative">
-                    <!-- input -->
-                        <input type="checkbox" id="toggle" class="sr-only">
-                        <!-- line -->
-                        <div class="block bg-primary-800 w-14 h-8 rounded-full"></div>
-                        <!-- dot -->
-                        <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+            <!-- <p class="w-1/4 text-center text-lg">Escolha um dos nossos planos e começe agora mesmo a evolução da sua empresa.</p> -->
+            
+            <!-- Quantidade de usuários e tipo de cobrança -->
+            <div class="mb-24 mt-16 flex flex-col justify-center items-center">
+                <!-- <div class="flex flex-col justify-center items-center mb-12">
+                    <div class="text-lg font-medium">Quantidade de usuários</div>
+                    <div class="ring ring-primary-800 h-8 mt-2 rounded-full">
+                        <button class="bg-primary-800 text-white px-3 h-full rounded-l-full -ml-px">-</button>
+                        <span class="px-3">5</span>
+                        <button class="bg-primary-800 text-white px-3 h-full rounded-r-full -mr-px">+</button>
                     </div>
-                </label>
-                <span class="text-neutral-400 font-twin">pago por ano</span>
+                </div> -->
+                <div class="text-lg flex space-x-3 font-medium">
+                    <span id="textoCheckboxMes">pago por mês</span>
+                    <label for="toggle" class="flex items-center cursor-pointer">
+                        <div class="relative">
+                            <input type="checkbox" id="toggle" class="sr-only w-full h-full">
+                            <div class="block bg-primary-800 w-14 h-8 rounded-full"></div>
+                            <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+                        </div>
+                    </label>
+                    <span id="textoCheckboxAno">pago por ano</span>
+                </div>
+            </div>
+            
+            <!-- Planos -->
+            <div class="flex justify-between w-full space-x-12 px-16">
+
+                <!-- Lite -->
+                <div class="bg-white w-1/3 py-16 px-12 shadow-lg">
+                    <h4 class="font-semibold text-4xl">Lite</h4>
+                    <div class="text-2xl mt-8">
+                        <strong class="font-extrabold" id="valor">R$45</strong><span class="text-neutral-500 text-sm">/<span id="recorrencia">mês</span> por usuário</span>
+                    </div>
+                    <ul class="mt-8 py-8 space-y-4 text-sm border-y">
+                        <li>5gb de armazenamento</li>
+                        <li>Controle financeiro</li>
+                        <li>2 automações sobre demanda</li>
+                        <li>5 relatórios</li>
+                        <li>100 disparos de SMS</li>
+                        <li>100 disparos do whatsapp</li>
+                    </ul>
+                    <div class="flex justify-center mt-8">
+                        <button class="bg-secondary-100 text-secondary-800 px-8 py-4 text-lg font-semibold">Contratar</button>
+                    </div>
+                </div>
+
+                <!-- Avançado -->
+                <div class="bg-white w-1/3 py-12 px-12 shadow-2xl -my-12">
+                    <div class="flex justify-center w-full mb-7">
+                        <span class="px-4 py-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max transition duration-300 ease">Mais vendido</span>
+                    </div>
+                    <h4 class="font-semibold text-4xl">Avançado</h4>
+                    <div class="text-2xl mt-8">
+                        <strong class="font-extrabold" id="valor">R$65</strong><span class="text-neutral-500 text-sm">/<span id="recorrencia">mês</span> por usuário</span>
+                    </div>
+                    <ul class="mt-8 py-8 space-y-4 text-sm border-y">
+                        <li>5gb de armazenamento</li>
+                        <li>controle financeiro</li>
+                        <li>2 automações sobre demanda</li>
+                        <li>5 relatórios</li>
+                        <li>100 disparos de SMS</li>
+                        <li>100 disparos do whatsapp</li>
+                    </ul>
+                    <div class="flex justify-center mt-8">
+                        <button class="bg-primary-800 text-white px-8 py-4 text-lg font-semibold">Contratar</button>
+                    </div>
+                </div>
+
+                <!-- Profissional -->
+                <div class="bg-white w-1/3 py-16 px-12 shadow-lg">
+                    <h4 class="font-semibold text-4xl">Profissional</h4>
+                    <div class="text-2xl mt-8">
+                    <strong class="font-extrabold" id="valor">R$85</strong><span class="text-neutral-500 text-sm">/<span id="recorrencia">mês</span> por usuário</span>
+                    </div>
+                    <ul class="mt-8 py-8 space-y-4 text-sm border-y">
+                        <li>5gb de armazenamento</li>
+                        <li>Controle financeiro</li>
+                        <li>2 automações sobre demanda</li>
+                        <li>5 relatórios</li>
+                        <li>100 disparos de SMS</li>
+                        <li>100 disparos do whatsapp</li>
+                    </ul>
+                    <div class="flex justify-center items-center mt-8">
+                        <button class="bg-secondary-100 text-secondary-800 px-8 py-4 text-lg font-semibold">Contratar</button>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="flex justify-between w-full space-x-16">
-            <div class="bg-white grow py-16 px-12 shadow-md">
-                <h4 class="font-semibold text-4xl">Lite</h4>
-                <div class="text-2xl mt-8">
-                   <strong class="font-extrabold">R$45</strong><span class="text-neutral-500 text-sm">/mês por usuário</span>
-                </div>
-                <ul class="mt-8 space-y-4 text-sm">
-                    <li>5gb de armazenamento</li>
-                    <li>Controle financeiro</li>
-                    <li>2 automações sobre demanda</li>
-                    <li>5 relatórios</li>
-                    <li>100 disparos de SMS</li>
-                    <li>100 disparos do whatsapp</li>
-                </ul>
-                <div class="flex justify-center mt-12">
-                    <button class="bg-secondary-100 text-secondary-800 px-8 py-4 text-lg font-semibold">Contratar</button>
-                </div>
-            </div>
-            <div class="bg-white shadow-2xl grow py-12 px-12" style="margin-top: -48px; margin-bottom: -48px">
-                <div class="flex justify-center w-full mb-7">
-                    <span class="px-4 py-2 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center w-max transition duration-300 ease">Mais vendido</span>
-                </div>
-                <h4 class="font-semibold text-4xl">Avançado</h4>
-                <div class="text-2xl mt-8">
-                   <strong class="font-extrabold">R$65</strong><span class="text-neutral-500 text-sm">/mês por usuário</span>
-                </div>
-                <ul class="mt-8 space-y-4 text-sm">
-                    <li>5gb de armazenamento</li>
-                    <li>controle financeiro</li>
-                    <li>2 automações sobre demanda</li>
-                    <li>5 relatórios</li>
-                    <li>100 disparos de SMS</li>
-                    <li>100 disparos do whatsapp</li>
-                </ul>
-                <div class="flex justify-center mt-[52px]">
-                    <button class="bg-primary-800 text-white px-8 py-4 text-lg font-semibold">Contratar</button>
-                </div>
-            </div>
-            <div class="bg-white grow py-16 px-12 shadow-md">
-                <h4 class="font-semibold text-4xl">Profissional</h4>
-                <div class="text-2xl mt-8">
-                   <strong class="font-extrabold">R$85</strong><span class="text-neutral-500 text-sm">/mês por usuário</span>
-                </div>
-                <ul class="mt-8 space-y-4 text-sm">
-                    <li>5gb de armazenamento</li>
-                    <li>Controle financeiro</li>
-                    <li>2 automações sobre demanda</li>
-                    <li>5 relatórios</li>
-                    <li>100 disparos de SMS</li>
-                    <li>100 disparos do whatsapp</li>
-                </ul>
-                <div class="flex justify-center mt-12">
-                    <button class="bg-secondary-100 text-secondary-800 px-8 py-4 text-lg font-semibold">Contratar</button>
-                </div>
-            </div>
+        <section class="w-full my-36 flex justify-center text-4xl">
+            <h3 class="font-bold">Mais de 1.000 empresas utilizam o Agilus CRM</h3>
         </section>
     </main>
-    <section class="w-full my-36 flex justify-center text-4xl">
-        <h3 class="font-bold">Mais de 1.000 empresas utilizam o Agilus CRM</h3>
-    </section>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        const planos = [
+            {
+                nome: 'Lite',
+                valorMensal: 45,
+                valorAnual: 450
+            },
+            {
+                nome: 'Avançado',
+                valorMensal: 65,
+                valorAnual: 560
+            },
+            {
+                nome: 'Profissional',
+                valorMensal: 85,
+                valorAnual: 800
+            }
+        ]
+        let quantidadeUsuarios = 10
+
+        const checkboxMesAno = document.getElementById('toggle')
+        const textoCheckboxAno = document.getElementById('textoCheckboxAno')
+        const textoCheckboxMes = document.getElementById('textoCheckboxMes')
+        const textoValor = document.querySelectorAll('#valor')
+        const textoRecorrencia = document.querySelectorAll('#recorrencia')
+
+        if (!checkboxMesAno.checked)
+            textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
+
+        checkboxMesAno.addEventListener('change', e => {
+            for (let i = 0; i < textoValor.length; i++) {
+                if (checkboxMesAno.checked) {
+                    textoValor[i].innerHTML = `R$${planos[i].valorAnual}`
+                    textoRecorrencia[i].innerHTML = 'ano'
+                    textoCheckboxAno.classList.remove('text-neutral-500', 'font-twin')
+                    textoCheckboxMes.classList.add('text-neutral-500', 'font-twin')
+                }
+                else {
+                    textoValor[i].innerHTML = `R$${planos[0].valorMensal}`
+                    textoRecorrencia[i].innerHTML = 'mês'
+                    textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
+                    textoCheckboxMes.classList.remove('text-neutral-500', 'font-twin')
+                }
+            }
+        })
+
     </script>
 </body>
 </html>

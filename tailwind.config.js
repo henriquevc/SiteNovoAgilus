@@ -1,5 +1,5 @@
 module.exports = {
-    content: ["./**/*.{html,js}"],
+    content: ["./public/*.{html,js}"],
     theme: {
         container: {
             center: true
@@ -11,6 +11,7 @@ module.exports = {
             },
             colors: {
                 primary: {
+                     50: '#F3EEFA',
                     100: '#DDD2FA',
                     200: '#BDA8F1',
                     300: '#9F7EE4',
@@ -22,12 +23,13 @@ module.exports = {
                     900: '#2E0079'
                 },
                 secondary: {
+                    50: '#FEF5FB',
                     100: '#FDE3F4',
                     200: '#FFBFED',
                     300: '#FFA5E2',
                     400: '#FF8ED7',
                     500: '#F67CCA',
-                    600: '#ea6cbd',
+                    600: '#EA6CBD',
                     700: '#D55CAA',
                     800: '#BE4C96',
                     900: '#A73E82'
