@@ -7,7 +7,7 @@ module.exports = {
                 DEFAULT: '1rem',
                 sm: '2rem',
                 md: '3rem',
-                lg: '4rem',
+                lg: '3rem',
                 xl: '5rem',
                 '2xl': '6rem'
             }
