@@ -14,9 +14,9 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <title>Agilus</title>
 </head>
-<body class="text-neutral-700">
-    <header class="container sticky top-0 mb-4 bg-white border-b lg:my-8 lg:border-b-0">
-        <nav class="flex flex-wrap items-center justify-between py-2 font-bold lg:mb-0">
+<body class="text-grey">
+    <header class="sticky top-0 z-30 mb-4 bg-white border-b lg:my-8 lg:border-b-0">
+        <nav class="container flex flex-wrap items-center justify-between py-2 font-bold lg:mb-0">
             <div class="basis-1/2 lg:basis-2/12">
                 <a href="./index.html">
                     <img src="../images/logo-agilus.svg" alt="Logo da Agilus" width="164">
@@ -34,12 +34,12 @@
             <div class="flex-grow hidden w-full pt-6 lg:w-auto lg:flex lg:items-center lg:justify-center lg:pt-0" id="nav-content">
                 <ul class="items-center justify-end flex-1 mb-4 text-lg lg:flex lg:justify-center lg:mb-0 lg:text-base">
                     <li class="block py-2 mx-9 lg:inline-block lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
-                        <a href="#" id="menu-ps" class="relative">Produtos e Serviços</a>
+                        <a class="cursor-pointer" id="menu-ps" class="relative">Produtos e Serviços</a>
                         <div id="submenu-ps" class="z-20 flex flex-wrap mt-4 text-base bg-white divide-x-0 sr-only lg:absolute lg:flex-nowrap lg:shadow-2xl lg:divide-x lg:p-12">
                             <div class="w-full lg:mr-16 lg:pl-0">
                                 <h3 class="px-4 font-bold">Produtos</h3>
-                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4 lg:w-32">
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus CRM</li>
+                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4">
+                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold"><a href="./Produtos/CRMPlanoSaude.html">CRM p/ Plano de saúde</a></li>
                                     <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Cred</li>
                                     <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Finan</li>
                                 </ul>
@@ -64,59 +64,95 @@
             </div>
         </nav>
     </header>
-    <section class="container flex flex-col-reverse pt-8 space-x-0 space-y-8 space-y-reverse sm:pt-10 md:pt-16 lg:pt-24 lg:space-x-16 lg:space-y-0 lg:flex-row">
-        <aside class="basis-full lg:basis-1/2" data-aos="fade-right" data-aos-duration="700">
-            <h1 class="mb-8 text-4xl font-black lg:text-6xl">Platarforma completa para sua empresa crescer <span class="underline decoration-primary-600">com eficácia.</span></h1>
-            <p class="mb-8 text-xl">Obtenha paz para seu financeiro através de controle, visibilidade, autonomia e descentralização dos processos para a sua empresa, organizando os dados e tendo resultados e análises na palma da mão.</p>
-            <div class="flex space-x-8">
-                <button class="px-4 py-2 font-bold text-white lg:py-4 lg:px-8 bg-primary-600">Vamos começar</button>
-                <button class="px-4 py-2 font-semibold lg:py-4 lg:px-8 bg-primary-100 text-primary-800"> Fale com a gente</button>
-            </div>
-        </aside>
-        <aside class="basis-full lg:basis-1/2">
-            <img src="../images/undraw_data_trends_re_2cdy.svg" alt="Imagem do sistema" class="w-full" data-aos="fade-up">
-        </aside>
-    </section>
-    <section class="container mt-16 sm:pt-24 lg:mt-0">
-        <div class="grid grid-cols-1 gap-8 p-8 lg:gap-16 lg:grid-cols-2 lg:p-24 bg-secondary-100">
-            <aside data-aos="fade-right">
-                <h2 class="mb-8 text-3xl font-bold lg:text-5xl">Uma solução completa para sua empersa e que entende do seu negócio.</h2>
-                <p class="mb-8 text-lg"> O Agilus CRM não é um sistema genérico onde você se adapta a ele para que seu negócio possa funcionar.</p>
-                <p class="text-lg">Desenvolvemos os módulos de acordo com as necessidades do seu mercado, com estruturas funcionais, nomenclaturas e terminologias que auxiliam no uso e no entendimento diário de toda a sua equipe.</p>
+    <section class="bg-primary-50 lg:bg-[url(../images/Group-221.svg)] lg:bg-right-top lg:bg-no-repeat lg:bg-contain">
+        <div class="container flex flex-col-reverse py-8 space-x-0 lg:space-x-16 lg:space-y-0 lg:flex-row sm:py-10 md:py-16 lg:py-24"> 
+            <aside class="mt-16 lg:mt-0 basis-full lg:basis-2/5" data-aos="fade-right" data-aos-duration="700">
+                <h1 class="mb-8 text-4xl font-extrabold text-title lg:text-5xl">A solução completa para seu negócio <span class="underline decoration-secondary-600 underline-offset-8">crescer</span></h1>
+                <p class="mb-8 text-lg text-grey">Controle seus leads, vendas e comissões, financeiro e crie fluxos de trabalhos poderosos e personalizados.</p>
+                <div class="flex mt-8">
+                    <button class="shadow-2xl btn btn-primary shadow-primary-300">Comece já!</button>
+                </div>
             </aside>
-            <aside class="order-first lg:order-last">
-                <img src="../images/undraw_key_points_re_u903.svg" alt="Imagem do sistema 2" class="object-cover w-full max-h-[430px]" data-aos="fade-left">
+            <aside class="-m-8 not-sr-only basis-full lg:sr-only">
+                <img src="../images/Group-221.svg" alt="Cards do sistema">
             </aside>
         </div>
     </section>
-    <section class="container mt-16 sm:pt-24 lg:mt-0">
-        <div class="font-medium">RECURSOS</div>
-        <h3 class="mt-6 text-2xl font-bold lg:text-3xl">Funcionalidades essenciais para o dia-a-dia</h2>
-        <p class="w-full mt-8 text-lg lg:w-1/2">Alguns recursos são indispensáveis para que você saiba o caminho que sua empresa está tomando e para facilitar o trabalho de todo o seu time.</p>
-        <section class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-3">
-            <div class="px-8 py-12 bg-neutral-100 lg:px-12 lg:py-16">
-                <h4 class="text-xl font-bold lg:text-2xl">Workflow</h4>
-                <p class="mt-4">Crie rotinas que serão executadas de forma automática ou quando algo acontecer dentro do sistema.</p>
-            </div>
-            <div class="px-8 py-12 bg-neutral-100 lg:px-12 lg:py-16">
-                <h4 class="text-xl font-bold lg:text-2xl">Notificações</h4>
-                <p class="mt-4">Notifique sua equipe em situações que vise serem necessárias. Escolha entre a notificação em tela, e-mail ou WhatsApp.</p>
-            </div>
-            <div class="px-8 py-12 bg-neutral-100 lg:px-12 lg:py-16">
-                <h4 class="text-xl font-bold lg:text-2xl">Financeiro</h4>
-                <p class="mt-4">Controle a vida financeira da sua empresa. Tenha, de forma fácil, suas receitas e despesas, esporádicas ou recorrentes, em relatórios e/ou dashboards customizados.</p>
-            </div>
-        </section>
+    <section class="container mt-8 lg:mt-0">
+        <div class="grid grid-cols-1 sm:gap-8 lg:gap-16 lg:grid-cols-2 lg:p-24">
+            <aside class="px-6" data-aos="fade-right">
+                <img src="../images/Group-224.svg" alt="Imagem do sistema 2" class="w-full scale-110 lg:scale-125">
+            </aside>
+            <aside class="lg:ml-16" data-aos="fade-down">
+                <h2 class="text-3xl font-bold sm:mt-4 sm:my-8 lg:text-4xl text-title">Nós entendemos do seu negócio!</h2>
+                <p class="mt-8 text-base">O Agilus CRM não é um sistema genérico onde você se adapta ao software para seu negócio funcionar.</p>
+                <p class="mt-4 text-base">Desenvolvemos módulos de acordo com as necessidades do mercado, com estruturas funcionais, seguindo as regras de negócio e terminologias que auxiliam no uso e no entendimento diário da sua equipe.</p>
+            </aside>
+        </div>
     </section>
-    <footer class="flex w-full pb-16 mt-24 text-white bg-dark h-144">
+    <section class="mt-8 sm:mt-16 lg:mt-0 bg-secondary-50">
+        <div class="container py-24">
+            <div class="font-medium text-grey">RECURSOS</div>
+            <h3 class="mt-6 text-2xl font-bold lg:text-3xl text-title">Funcionalidades essenciais para o dia-a-dia</h3>
+            <p class="w-full mt-4 lg:w-1/2 text-grey">Alguns recursos são indispensáveis para que você saiba o caminho que sua empresa está tomando e para facilitar o trabalho de todo o seu time.</p>
+            <section class="grid grid-cols-1 gap-8 mx-2 mt-12 lg:grid-cols-3">
+                <div class="px-8 py-12 bg-white shadow-2xl shadow-secondary-100 lg:px-12 lg:py-16">
+                    <img src="../images/workflow-networking-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
+                    <h4 class="text-xl font-bold lg:text-2xl text-title">Workflow</h4>
+                    <p class="mt-4">Crie rotinas que serão executadas de forma automática ou quando algo acontecer dentro do sistema.</p>
+                </div>
+                <div class="px-8 py-12 bg-white shadow-2xl shadow-secondary-100 lg:px-12 lg:py-16">
+                    <img src="../images/list-signs-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
+                    <h4 class="text-xl font-bold lg:text-2xl text-title">Notificações</h4>
+                    <p class="mt-4">Notifique sua equipe em situações que vise serem necessárias. Escolha entre a notificação em tela, e-mail ou WhatsApp.</p>
+                </div>
+                <div class="px-8 py-12 bg-white shadow-2xl shadow-secondary-100 lg:px-12 lg:py-16">
+                    <img src="../images/money-money-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
+                    <h4 class="text-xl font-bold lg:text-2xl text-title">Financeiro</h4>
+                    <p class="mt-4">Controle a vida financeira da sua empresa. Tenha, de forma fácil, suas receitas e despesas, esporádicas ou recorrentes, em relatórios e/ou dashboards customizados.</p>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="container py-12 sm:py-24">
+        <div class="flex flex-col-reverse md:flex-row" data-aos="fade-right" data-aos-duration="600">
+            <aside class="flex flex-col items-center justify-center w-full space-y-6 lg:flex-col md:w-1/2">
+                <h3 class="text-2xl font-bold md:w-2/3 lg:text-3xl text-title">Por telefone, e-mail, sms ou whatsapp você se conecta com seu cliente.</h3>
+                <p class="text-base text-grey md:w-2/3">Você pode criar modelos de email, sms ou whatsapp para agilizar seus contatos, respostas ou notificações. Ganhe tempo e se preocupe com a estratégia.</p>
+            </aside>
+            <aside class="flex justify-center w-full md:w-1/2">
+                <img src="../images/Content.svg" alt="">
+            </aside>
+        </div>
+    </section>
+    <section class="mt-16 bg-primary-50 lg:mt-0">
+        <div class="container flex flex-col content-center py-16 md:flex-row lg:py-24" data-aos="fade-down">
+            <aside class="flex justify-center w-full lg:w-1/2">
+                <img src="../images/Smartphone.svg" alt="imagem da tela inicial do Agilus CRM">
+            </aside>
+            <aside class="flex flex-col items-center justify-center w-full mt-8 space-y-6 md:mt-0 lg:w-1/2">
+                <h3 class="text-2xl font-bold lg:text-3xl text-title md:w-2/3">Sem instalação de aplicativos, sem complicação. Acesse de qualquer lugar.</h3>
+                <p class="text-base text-grey md:w-2/3">O Agilus CRM é desenvolvido seguindo as melhores práticas e tecnologias do mercado. Sua equipe conectada o tempo todo, sem complicações. Acessou, usou.</p>
+            </aside>
+        </div>
+    </section>
+    <section class="container bg-secondary-50">
+        <div class="text-center py-36">
+            <h2 class="text-2xl font-bold text-title lg:text-3xl">
+                Interessado em aumentar sua produtividade?
+            </h2>
+            <button class="mt-8 shadow-2xl btn btn-secondary shadow-secondary-600">Vamos conversar</button>
+        </div>
+    </section>
+    <footer class="flex w-full pb-16 text-white bg-black h-144">
         <section class="container grid grid-cols-1 gap-8 pt-16 lg:gap-16 lg:grid-cols-3 lg:pt-24">
             <aside>
-                <h3 class="text-3xl font-bold">AGILUS</h3>
-                <p class="mt-8 text-md">A Agilus é uma empresa de desenvolvimento de sistemas que buscam auxiliar os clientes com uma linguagem e, principalmente, recursos próprios para solucionar as demandas diárias que o seu mercado possa lhe proporcionar.</p>
+                
+                <img src="..\images\logo-agilus-rosa.svg" alt="">
+                <p class="pr-8 mt-8 text-base">A Agilus é uma empresa de desenvolvimento de sistemas que buscam auxiliar os clientes com uma linguagem e, principalmente, recursos próprios para solucionar as demandas diárias que o seu mercado possa lhe proporcionar.</p>
             </aside>
             <aside class="lg:col-span-2">
-                <img src="../images/logo-agilus-dark.png" alt="">
-                <div class="grid grid-cols-1 gap-4 mt-8 gap-y-8 sm:grid-cols-3">
+                <div class="grid grid-cols-1 gap-4 mt-1 gap-y-8 sm:grid-cols-3">
                     <div class="">
                         <h4 class="mb-6 text-xl font-semibold">Produto</h4>
                         <ul class="space-y-4 text-md">
@@ -142,6 +178,7 @@
                             <li>Linkedin</li>
                             <li>Instagram</li>
                             <li>Facebook</li>
+                            <li>Whatsapp</li>
                         </ul>
                     </div>
                 </div>
@@ -152,7 +189,9 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
 
-        AOS.init();
+        AOS.init({
+            disable: window.innerWidth <= 768
+        });
 
         const menuPS = document.getElementById('menu-ps') // li produtos e serviços
         const submenuPS = document.getElementById('submenu-ps') // lista dentro de produtos e serviços
@@ -164,6 +203,7 @@
         })
 
         menuPS.addEventListener('click', () => {
+            console.log('clicou')
             submenuPS.className.includes('sr-only') ?
                 submenuPS.classList.remove('sr-only')
             :   submenuPS.classList.add('sr-only')
