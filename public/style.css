@@ -11,9 +11,9 @@ input:checked ~ .dot {
 }
 
 .btn-primary {
-  @apply text-white bg-primary-600;
+  @apply text-white bg-primary-600 hover:bg-primary-800;
 }
 
 .btn-secondary {
-  @apply text-white bg-secondary-600;
+  @apply text-white bg-secondary-600 hover:bg-secondary-800;
 }

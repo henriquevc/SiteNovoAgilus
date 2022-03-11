@@ -64,13 +64,41 @@
             </div>
         </nav>
     </header>
+    <!-- Modal -->
+    <div class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden h-screen overflow-x-hidden overflow-y-auto bg-opacity-50 bg-neutral-700 backdrop-blur-md md:h-full md:inset-0" id="modal-cta">
+        <div class="relative flex items-center w-full h-full max-w-md px-4 md:h-auto">
+            <div class="relative w-full bg-white rounded-lg shadow">
+                <div class="flex justify-between px-6 py-6">
+                    <h3 class="text-xl font-medium text-gray-900">Entre em contato</h3>
+                    <button type="button" id="btn-close-modal" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm p-1.5 ml-auto inline-flex items-center">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                    </button>
+                </div>
+                <form class="px-6 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8" action="#">
+                    <div>
+                        <label for="nome" class="block mb-2 text-sm font-medium text-gray-700">Nome da empresa</label>
+                        <input type="password" name="nome" id="nome" placeholder="xyz ltda." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Seu email</label>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="nome@empresa.com" required>
+                    </div>
+                    <div>
+                        <label for="telefone" class="block mb-2 text-sm font-medium text-gray-700">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="(xx) xxxxx-xxxx" required>
+                    </div>
+                    <button type="submit" class="w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <section class="pt-16 pb-8 md:py-16 lg:py-20 bg-[#f4f1ff]">
         <div class="container flex flex-col-reverse space-x-0 space-y-4 space-y-reverse sm:space-y-0 lg:space-x-16 lg:flex-row">
             <aside class="basis-full lg:basis-2/5" data-aos="fade-right" data-aos-duration="700">
                 <h1 class="mb-8 text-4xl font-extrabold text-title lg:text-5xl">O CRM <span class="underline decoration-secondary-600 underline-offset-4">ideal</span> para sua corretora de plano de saúde.</h1>
                 <p class="mb-8 text-lg lg:mb-10 text-grey">A sua empresa trabalha com venda de plano de saúde? O Agilus CRM tem inúmeras funções que vão agilizar seu trabalho e aumentar sua produtividade.</p>
                 <div class="flex">
-                    <button class="btn btn-primary">Comece agora</button>
+                    <button class="btn btn-primary" id="btn-cta">Comece agora</button>
                 </div>
             </aside>
             <aside class="basis-full lg:basis-3/5" style="margin-top: -64px">
@@ -256,6 +284,9 @@
         const submenuPS = document.getElementById('submenu-ps') // lista dentro de produtos e serviços
         const buttonToggle = document.getElementById('nav-toggle') // menu hamburguer
         const navContent = document.getElementById('nav-content') // links do header
+        const btnCta = document.getElementById('btn-cta') // botão de cta (click-to-action)
+        const modalCta = document.getElementById('modal-cta') // modal de cta (click-to-action)
+        const btnCloseModalCta = document.getElementById('btn-close-modal')
 
         buttonToggle.addEventListener('click', () => {
             navContent.classList.toggle('hidden')
@@ -269,6 +300,16 @@
         
         submenuPS.addEventListener('mouseleave', () => {
             submenuPS.classList.add('sr-only')
+        })
+
+        btnCta.addEventListener('click', () => {
+            modalCta.classList.toggle('flex')
+            modalCta.classList.toggle('hidden')
+        })
+
+        btnCloseModalCta.addEventListener('click', () => {
+            modalCta.classList.add('hidden')
+            modalCta.classList.remove('flex')
         })
     </script>
 </body>
