@@ -7,5 +7,13 @@ input:checked ~ .dot {
 }
 
 .btn {
-  @apply px-12 py-4 xl:px-20 bg-primary-100 text-primary-600
+  @apply px-8 py-4 font-bold sm:px-12 sm:py-6 xl:px-20;
+}
+
+.btn-primary {
+  @apply text-white bg-primary-600;
+}
+
+.btn-secondary {
+  @apply text-white bg-secondary-600;
 }
