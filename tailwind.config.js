@@ -1,5 +1,5 @@
 module.exports = {
-    content: ["./public/*.{html,js}"],
+    content: ["./public/*.{html,js}", "./public/Produtos/*.{html,js}"],
     theme: {
         container: {
             center: true,
@@ -42,6 +42,8 @@ module.exports = {
                     800: '#BE4C96',
                     900: '#A73E82'
                 },
+                title: '#2D1D61',
+                grey: '#363049',
                 dark: '#2d2d2d',
                 background: '#333333',
                 accent: '#909090'
