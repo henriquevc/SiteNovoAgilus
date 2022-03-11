@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página inicial da Agilus. Aprensentando o sistema Agilus CRM">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../../dist/output.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <title>Agilus - CRM</title>
+</head>
+<body class="text-grey">
+    <header class="sticky top-0 z-30 mb-4 bg-white border-b lg:my-8 lg:border-b-0">
+        <nav class="container flex flex-wrap items-center justify-between py-2 font-bold lg:mb-0">
+            <div class="basis-1/2 lg:basis-2/12">
+                <a href="../index.html">
+                    <img src="../../images/logo-agilus.svg" alt="Logo da Agilus" width="164">
+                </a>
+            </div>
+
+            <div class="flex justify-end flex-grow lg:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 hover:text-white hover:border-white">
+                    <svg class="w-6 h-6" viewBox="0 0 20 20" fill="rgb(54, 1, 137)" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                </button>
+            </div>
+
+            <div class="flex-grow hidden w-full pt-6 lg:w-auto lg:flex lg:items-center lg:justify-center lg:pt-0" id="nav-content">
+                <ul class="items-center justify-end flex-1 mb-4 text-lg lg:flex lg:justify-center lg:mb-0 lg:text-base">
+                    <li class="block py-2 mx-9 lg:inline-block lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
+                        <a class="cursor-pointer" id="menu-ps" class="relative">Produtos e Serviços</a>
+                        <div id="submenu-ps" class="z-20 flex flex-wrap mt-4 text-base bg-white divide-x-0 sr-only lg:absolute lg:flex-nowrap lg:shadow-2xl lg:divide-x lg:p-12">
+                            <div class="w-full lg:mr-16 lg:pl-0">
+                                <h3 class="px-4 font-bold">Produtos</h3>
+                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4">
+                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold"><a href="#">CRM p/ Plano de saúde</a></li>
+                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Cred</li>
+                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Finan</li>
+                                </ul>
+                            </div>
+                            <div class="w-full mt-4 lg:mt-0 lg:mr-8 lg:pl-16">
+                                <h3 class="px-4 font-bold">Serviços</h3>
+                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4 lg:w-32">
+                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus alert</li>
+                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Telefonia</li>
+                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus alert</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="../precos.html">Preços</a></li>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="../sobre.html">Empresa</a></li>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="hidden lg:block">
+                <a href="https://agiluscrm.com.br/#/login" class="px-12 py-4 xl:px-20 bg-primary-100 text-primary-600">Login</a>
+            </div>
+        </nav>
+    </header>
+    <section class="pt-16 pb-8 md:py-16 lg:py-20 bg-[#f4f1ff]">
+        <div class="container flex flex-col-reverse space-x-0 space-y-4 space-y-reverse sm:space-y-0 lg:space-x-16 lg:flex-row">
+            <aside class="basis-full lg:basis-2/5" data-aos="fade-right" data-aos-duration="700">
+                <h1 class="mb-8 text-4xl font-extrabold text-title lg:text-5xl">O CRM <span class="underline decoration-secondary-600 underline-offset-4">ideal</span> para sua corretora de plano de saúde.</h1>
+                <p class="mb-8 text-lg lg:mb-10 text-grey">A sua empresa trabalha com venda de plano de saúde? O Agilus CRM tem inúmeras funções que vão agilizar seu trabalho e aumentar sua produtividade.</p>
+                <div class="flex">
+                    <button class="btn btn-primary">Comece agora</button>
+                </div>
+            </aside>
+            <aside class="basis-full lg:basis-3/5" style="margin-top: -64px">
+                <img src="../../images/Card.svg" alt="Imagem do sistema" class="w-full" data-aos="fade-up">
+            </aside>
+        </div>
+    </section>
+    <section class="container mt-16 sm:py-12 md:py-16 lg:py-20 sm:mt-0">
+        <div class="text-center">
+            <h2 class="my-4 text-3xl font-bold lg:text-4xl text-title">Saiba tudo do início ao fim da operação</h2>
+            <p class="max-w-2xl mx-auto text-base">Feito por quem entende do mercado, sem soluções genéricas. Pensamos nas dificuldades que sua operação tem no dia a dia e criamos soluções que resolvem seu problema.</p>
+        </div>
+        <div class="grid grid-cols-1 px-8 mt-8 sm:px-0 sm:grid-cols-2 md:grid-cols-3 gap-x-4 sm:gap-x-8 gap-y-8 md:gap-x-12 lg:gap-x-16">
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="../../images/leads_icon.svg" alt="Leads icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Leads</h4>
+                <p class="text-base text-grey">Realize simulações por idade ou faixa etária, envie através de whatsapp, sms ou e-mail para o seu cliente.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="../../images/campanhas_icon.svg" alt="Campanhas icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Campanhas</h4>
+                <p class="text-base text-grey">Use a ferramenta de distribuição, para criar e organizar seus leads de acordo com suas estratégias.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="../../images/automacoes_icon.svg" alt="Automações icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Automações</h4>
+                <p class="text-base text-grey">Automações personalizadas, execute tarefas repetitivas de forma automática, integre sistemas e agilize seu negócio.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="../../images/comissoes_icon.svg" alt="Comissões icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Comissões</h4>
+                <p class="text-base text-grey">Controle suas comissões a pagar e receber em um único lugar, além da possibilidade de criar regras personalizadas.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="../../images/financeiro_icon.svg" alt="Financeiro icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Financeiro</h4>
+                <p class="text-base text-grey">Tenha em mãos todos os pagamentos e recebimentos, saiba o que vende mais e aonde estão seus maiores gastos.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="../../images/indicadores_icon.svg" alt="comissoes icon" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Indicadores</h4>
+                <p class="text-base text-grey">Monte seu dashboard com os indicadores que te ajudarão a tomar decisões importantes.</p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[#F4F1FF]">
+        <div class="container grid grid-cols-1 gap-8 lg:gap-16 py-12 mt-16 bg-left-top bg-cover sm:py-16 md:py-24 sm:mt-0 sm:grid-cols-2 lg:bg-[url(../../images/aspas-grande.svg)] bg-no-repeat" style="background-size: 86px 72px;background-position: 68px 110px;">
+            <aside class="flex flex-col lg:pl-8">
+                <h2 class="w-full text-3xl font-bold lg:w-7/12 text-title lg:text-4xl">Seus dados são seus de verdade!</h2>
+                <p class="mt-4 text-lg">Não vendemos, compartilhamos ou negociamos base, aqui levamos a sério a segurança de dados.</p>
+                <div class="self-end w-full p-8 pl-16 mt-12 bg-white rounded-lg lg:w-2/3 text-grey" style="background-image: url(../../images/aspas-pequena.svg); background-repeat: no-repeat; background-position: 32px 32px;">
+                    Nossa politica de dados é rigida, o sistema é nosso, mas os dados são seus. Diferente de outros sistemas, nós não negociamos nenhuma base de dados. Nosso foco é desenvolver o melhor CRM para a sua empresa.
+                </div>
+            </aside>
+            <aside class="flex flex-col gap-8 lg:gap-16 lg:mt-20">
+                <div class="w-full p-8 pl-16 bg-white rounded-lg lg:w-3/4 text-grey" style="background-image: url(../../images/aspas-pequena.svg); background-repeat: no-repeat; background-position: 32px 32px;">
+                    <p>Nossos servidores estão alocados em um datacenter Tier 3, com um sistema autossustentado, com equipamentos de refrigeração e alimentação de energia redundantes além de link de internet de alta capacidade.</p>
+                </div>
+                <div class="w-full p-8 pl-16 bg-white rounded-lg lg:w-2/3 text-grey" style="background-image: url(../../images/aspas-pequena.svg); background-repeat: no-repeat; background-position: 32px 32px;">
+                    <p>Uptime de 98%, possímos uma infra estrutura robusta, a Agilus garante um funcionamento, com o mínimo de impacto em sua operação.</p>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <section class="container mt-16 sm:py-16 md:py-24 sm:mt-0">
+        <div class="flex flex-col items-center lg:flex-row lg:justify-between">
+            <aside class="flex flex-col justify-center space-y-4 lg:w-1/2">
+                <h2 class="text-3xl font-bold lg:text-4xl text-title">Vem para a Agilus</h2>
+                <p class="text-base lg:w-4/5 text-grey">Aqui sua empresa tem suporte de qualidade, pessoas qualificadas para entender sua necessidade e te ajudar a crescer.</p>
+            </aside>
+            <aside class="grid grid-cols-1 mt-8 lg:mt-0 sm:w-full lg:w-5/12 gap-y-8 sm:gap-x-4 sm:grid-cols-2">
+                <div class="flex flex-row space-x-8">
+                    <img src="../../images/leads_icon.svg" alt="leads icone" class="w-8 h-12">
+                    <div>
+                        <h4 class="text-2xl font-bold text-title">3.000+</h4>
+                        <p class="text-sm">Usuários diários</p>
+                    </div>
+                </div>
+                <div class="flex flex-row space-x-8">
+                    <img src="../../images/comissoes_icon.svg" alt="comissões icone">
+                    <div>
+                        <h4 class="text-2xl font-bold text-title">300 mil</h4>
+                        <p class="text-sm">Usuários</p>
+                    </div>
+                </div>
+                <div class="flex flex-row space-x-8">
+                    <img src="../../images/financeiro_icon.svg" alt="financeiro icone">
+                    <div>
+                        <h4 class="text-2xl font-bold text-title">700+</h4>
+                        <p class="text-sm">Clientes</p>
+                    </div>
+                </div>
+                <div class="flex flex-row space-x-8">
+                    <img src="../../images/lista_icon.svg" alt="lista icone">
+                    <div>
+                        <h4 class="text-2xl font-bold text-title">26+1</h4>
+                        <p class="text-sm">Em todo Brasil</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <section class="container mt-16 sm:pb-16 md:pb-24 sm:mt-0">
+        <div class="flex flex-col md:flex-row">
+            <aside class="flex flex-col justify-center w-full md:w-1/2">
+                <h2 class="w-full my-4 text-3xl font-bold md:w-2/3 lg:text-4xl text-title">Integrações facilitadas, suporte avançado.</h2>
+                <p class="text-base text-grey md:w-2/3">Na Agilus você tem suporte avançado para integrar e criar novas soluções para sua empresa.</p>
+            </aside>
+            <aside class="flex flex-col mt-4 md:mt-0 items-center justify-center w-full md:w-1/2 space-y-12 md:space-y-16 h-[270px]" style="background-image: url(../../images/Vector.svg); background-repeat: no-repeat; background-position: center;">
+                <div class="grid grid-cols-4 gap-8 md:gap-16">
+                    <img src="../../images/Logo.svg" class="h-14 w-14" alt="logo 1">
+                    <img src="../../images/Logo-1.svg" class="h-14 w-14" alt="logo 2">
+                    <img src="../../images/Logo-2.svg" class="h-14 w-14" alt="logo 3">
+                    <img src="../../images/Logo-3.svg" class="h-14 w-14" alt="logo 4">
+                </div>
+                <div class="grid grid-cols-3 gap-16">
+                    <img src="../../images/Logo-4.svg" class="h-14 w-14" alt="logo 1">
+                    <img src="../../images/Logo-5.svg" class="h-14 w-14" alt="logo 2">
+                    <img src="../../images/Logo-6.svg" class="h-14 w-14" alt="logo 3">
+                </div>
+            </aside>
+        </div>
+    </section>
+    <section class="bg-[#F4F1FF]">
+        <div class="container grid grid-cols-1 py-8 mt-16 sm:py-12 sm:mt-0 lg:grid-cols-3 xl:grid-cols-2">
+            <aside class="flex flex-col justify-center">
+                <h2 class="my-4 text-3xl font-bold text-title lg:text-4xl">Acesso simples, sem baixar app.</h2>
+                <p class="w-full text-base lg:w-3/5">Acesse o sistema de qualquer lugar, apenas com o navegador você já pode gerenciar toda sua empresa. Nada de baixar aplicativos.</p>
+            </aside>
+            <aside class="flex flex-col mt-12 -mb-8 sm:flex-row lg:col-span-2 xl:col-span-1 sm:-mb-12 lg:-my-12">
+                <img src="../../images/Phone-Print-1.svg" class="sm:w-1/2" alt="print do sistema 1">
+                <img src="../../images/Phone-Print-2.svg" class="sm:w-1/2" alt="print do sistema 2">
+            </aside>
+        </div>
+    </section>
+    <footer class="flex w-full pb-16 text-white bg-black h-144">
+        <section class="container grid grid-cols-1 gap-8 pt-16 lg:gap-16 lg:grid-cols-3 lg:pt-24">
+            <aside>
+                <img src="..\..\images\logo-agilus-rosa.svg" alt="">
+                <p class="pr-8 mt-8 text-base">A Agilus é uma empresa de desenvolvimento de sistemas que buscam auxiliar os clientes com uma linguagem e, principalmente, recursos próprios para solucionar as demandas diárias que o seu mercado possa lhe proporcionar.</p>
+            </aside>
+            <aside class="lg:col-span-2">
+                <div class="grid grid-cols-1 gap-4 mt-1 gap-y-8 sm:grid-cols-3">
+                    <div class="">
+                        <h4 class="mb-6 text-xl font-semibold">Produto</h4>
+                        <ul class="space-y-4 text-md">
+                            <li>Controle financeiro</li>
+                            <li>Comissionamento</li>
+                            <li>Integrações</li>
+                            <li>Notificações</li>
+                            <li>Relatórios</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4 class="mb-6 text-xl font-semibold">Empresa</h4>
+                        <ul class="space-y-4 text-md">
+                            <li>Sobre</li>
+                            <li><a href="../PoliticaPrivacidade.html">Politica de Privacidade</a></li>
+                            <li>Time</li>
+                            <li>Trabalhe conosco</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4 class="mb-6 text-xl font-semibold">Social</h4>
+                        <ul class="space-y-4 text-md">
+                            <li>Linkedin</li>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>Whatsapp</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            
+        </section>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+
+        AOS.init();
+
+        const menuPS = document.getElementById('menu-ps') // li produtos e serviços
+        const submenuPS = document.getElementById('submenu-ps') // lista dentro de produtos e serviços
+        const buttonToggle = document.getElementById('nav-toggle') // menu hamburguer
+        const navContent = document.getElementById('nav-content') // links do header
+
+        buttonToggle.addEventListener('click', () => {
+            navContent.classList.toggle('hidden')
+        })
+
+        menuPS.addEventListener('click', () => {
+            submenuPS.className.includes('sr-only') ?
+                submenuPS.classList.remove('sr-only')
+            :   submenuPS.classList.add('sr-only')
+        })
+        
+        submenuPS.addEventListener('mouseleave', () => {
+            submenuPS.classList.add('sr-only')
+        })
+    </script>
+</body>
+</html>
