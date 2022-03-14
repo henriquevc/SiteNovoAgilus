@@ -7,7 +7,7 @@ input:checked ~ .dot {
 }
 
 .btn {
-  @apply px-8 py-4 font-bold sm:px-12 sm:py-6 xl:px-20;
+  @apply px-8 py-4 font-bold sm:px-12 xl:px-20;
 }
 
 .btn-primary {

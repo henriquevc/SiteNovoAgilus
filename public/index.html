@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="../dist/output.css">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <title>Agilus</title>
 </head>
 <body class="text-grey">
@@ -19,7 +19,7 @@
         <nav class="container flex flex-wrap items-center justify-between py-2 font-bold lg:mb-0">
             <div class="basis-1/2 lg:basis-2/12">
                 <a href="./index.html">
-                    <img src="../images/logo-agilus.svg" alt="Logo da Agilus" width="164">
+                    <img src="/assets/images/logo-agilus.svg" alt="Logo da Agilus" width="164" class="w-[164px] h-[92.25px]">
                 </a>
             </div>
 
@@ -34,12 +34,12 @@
             <div class="flex-grow hidden w-full pt-6 lg:w-auto lg:flex lg:items-center lg:justify-center lg:pt-0" id="nav-content">
                 <ul class="items-center justify-end flex-1 mb-4 text-lg lg:flex lg:justify-center lg:mb-0 lg:text-base">
                     <li class="block py-2 mx-9 lg:inline-block lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
-                        <a class="cursor-pointer" id="menu-ps" class="relative">Produtos e Serviços</a>
+                        <div class="cursor-pointer" id="menu-ps" class="relative">Produtos e Serviços</div>
                         <div id="submenu-ps" class="z-20 flex flex-wrap mt-4 text-base bg-white divide-x-0 sr-only lg:absolute lg:flex-nowrap lg:shadow-2xl lg:divide-x lg:p-12">
                             <div class="w-full lg:mr-16 lg:pl-0">
                                 <h3 class="px-4 font-bold">Produtos</h3>
                                 <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4">
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold"><a href="./Produtos/CRMPlanoSaude.html">CRM p/ Plano de saúde</a></li>
+                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold"><a href="./CRMPlanoSaude.html">CRM p/ Plano de saúde</a></li>
                                     <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Cred</li>
                                     <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Finan</li>
                                 </ul>
@@ -54,9 +54,9 @@
                             </div>
                         </div>
                     </li>
-                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./precos.html">Preços</a></li>
-                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./sobre.html">Empresa</a></li>
-                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./contato.html">Contato</a></li>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Precos.html">Preços</a></li>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Sobre.html">Empresa</a></li>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Contato.html">Contato</a></li>
                 </ul>
             </div>
             <div class="hidden lg:block">
@@ -64,24 +64,60 @@
             </div>
         </nav>
     </header>
-    <section class="bg-primary-50 lg:bg-[url(../images/Group-221.svg)] lg:bg-right-top lg:bg-no-repeat lg:bg-contain">
+
+    <!-- Modal -->
+    <div class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden h-screen overflow-x-hidden overflow-y-auto bg-opacity-50 bg-neutral-700 backdrop-blur-md md:h-full md:inset-0" id="modal-cta">
+        <div class="relative flex items-center w-full h-full max-w-md px-4 md:h-auto">
+            <div class="relative w-full bg-white rounded-lg shadow">
+                <div class="flex justify-between px-6 py-6">
+                    <h3 class="text-xl font-medium text-gray-900">Entre em contato</h3>
+                    <button type="button" id="btn-close-modal" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm p-1.5 ml-auto inline-flex items-center">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                    </button>
+                </div>
+                <form class="px-6 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8">
+                    <div>
+                        <label for="nome" class="block mb-2 text-sm font-medium text-gray-700">Nome da empresa</label>
+                        <input type="text" name="nome" id="nome" placeholder="xyz ltda." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 block w-full p-2.5" required>
+
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Seu email</label>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 block w-full p-2.5" placeholder="nome@empresa.com" required>
+                    </div>
+                    <div>
+                        <label for="telefone" class="block mb-2 text-sm font-medium text-gray-700">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 block w-full p-2.5" placeholder="(xx) xxxxx-xxxx" required>
+                    </div>
+                    <button id="btn-cta-enviar" type="submit" class="w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">Enviar</button>
+                    <p class="block w-full font-extrabold text-center">ou</p>
+                    <button id="btn-cta-whatsapp" type="submit" class="w-full text-center text-white bg-[#2CB742] focus:bg-green-900 rounded-lg btn flex items-center justify-center space-x-2">
+                        <img src="/assets/images/whatsapp.svg" alt="whatsapp" class="w-6 h-6">
+                        <span>Whatsapp</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-primary-50 lg:bg-[url(/assets/images/Group-221.svg)] lg:bg-right-top lg:bg-no-repeat lg:bg-contain">
         <div class="container flex flex-col-reverse py-8 space-x-0 lg:space-x-16 lg:space-y-0 lg:flex-row sm:py-10 md:py-16 lg:py-24"> 
             <aside class="mt-16 lg:mt-0 basis-full lg:basis-2/5" data-aos="fade-right" data-aos-duration="700">
                 <h1 class="mb-8 text-4xl font-extrabold text-title lg:text-5xl">A solução completa para seu negócio <span class="underline decoration-secondary-600 underline-offset-8">crescer</span></h1>
                 <p class="mb-8 text-lg text-grey">Controle seus leads, vendas e comissões, financeiro e crie fluxos de trabalhos poderosos e personalizados.</p>
                 <div class="flex mt-8">
-                    <button class="shadow-2xl btn btn-primary shadow-primary-300">Comece já!</button>
+                    <button class="shadow-2xl btn btn-primary shadow-primary-300" id="btn-cta">Comece já!</button>
                 </div>
             </aside>
-            <aside class="-m-8 not-sr-only basis-full lg:sr-only">
-                <img src="../images/Group-221.svg" alt="Cards do sistema">
+            <aside class="block -m-8 basis-full lg:hidden">
+                <img src="/assets/images/Group-221.svg" alt="Cards do sistema" width="1025" height="774">
             </aside>
         </div>
     </section>
     <section class="container mt-8 lg:mt-0">
         <div class="grid grid-cols-1 sm:gap-8 lg:gap-16 lg:grid-cols-2 lg:p-24">
             <aside class="px-6" data-aos="fade-right">
-                <img src="../images/Group-224.svg" alt="Imagem do sistema 2" class="w-full scale-110 lg:scale-125">
+                <img src="/assets/images/Group-224.svg" alt="Imagem do sistema 2" class="w-full scale-110 lg:scale-125" width="737" height="640">
             </aside>
             <aside class="lg:ml-16" data-aos="fade-down">
                 <h2 class="text-3xl font-bold sm:mt-4 sm:my-8 lg:text-4xl text-title">Nós entendemos do seu negócio!</h2>
@@ -97,17 +133,17 @@
             <p class="w-full mt-4 lg:w-1/2 text-grey">Alguns recursos são indispensáveis para que você saiba o caminho que sua empresa está tomando e para facilitar o trabalho de todo o seu time.</p>
             <section class="grid grid-cols-1 gap-8 mx-2 mt-12 lg:grid-cols-3">
                 <div class="px-8 py-12 bg-white shadow-2xl shadow-secondary-100 lg:px-12 lg:py-16">
-                    <img src="../images/workflow-networking-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
+                    <img src="/assets/images/workflow-networking-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
                     <h4 class="text-xl font-bold lg:text-2xl text-title">Workflow</h4>
                     <p class="mt-4">Crie rotinas que serão executadas de forma automática ou quando algo acontecer dentro do sistema.</p>
                 </div>
                 <div class="px-8 py-12 bg-white shadow-2xl shadow-secondary-100 lg:px-12 lg:py-16">
-                    <img src="../images/list-signs-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
+                    <img src="/assets/images/list-signs-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
                     <h4 class="text-xl font-bold lg:text-2xl text-title">Notificações</h4>
                     <p class="mt-4">Notifique sua equipe em situações que vise serem necessárias. Escolha entre a notificação em tela, e-mail ou WhatsApp.</p>
                 </div>
                 <div class="px-8 py-12 bg-white shadow-2xl shadow-secondary-100 lg:px-12 lg:py-16">
-                    <img src="../images/money-money-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
+                    <img src="/assets/images/money-money-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
                     <h4 class="text-xl font-bold lg:text-2xl text-title">Financeiro</h4>
                     <p class="mt-4">Controle a vida financeira da sua empresa. Tenha, de forma fácil, suas receitas e despesas, esporádicas ou recorrentes, em relatórios e/ou dashboards customizados.</p>
                 </div>
@@ -117,18 +153,18 @@
     <section class="container py-12 sm:py-24">
         <div class="flex flex-col-reverse md:flex-row" data-aos="fade-right" data-aos-duration="600">
             <aside class="flex flex-col items-center justify-center w-full space-y-6 lg:flex-col md:w-1/2">
-                <h3 class="text-2xl font-bold md:w-2/3 lg:text-3xl text-title">Por telefone, e-mail, sms ou whatsapp você se conecta com seu cliente.</h3>
+                <h3 class="text-2xl font-bold md:w-2/3 lg:text-3xl text-title">Por telefone, e-mail, sms ou whatsapp! Conecte-se com o seu cliente.</h3>
                 <p class="text-base text-grey md:w-2/3">Você pode criar modelos de email, sms ou whatsapp para agilizar seus contatos, respostas ou notificações. Ganhe tempo e se preocupe com a estratégia.</p>
             </aside>
             <aside class="flex justify-center w-full md:w-1/2">
-                <img src="../images/Content.svg" alt="">
+                <img src="/assets/images/Content.svg" alt="">
             </aside>
         </div>
     </section>
     <section class="mt-16 bg-primary-50 lg:mt-0">
         <div class="container flex flex-col content-center py-16 md:flex-row lg:py-24" data-aos="fade-down">
             <aside class="flex justify-center w-full lg:w-1/2">
-                <img src="../images/Smartphone.svg" alt="imagem da tela inicial do Agilus CRM">
+                <img src="/assets/images/Smartphone.svg" alt="imagem da tela inicial do Agilus CRM">
             </aside>
             <aside class="flex flex-col items-center justify-center w-full mt-8 space-y-6 md:mt-0 lg:w-1/2">
                 <h3 class="text-2xl font-bold lg:text-3xl text-title md:w-2/3">Sem instalação de aplicativos, sem complicação. Acesse de qualquer lugar.</h3>
@@ -136,25 +172,25 @@
             </aside>
         </div>
     </section>
-    <section class="container bg-secondary-50">
-        <div class="text-center py-36">
+    <section class="bg-secondary-50">
+        <div class="container text-center py-36">
             <h2 class="text-2xl font-bold text-title lg:text-3xl">
                 Interessado em aumentar sua produtividade?
             </h2>
-            <button class="mt-8 shadow-2xl btn btn-secondary shadow-secondary-600">Vamos conversar</button>
+            <button class="mt-8 text-white shadow-2xl btn bg-secondary-800 shadow-secondary-800" id="btn-cta2">Vamos conversar</button>
         </div>
     </section>
     <footer class="flex w-full pb-16 text-white bg-black h-144">
         <section class="container grid grid-cols-1 gap-8 pt-16 lg:gap-16 lg:grid-cols-3 lg:pt-24">
             <aside>
                 
-                <img src="..\images\logo-agilus-rosa.svg" alt="">
+                <img src="/assets\images\logo-agilus-rosa.svg" alt="">
                 <p class="pr-8 mt-8 text-base">A Agilus é uma empresa de desenvolvimento de sistemas que buscam auxiliar os clientes com uma linguagem e, principalmente, recursos próprios para solucionar as demandas diárias que o seu mercado possa lhe proporcionar.</p>
             </aside>
             <aside class="lg:col-span-2">
                 <div class="grid grid-cols-1 gap-4 mt-1 gap-y-8 sm:grid-cols-3">
                     <div class="">
-                        <h4 class="mb-6 text-xl font-semibold">Produto</h4>
+                        <h3 class="mb-6 text-xl font-semibold">Produto</h3>
                         <ul class="space-y-4 text-md">
                             <li>Controle financeiro</li>
                             <li>Comissionamento</li>
@@ -163,8 +199,8 @@
                             <li>Relatórios</li>
                         </ul>
                     </div>
-                    <div class="">
-                        <h4 class="mb-6 text-xl font-semibold">Empresa</h4>
+                    <div>
+                        <h3 class="mb-6 text-xl font-semibold">Empresa</h3>
                         <ul class="space-y-4 text-md">
                             <li>Sobre</li>
                             <li><a href="./PoliticaPrivacidade.html">Politica de Privacidade</a></li>
@@ -172,8 +208,8 @@
                             <li>Trabalhe conosco</li>
                         </ul>
                     </div>
-                    <div class="">
-                        <h4 class="mb-6 text-xl font-semibold">Social</h4>
+                    <div>
+                        <h3 class="mb-6 text-xl font-semibold">Social</h3>
                         <ul class="space-y-4 text-md">
                             <li>Linkedin</li>
                             <li>Instagram</li>
@@ -187,31 +223,12 @@
         </section>
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
     <script>
-
         AOS.init({
             disable: window.innerWidth <= 768
         });
-
-        const menuPS = document.getElementById('menu-ps') // li produtos e serviços
-        const submenuPS = document.getElementById('submenu-ps') // lista dentro de produtos e serviços
-        const buttonToggle = document.getElementById('nav-toggle') // menu hamburguer
-        const navContent = document.getElementById('nav-content') // links do header
-
-        buttonToggle.addEventListener('click', () => {
-            navContent.classList.toggle('hidden')
-        })
-
-        menuPS.addEventListener('click', () => {
-            console.log('clicou')
-            submenuPS.className.includes('sr-only') ?
-                submenuPS.classList.remove('sr-only')
-            :   submenuPS.classList.add('sr-only')
-        })
-        
-        submenuPS.addEventListener('mouseleave', () => {
-            submenuPS.classList.add('sr-only')
-        })
     </script>
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>
