@@ -15,11 +15,11 @@
     <title>Agilus</title>
 </head>
 <body class="text-grey">
-    <header class="sticky top-0 z-30 mb-4 bg-white border-b lg:my-8 lg:border-b-0">
+    <header class="sticky top-0 z-30 mb-0 bg-white border-b sm:mb-4 lg:my-8 lg:border-b-0">
         <nav class="container flex flex-wrap items-center justify-between py-2 font-bold lg:mb-0">
             <div class="basis-1/2 lg:basis-2/12">
                 <a href="./index.html">
-                    <img src="/assets/images/logo-agilus.svg" alt="Logo da Agilus" width="164">
+                    <img src="/assets/images/logo-agilus.svg" alt="Logo da Agilus" width="164" class="w-[164px]">
                 </a>
             </div>
 
@@ -34,22 +34,17 @@
             <div class="flex-grow hidden w-full pt-6 lg:w-auto lg:flex lg:items-center lg:justify-center lg:pt-0" id="nav-content">
                 <ul class="items-center justify-end flex-1 mb-4 text-lg lg:flex lg:justify-center lg:mb-0 lg:text-base">
                     <li class="block py-2 mx-9 lg:inline-block lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
-                        <a class="cursor-pointer" id="menu-ps" class="relative">Produtos e Serviços</a>
-                        <div id="submenu-ps" class="z-20 flex flex-wrap mt-4 text-base bg-white divide-x-0 sr-only lg:absolute lg:flex-nowrap lg:shadow-2xl lg:divide-x lg:p-12">
-                            <div class="w-full lg:mr-16 lg:pl-0">
-                                <h3 class="px-4 font-bold">Produtos</h3>
-                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4">
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold"><a href="./CRMPlanoSaude.html">CRM p/ Plano de saúde</a></li>
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Cred</li>
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Finan</li>
+                        <div class="cursor-pointer" id="menu-ps" class="relative">Produtos e Serviços</div>
+                        <div id="submenu-ps" class="z-20 flex-wrap hidden mt-4 text-base bg-white divide-x-0 lg:absolute lg:flex-nowrap lg:shadow-2xl lg:py-8">
+                            <div class="space-y-2">
+                                <h3 class="px-6 font-bold lg:px-12">Produtos CRM</h3>
+                                <ul class="w-full mt-2 font-normal cursor-pointer lg:mt-4">
+                                    <li class="px-8 py-2 lg:px-16 hover:bg-gray-100 hover:font-bold"><a href="./CRMPlanoSaude.html">Plano de saúde</a></li>
+                                    <li class="px-8 py-2 lg:px-16 hover:bg-gray-100 hover:font-bold"><a href="./CRMConsignado.html">Consignado</a></li>
                                 </ul>
-                            </div>
-                            <div class="w-full mt-4 lg:mt-0 lg:mr-8 lg:pl-16">
-                                <h3 class="px-4 font-bold">Serviços</h3>
-                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4 lg:w-32">
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus alert</li>
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Telefonia</li>
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus alert</li>
+                                <h3 class="px-6 font-bold lg:px-12">Serviços</h3>
+                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4">
+                                    <li class="px-8 py-2 lg:px-16 hover:bg-gray-100 hover:font-bold">Agilus Alert</li>
                                 </ul>
                             </div>
                         </div>
@@ -66,39 +61,46 @@
     </header>
 
     <!-- Modal -->
-    <div class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden h-screen overflow-x-hidden overflow-y-auto bg-opacity-50 bg-neutral-700 backdrop-blur-md md:h-full md:inset-0" id="modal-cta">
-        <div class="relative flex items-center w-full h-full max-w-md px-4 md:h-auto">
-            <div class="relative w-full bg-white rounded-lg shadow">
+    <div class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden h-screen overflow-x-hidden overflow-y-auto bg-opacity-50 bg-neutral-700 backdrop-blur-md sm:h-full" id="modal-cta">
+        <div class="flex items-center w-full h-full max-w-md px-4 sm:h-auto">
+            <div class="w-full h-screen overflow-y-auto bg-white rounded-lg shadow sm:overflow-y-hidden sm:h-auto">
                 <div class="flex justify-between px-6 py-6">
                     <h3 class="text-xl font-medium text-gray-900">Entre em contato</h3>
                     <button type="button" id="btn-close-modal" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm p-1.5 ml-auto inline-flex items-center">
                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
                     </button>
                 </div>
-                <form class="px-6 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8">
+                <form class="px-6 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8" id="form">
                     <div>
-                        <label for="nome" class="block mb-2 text-sm font-medium text-gray-700">Nome da empresa</label>
-                        <input type="text" name="nome" id="nome" placeholder="xyz ltda." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 block w-full p-2.5" required>
-
+                        <label for="nome" class="block mb-2 text-sm font-medium text-gray-700">Seu nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="João Silva" class="input" required>
+                    </div>
+                    <div>
+                        <label for="nomeEmpresa" class="block mb-2 text-sm font-medium text-gray-700">Nome da empresa</label>
+                        <input type="text" name="nomeEmpresa" id="nomeEmpresa" placeholder="xyz ltda." class="input">
                     </div>
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Seu email</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 block w-full p-2.5" placeholder="nome@empresa.com" required>
+                        <input type="email" name="email" id="email" class="input" placeholder="nome@empresa.com" required>
                     </div>
                     <div>
                         <label for="telefone" class="block mb-2 text-sm font-medium text-gray-700">Telefone</label>
-                        <input type="tel" name="telefone" id="telefone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 block w-full p-2.5" placeholder="(xx) xxxxx-xxxx" required>
+                        <input type="tel" name="telefone" id="telefone" class="input" placeholder="(xx) xxxxx-xxxx" required>
                     </div>
+
                     <button id="btn-cta-enviar" type="submit" class="w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">Enviar</button>
+                    
                     <p class="block w-full font-extrabold text-center">ou</p>
+                    
                     <button id="btn-cta-whatsapp" type="submit" class="w-full text-center text-white bg-[#2CB742] focus:bg-green-900 rounded-lg btn flex items-center justify-center space-x-2">
                         <img src="/assets/images/whatsapp.svg" alt="whatsapp" class="w-6 h-6">
                         <span>Whatsapp</span>
                     </button>
                 </form>
-                </div>
+            </div>
         </div>
     </div>
+    <!-- Fim do Modal -->
 
     <section class="pt-16 pb-8 md:py-16 lg:py-20 bg-[#f4f1ff]">
         <div class="container flex flex-col-reverse space-x-0 space-y-4 space-y-reverse sm:space-y-0 lg:space-x-16 lg:flex-row">
@@ -290,6 +292,8 @@
             </aside>
         </section>
     </footer>
+    <script src="//cdn.jsdelivr.net/npm/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
