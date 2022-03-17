@@ -615,9 +615,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
-.my-36 {
-  margin-top: 9rem;
-  margin-bottom: 9rem;
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .mb-4 {
@@ -634,6 +634,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-24 {
   margin-top: 6rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-8 {
@@ -676,10 +680,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.5rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .ml-4 {
   margin-left: 1rem;
 }
@@ -704,8 +704,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: -1px;
 }
 
-.mb-7 {
-  margin-bottom: 1.75rem;
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .block {
@@ -792,14 +792,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 4rem;
 }
 
-.w-10 {
-  width: 2.5rem;
-}
-
 .w-max {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .max-w-md {
@@ -905,8 +909,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 2rem;
 }
 
-.gap-y-12 {
-  row-gap: 3rem;
+.gap-x-36 {
+  -moz-column-gap: 9rem;
+       column-gap: 9rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1084,11 +1089,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(54 1 137 / var(--tw-bg-opacity));
 }
 
-.bg-secondary-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 227 244 / var(--tw-bg-opacity));
-}
-
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -1153,6 +1153,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-6 {
@@ -1326,19 +1331,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.text-neutral-500 {
-  --tw-text-opacity: 1;
-  color: rgb(115 115 115 / var(--tw-text-opacity));
-}
-
-.text-secondary-800 {
-  --tw-text-opacity: 1;
-  color: rgb(190 76 150 / var(--tw-text-opacity));
-}
-
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-neutral-500 {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1368,12 +1368,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1509,6 +1503,13 @@ input:checked ~ .dot {
   --tw-ring-color: rgb(100 43 189 / var(--tw-ring-opacity));
 }
 
+.icon-done {
+  background-image: url(/assets/images/done_black_18dp.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  padding-left: 24px;
+}
+
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -1618,6 +1619,10 @@ input:checked ~ .dot {
     height: auto;
   }
 
+  .sm\:w-2\/3 {
+    width: 66.666667%;
+  }
+
   .sm\:w-full {
     width: 100%;
   }
@@ -1668,6 +1673,11 @@ input:checked ~ .dot {
     overflow-y: hidden;
   }
 
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .sm\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -1693,11 +1703,6 @@ input:checked ~ .dot {
     padding-bottom: 6rem;
   }
 
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .sm\:pb-6 {
     padding-bottom: 1.5rem;
   }
@@ -1719,6 +1724,10 @@ input:checked ~ .dot {
 
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
   }
 
   .md\:w-1\/2 {
@@ -1752,6 +1761,11 @@ input:checked ~ .dot {
     margin-bottom: calc(4rem * var(--tw-space-y-reverse));
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -1760,11 +1774,6 @@ input:checked ~ .dot {
   .md\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .md\:pb-24 {
@@ -1869,6 +1878,10 @@ input:checked ~ .dot {
     width: 8rem;
   }
 
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .lg\:w-7\/12 {
     width: 58.333333%;
   }
@@ -1897,8 +1910,8 @@ input:checked ~ .dot {
     width: 60%;
   }
 
-  .lg\:w-1\/3 {
-    width: 33.333333%;
+  .lg\:w-2\/5 {
+    width: 40%;
   }
 
   .lg\:basis-2\/12 {
@@ -1960,15 +1973,6 @@ input:checked ~ .dot {
          column-gap: 4rem;
   }
 
-  .lg\:gap-y-0 {
-    row-gap: 0px;
-  }
-
-  .lg\:gap-x-8 {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-
   .lg\:space-x-16 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(4rem * var(--tw-space-x-reverse));
@@ -2024,11 +2028,6 @@ input:checked ~ .dot {
     padding-bottom: 0.25rem;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -2042,6 +2041,11 @@ input:checked ~ .dot {
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:py-20 {
@@ -2148,24 +2152,9 @@ input:checked ~ .dot {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .xl\:gap-x-12 {
-    -moz-column-gap: 3rem;
-         column-gap: 3rem;
-  }
-
   .xl\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
-  }
-
-  .xl\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .xl\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
 
   .xl\:pb-8 {
