@@ -66,6 +66,49 @@
             </div>
         </nav>
     </header>
+
+    <!-- Modal -->
+    <div class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden h-screen overflow-x-hidden overflow-y-auto bg-opacity-50 bg-neutral-700 backdrop-blur-md sm:h-full" id="modal-cta">
+        <div class="flex items-center w-full h-full max-w-md px-4 sm:h-auto">
+            <div class="w-full h-screen overflow-y-auto bg-white rounded-lg shadow sm:overflow-y-hidden sm:h-auto">
+                <div class="flex justify-between px-6 py-6">
+                    <h3 class="text-xl font-medium text-gray-900">Entre em contato</h3>
+                    <button type="button" id="btn-close-modal" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm p-1.5 ml-auto inline-flex items-center">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                    </button>
+                </div>
+                <form class="px-6 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8" id="form">
+                    <div>
+                        <label for="nome" class="block mb-2 text-sm font-medium text-gray-700">Seu nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="João Silva" class="input" required>
+                    </div>
+                    <div>
+                        <label for="nomeEmpresa" class="block mb-2 text-sm font-medium text-gray-700">Nome da empresa</label>
+                        <input type="text" name="nomeEmpresa" id="nomeEmpresa" placeholder="xyz ltda." class="input">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Seu email</label>
+                        <input type="email" name="email" id="email" class="input" placeholder="nome@empresa.com" required>
+                    </div>
+                    <div>
+                        <label for="telefone" class="block mb-2 text-sm font-medium text-gray-700">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" class="input" placeholder="(xx) xxxxx-xxxx" required>
+                    </div>
+
+                    <button id="btn-cta-enviar" type="submit" class="w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">Enviar</button>
+                    
+                    <p class="block w-full font-extrabold text-center">ou</p>
+                    
+                    <button id="btn-cta-whatsapp" type="submit" class="w-full text-center text-white bg-[#2CB742] focus:bg-green-900 rounded-lg btn flex items-center justify-center space-x-2">
+                        <img src="/assets/images/whatsapp.svg" alt="whatsapp" class="w-6 h-6">
+                        <span>Whatsapp</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Fim do Modal -->
+
     <main class="container pt-8 sm:pt-10 md:pt-16 lg:pt-24" data-aos="fade-up" data-aos-duration="800">
         <section class="flex flex-col items-center w-full py-24 mb-16 bg-primary-50" data-aos="fade-down">
             <h2 class="w-full mb-8 text-3xl font-bold text-center lg:text-4xl text-title">Planos e preços</h2>
@@ -130,7 +173,7 @@
                         <li class="mb-3 icon-done"> Integração com sistemas de higienização de cliente</li>
                     </ul>
                     <div class="flex justify-center mt-8">
-                        <button class="px-8 py-4 text-lg font-semibold text-white bg-primary-800">Contratar</button>
+                        <button id="btn-cta" class="px-8 py-4 text-lg font-semibold text-white bg-primary-800">Contratar</button>
                     </div>
                 </div>
             </div>
@@ -180,29 +223,12 @@
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
         AOS.init();
     </script>
     <script>
-        const menuPS = document.getElementById('menu-ps') // li produtos e serviços
-        const submenuPS = document.getElementById('submenu-ps') // lista dentro de produtos e serviços
-        const buttonToggle = document.getElementById('nav-toggle') // menu hamburguer
-        const navContent = document.getElementById('nav-content') // links do header
-
-        buttonToggle.addEventListener('click', () => {
-            navContent.classList.toggle('hidden')
-        })
-
-        menuPS.addEventListener('click', () => {
-            submenuPS.className.includes('sr-only') ?
-                submenuPS.classList.remove('sr-only')
-            :   submenuPS.classList.add('sr-only')
-        })
-        
-        submenuPS.addEventListener('mouseleave', () => {
-            submenuPS.classList.add('sr-only')
-        })
-        
         const planos = [
             {
                 nome: 'Avançado',
@@ -237,7 +263,7 @@
                 }
             }
         })
-
     </script>
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>
