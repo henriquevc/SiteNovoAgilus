@@ -27,4 +27,5 @@ input:checked ~ .dot {
   background-repeat: no-repeat;
   background-position-y: center;
   padding-left: 24px;
+  background-position-x: 4px;
 }
