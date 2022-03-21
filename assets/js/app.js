@@ -26,9 +26,15 @@ submenuPS.addEventListener('mouseleave', () => {
     submenuPS.classList.toggle('hidden')
 })
 
-btnCta.addEventListener('click', toggleModal())
-btnCta2.addEventListener('click', toggleModal())
-btnCloseModalCta.addEventListener('click', toggleModal())
+if (btnCta) {
+    btnCta.addEventListener('click', toggleModal())
+}
+if (btnCta2) {
+    btnCta2.addEventListener('click', toggleModal())
+}
+if (btnCloseModalCta) {
+    btnCloseModalCta.addEventListener('click', toggleModal())
+}
 
 formModalCta.addEventListener('submit', event => {
   event.preventDefault()
@@ -49,12 +55,16 @@ btnCtaEnviar.addEventListener('click', () => {
         return
     }
 
-    axios.post('http://7da7-186-230-40-78.ngrok.io/enviar', {
-        'para': 'henriquevc93@gmail.com',
-        'assunto': 'Cliente interessado no Agilus CRM - contato pelo site',
-        'corpoEmail': `Nome do cliente: ${nome}\nNome Empresa: ${nomeEmpresa}\nEmail: ${email}\nTelefone: ${telefone}`
+    axios.post('https://api.smtp2go.com/v3/email/send', {
+        api_key: 'api-8EE83DF07ECE11E8A036F23C91C88F4E',
+        to: ["Henrique Vilanova <henriquevc93@gmail.com>"],
+        sender: "Site Agilus <site@agilus.com.br>",
+        subject: 'Cliente interessado no Agilus CRM - contato pelo site',
+        text_body: `Nome do cliente: ${nome}\nNome Empresa: ${nomeEmpresa}\nEmail: ${email}\nTelefone: ${telefone}`
     }).then(() => {
-        (toggleModal())()
+        if (modalCta) {
+            (toggleModal())()
+        }
         alert('Recebemos os seus dados e já entraremos em contato! Obrigado')
     }).catch(error => {
         alert('Não foi possível enviar o contato. Fale com a gente pelo número (11) 4040-8065')
