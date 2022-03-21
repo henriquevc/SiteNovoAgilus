@@ -17,11 +17,11 @@
     <title>Agilus</title>
 </head>
 <body class="text-neutral-700">
-    <header class="sticky top-0 z-10 mb-4 bg-white border-b lg:my-8 lg:border-b-0">
+    <header class="sticky top-0 z-30 py-1 bg-white border-b lg:border-b-0">
         <nav class="container flex flex-wrap items-center justify-between py-2 font-bold lg:mb-0">
             <div class="basis-1/2 lg:basis-2/12">
                 <a href="./index.html">
-                    <img src="/assets/images/logo-agilus.svg" alt="Logo da Agilus" width="164">
+                    <img src="/assets/images/logo-agilus.svg" alt="Logo da Agilus" width="164" class="w-[164px]">
                 </a>
             </div>
 
@@ -36,29 +36,24 @@
             <div class="flex-grow hidden w-full pt-6 lg:w-auto lg:flex lg:items-center lg:justify-center lg:pt-0" id="nav-content">
                 <ul class="items-center justify-end flex-1 mb-4 text-lg lg:flex lg:justify-center lg:mb-0 lg:text-base">
                     <li class="block py-2 mx-9 lg:inline-block lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
-                        <a href="#" id="menu-ps" class="relative">Produtos e Serviços</a>
-                        <div id="submenu-ps" class="z-20 flex flex-wrap mt-4 text-base bg-white divide-x-0 sr-only lg:absolute lg:flex-nowrap lg:shadow-2xl lg:divide-x lg:p-12">
-                            <div class="w-full lg:mr-16 lg:pl-0">
-                                <h3 class="px-4 font-bold">Produtos</h3>
-                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4 lg:w-32">
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus CRM</li>
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Cred</li>
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus Finan</li>
+                        <div class="cursor-pointer" id="menu-ps" class="relative">Produtos e Serviços</div>
+                        <div id="submenu-ps" class="z-20 flex-wrap hidden mt-4 text-base bg-white divide-x-0 lg:absolute lg:flex-nowrap lg:shadow-2xl lg:py-8">
+                            <div class="space-y-2">
+                                <h3 class="px-6 font-bold lg:px-12">Produtos CRM</h3>
+                                <ul class="w-full mt-2 font-normal cursor-pointer lg:mt-4">
+                                    <li class="px-8 py-2 lg:px-16 hover:bg-gray-100 hover:font-bold"><a href="./CRMPlanoSaude.html">Plano de saúde</a></li>
+                                    <li class="px-8 py-2 lg:px-16 hover:bg-gray-100 hover:font-bold"><a href="./CRMConsignado.html">Consignado</a></li>
                                 </ul>
-                            </div>
-                            <div class="w-full mt-4 lg:mt-0 lg:mr-8 lg:pl-16">
-                                <h3 class="px-4 font-bold">Serviços</h3>
-                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4 lg:w-32">
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus alert</li>
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Telefonia</li>
-                                    <li class="px-4 lg:py-1 hover:bg-gray-100 hover:font-bold">Agilus alert</li>
+                                <h3 class="px-6 font-bold lg:px-12">Serviços</h3>
+                                <ul class="w-full mt-2 space-y-4 font-normal cursor-pointer lg:mt-4">
+                                    <li class="px-8 py-2 lg:px-16 hover:bg-gray-100 hover:font-bold">Agilus Alert</li>
                                 </ul>
                             </div>
                         </div>
                     </li>
-                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./precos.html">Preços</a></li>
-                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./sobre.html">Empresa</a></li>
-                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./contato.html">Contato</a></li>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Precos.html">Preços</a></li>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Sobre.html">Empresa</a></li>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Contato.html">Contato</a></li>
                 </ul>
             </div>
             <div class="hidden lg:block">
@@ -109,38 +104,22 @@
     </div>
     <!-- Fim do Modal -->
 
-    <main class="container pt-8 sm:pt-10 md:pt-16 lg:pt-24" data-aos="fade-up" data-aos-duration="800">
-        <section class="flex flex-col items-center w-full py-24 mb-16 bg-primary-50" data-aos="fade-down">
-            <h2 class="w-full mb-8 text-3xl font-bold text-center lg:text-4xl text-title">Planos e preços</h2>
-            <p class="w-full px-12 text-base text-center sm:w-1/2 lg:w-1/3 xl:1/4">Veja os recursos disponiveis no sistema, escolha a recorrência da mensalidade, conheça todas os recursos e entre em contato com a gente.</p>
-            
-            <!-- Quantidade de usuários e tipo de cobrança -->
-            <!-- <div class="flex flex-col items-center justify-center mt-12 mb-16 lg:mt-16 lg:mb-24">
-                <div class="flex flex-col items-center justify-center mb-12">
-                    <div class="text-lg font-medium">Quantidade de usuários</div>
-                    <div class="h-8 mt-2 rounded-full ring ring-primary-800">
-                        <button class="h-full px-3 -ml-px text-white rounded-l-full bg-primary-800">-</button>
-                        <span class="px-3">5</span>
-                        <button class="h-full px-3 -mr-px text-white rounded-r-full bg-primary-800">+</button>
-                    </div>
+    <main>
+        <section class="py-12 bg-primary-50 md:py-16 lg:py-24">
+            <div class="container flex flex-col w-full gap-8 lg:gap-16 md:flex-row sm:items-center md:items-start">
+                
+                <div class="flex flex-col w-full sm:pt-16 sm:w-1/2 md:w-1/3 xl:w-1/4" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="w-full mb-4 text-3xl font-bold lg:text-4xl text-title">Plano CRM</h2>
+                    <p class="w-full text-base">Veja e conheça todos os recursos disponiveis no sistema, escolha a melhor forma de recorrência da mensalidade e entre em contato com a gente.</p>
                 </div>
-                <div class="flex px-3 space-x-3 text-base font-medium lg:text-lg">
-                    
-                </div>
-            </div> -->
-            
-            <!-- Planos -->
-            <div class="flex flex-row justify-center w-full mt-16">
-                <div class="px-8 py-12 mx-4 bg-white shadow-2xl sm:mx-32 lg:mx-0 lg:px-8 lg:w-2/5">
-                    <div class="flex justify-center w-full mb-4">
-                        <span class="flex px-4 py-2 text-sm font-semibold text-gray-500 transition duration-300 bg-gray-200 rounded-full align-center w-max ease">Mais vendido</span>
-                    </div>
-                    <h4 class="text-3xl font-semibold text-center xl:text-4xl">Padrão</h4>
-                    <div class="flex flex-col items-center mt-12 space-y-4">
+                
+                <div class="flex flex-col w-full px-8 py-16 bg-white shadow-2xl lg:space-x-4 sm:px-12 xl:flex-row sm:w-2/3 xl:w-3/4" data-aos="fade-right" data-aos-duration="800">
+                    <div class="flex flex-col items-center justify-center w-full xl:w-2/5">
                         <div>
-                            <strong class="text-3xl font-extrabold" id="valor">R$50</strong><span class="text-sm text-neutral-500">/<span id="recorrencia">mês</span> por usuário</span>
+                            <strong class="text-4xl font-extrabold" id="valor">R$50</strong>
+                            <span class="text-sm text-neutral-500">/<span id="recorrencia">mês</span> por usuário</span>
                         </div>
-                        <div class="flex flex-row space-x-2">
+                        <div class="flex flex-row mt-3 space-x-2">
                             <span id="textoCheckboxMes">por mês</span>
                             <label for="toggle" class="flex items-center cursor-pointer">
                                 <div class="relative">
@@ -151,31 +130,40 @@
                             </label>
                             <span id="textoCheckboxAno">por ano</span>
                         </div>
+                        <div class="flex justify-center w-full mt-12">
+                            <button id="btn-cta" class="w-full px-8 py-4 text-lg font-semibold text-white bg-primary-800">
+                                Contratar
+                            </button>
+                        </div>
                     </div>
-                    <ul class="py-8 mt-8 text-sm border-y">
-                        <li class="mb-3 icon-done">Sistema financeiro</li>
-                        <li class="mb-3 icon-done"> Cadastro de leads</li>
-                        <li class="mb-3 icon-done"> Integração com seu site</li>
-                        <li class="mb-3 icon-done"> Importação de dados permitindo adaptações de layout</li>
-                        <li class="mb-3 icon-done"> Distribuição de base de dados para os vendedores com grande flexibilidade</li>
-                        <li class="mb-3 icon-done"> Linha do tempo da negociação</li>
-                        <li class="mb-3 icon-done"> Controle de atividades para execução</li>
-                        <li class="mb-3 icon-done"> Gestão de vendas por tipo de negociação</li>
-                        <li class="mb-3 icon-done"> Controle total do comissionamento e alta customização do método de pagamento.</li>
-                        <li class="mb-3 icon-done"> Permite utilizar em várias filiais, com gerenciamento centralizado</li>
-                        <li class="mb-3 icon-done"> Hierarquias ilimitadas entre vendedores, para distribuição de comissão</li>
-                        <li class="mb-3 icon-done"> Grande flexibilidade na forma de cálculo de comissão.</li>
-                        <li class="mb-3 icon-done"> Poderoso construtor de fórmulas: monte todas as suas regras de comissionamento em um só lugar</li>
-                        <li class="mb-3 icon-done"> Fórmulas de comissão</li>
-                        <li class="mb-3 icon-done"> Anexo de documentos</li>
-                        <li class="mb-3 icon-done"> Notificações</li>
-                        <li class="mb-3 icon-done"> Relatórios</li>
-                        <li class="mb-3 icon-done"> Integração com sistemas de higienização de cliente</li>
+                    <ul class="flex flex-row flex-wrap w-full mt-4 text-sm sm:mt-8 xl:mt-0 xl:w-3/5 xl:justify-start">
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Sistema financeiro</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Gerenciamento de Leads</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Integração com seu site</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Importação de dados</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Distribuição de base de dados</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Linha do tempo</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle de atividades</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Gestão de vendas</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle de comissões</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Utilização em várias filiais</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Hierarquias de vendedores</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Cálculo de comissão</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Fórmulas de comissão</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Anexo de documentação</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Notificações</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Relatórios</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Integração com sistemas de higienização de cliente</li>
                     </ul>
-                    <div class="flex justify-center mt-8">
-                        <button id="btn-cta" class="px-8 py-4 text-lg font-semibold text-white bg-primary-800">Contratar</button>
-                    </div>
                 </div>
+            </div>
+        </section>
+        <section class="py-24 bg-white">
+            <div class="container text-center">
+                <h2 class="text-2xl font-bold text-title lg:text-3xl">
+                    Ainda esta com dúvidas?
+                </h2>
+                <button class="mt-8 text-white shadow-2xl btn bg-primary-800 shadow-primary-800" id="btn-cta2">Vamos conversar</button>
             </div>
         </section>
     </main>
