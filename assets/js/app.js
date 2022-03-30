@@ -1,6 +1,8 @@
 const menuPS = document.getElementById('menu-ps') // li produtos e serviços
+const menuP = document.getElementById('menu-p') // li preços
 const submenuPS = document.getElementById('submenu-ps') // lista dentro de produtos e serviços
-const buttonToggle = document.getElementById('nav-toggle') // menu hamburguer
+const submenuP = document.getElementById('submenu-p') // lista dentro de preços
+const buttonMenuHamburguer = document.getElementById('nav-toggle') // menu hamburguer
 const navContent = document.getElementById('nav-content') // links do header
 const btnCta = document.getElementById('btn-cta') // botão de cta (click-to-action)
 const btnCta2 = document.getElementById('btn-cta2')
@@ -11,19 +13,33 @@ const btnCtaWhatsapp = document.getElementById('btn-cta-whatsapp')
 const btnCtaEnviar = document.getElementById('btn-cta-enviar')
 const inputTelefone = document.getElementById('telefone')
 
-VMasker(inputTelefone).maskPattern('(99) 99999-9999')
+if (inputTelefone) {
+    VMasker(inputTelefone).maskPattern('(99) 99999-9999')
+}
 
-buttonToggle.addEventListener('click', () => {
+buttonMenuHamburguer.addEventListener('click', () => {
     navContent.classList.toggle('hidden')
 })
 
 menuPS.addEventListener('click', () => {
-    submenuPS.classList.toggle('hidden')
-    submenuPS.classList.toggle('flex')
+    toggleSubMenu(submenuPS)
 })
 
+menuP.addEventListener('click', () => {
+    toggleSubMenu(submenuP)
+})
+
+function toggleSubMenu (element) {
+    element.classList.toggle('hidden')
+    element.classList.toggle('flex')
+}
+
 submenuPS.addEventListener('mouseleave', () => {
-    submenuPS.classList.toggle('hidden')
+    toggleSubMenu(submenuPS)
+})
+
+submenuP.addEventListener('mouseleave', () => {
+    toggleSubMenu(submenuP)
 })
 
 if (btnCta) {

@@ -29,3 +29,7 @@ input:checked ~ .dot {
   padding-left: 24px;
   background-position-x: 4px;
 }
+
+.selected {
+  @apply text-white bg-primary-600;
+}
