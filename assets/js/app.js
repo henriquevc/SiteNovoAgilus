@@ -61,8 +61,8 @@ btnCtaWhatsapp.addEventListener('click', () => {
     if (!nome) {
         return
     }
-    let mensagem = `Olá. Meu nome é ${nome} ${nomeEmpresa ? '(da empresa ' + nomeEmpresa + ')' : ''} e gostaria de mais informações sobre o AgilusCRM.`
-    window.open(`https://api.whatsapp.com/send?phone=+5511976847567&text=${encodeURI(mensagem)}`, '_blank')
+    let mensagem = `Olá. Meu nome é ${nome} ${nomeEmpresa ? '(da empresa ' + nomeEmpresa + ')' : ''} e gostaria de mais informações sobre o sistema da Agilus.`
+    window.open(`https://api.whatsapp.com/send?phone=+5511930426110&text=${encodeURI(mensagem)}`, '_blank')
 })
 
 btnCtaEnviar.addEventListener('click', () => {
@@ -73,7 +73,7 @@ btnCtaEnviar.addEventListener('click', () => {
 
     axios.post('https://api.smtp2go.com/v3/email/send', {
         api_key: 'api-8EE83DF07ECE11E8A036F23C91C88F4E',
-        to: ["Henrique Vilanova <henriquevc93@gmail.com>"],
+        to: ["Comercial Agilus <comercial@agilus.com.br>"],
         sender: "Site Agilus <site@agilus.com.br>",
         subject: 'Cliente interessado no Agilus CRM - contato pelo site',
         text_body: `Nome do cliente: ${nome}\nNome Empresa: ${nomeEmpresa}\nEmail: ${email}\nTelefone: ${telefone}`

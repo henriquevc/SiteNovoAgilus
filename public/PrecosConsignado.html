@@ -106,7 +106,7 @@
     <!-- Fim do Modal -->
 
     <main>
-        <section class="py-12 bg-primary-50 md:py-16 lg:py-24">
+        <section class="py-12 bg-secondary-50 md:py-16 lg:py-24">
             <div class="container flex flex-col w-full gap-8 lg:gap-16 md:flex-row sm:items-center md:items-start">
                 
                 <div class="flex flex-col w-full sm:pt-16 sm:w-1/2 md:w-1/3 xl:w-1/4" data-aos="fade-up" data-aos-duration="800">
@@ -158,12 +158,41 @@
                 </div>
             </div>
         </section>
-        <section class="py-24 bg-white">
+        <section class="container py-12 md:py-16 lg:py-24">
+            <h2 class="w-full mb-4 text-3xl font-bold text-center lg:text-4xl text-title">Por que ser Agilus</h2>
+            <div class="grid gap-8 mt-16 sm:grid-cols-2 md:grid-cols-3">
+                <div class="p-8">
+                    <h3 class="mb-2 text-xl font-semibold">Experiência e Credibilidade</h3>
+                    <p class="text-base text-neutral-600">Desde 2001 consolidamos um nome de confiança perante ao mercado. O sistema foi crescendo de acordo com as necessidades e as sugestões dos clientes</p>
+                </div>
+                <div class="p-8">
+                    <h3 class="mb-2 text-xl font-semibold">Preço Justo / Custo Benefício</h3>
+                    <p class="text-base text-neutral-600">Preço de acordo com a sua necessidade. O valor da mensalidade encaixa-se perfeitamente no seu bolso de acordo com a estrutura da empresa.</p>
+                </div>
+                <div class="p-8">
+                    <h3 class="mb-2 text-xl font-semibold">Inovação</h3>
+                    <p class="text-base text-neutral-600">Seguimos as tendências do mercado para que o sistema fique sempre funcional às novidades. Teve alteração em alguma regra? O Agilus se adapta a ela.</p>
+                </div>
+                <div class="p-8">
+                    <h3 class="mb-2 text-xl font-semibold">Sistema Customizável</h3>
+                    <p class="text-base text-neutral-600">Customize seu sistema como preferir. Quem define o que os funcionários terão de acesso é você! Inclua e remova funções com apenas um clique.</p>
+                </div>
+                <div class="p-8">
+                    <h3 class="mb-2 text-xl font-semibold">Parcerias</h3>
+                    <p class="text-base text-neutral-600">Armazene seus dados num servidor online e conte com toda segurança e infraestrutura da UOL Host. Integrações para atualizações de dados também estão sempre disponíveis.</p>
+                </div>
+                <div class="p-8">
+                    <h3 class="mb-2 text-xl font-semibold">Atendimento Diferenciado</h3>
+                    <p class="text-base text-neutral-600">Suporte diário por telefone, skype ou e-mail. Precisa de um auxílio presencial? Agende uma visita que vamos até sua empresa dar um treinamento.</p>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-secondary-50">
             <div class="container text-center">
                 <h2 class="text-2xl font-bold text-title lg:text-3xl">
-                    Ainda esta com dúvidas?
+                    Ainda está com dúvidas?
                 </h2>
-                <button class="mt-8 text-white shadow-2xl btn bg-primary-800 shadow-primary-800" id="btn-cta2">Vamos conversar</button>
+                <button class="mt-8 text-white shadow-2xl btn bg-secondary-800 shadow-secondary-800" id="btn-cta2">Vamos conversar</button>
             </div>
         </section>
     </main>
@@ -239,7 +268,7 @@
                 valorMensal: 1550
             }
         ]
-        
+
         const trocaValor = (id) => {
             const textoValor = document.getElementById('valor')
             
@@ -256,7 +285,7 @@
             textoValor.innerHTML = valorFormatado
         }
 
-        trocaValor(2) //selecionando o plano «Até 20 usuários»
+        trocaValor(0) //selecionando o plano «Até 20 usuários»
     </script>
     <script src="/assets/js/app.js"></script>
 </body>
