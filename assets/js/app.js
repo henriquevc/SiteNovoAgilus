@@ -71,9 +71,13 @@ btnCtaEnviar.addEventListener('click', () => {
         return
     }
 
+    // Decrypt
+    var bytes = CryptoJS.AES.decrypt('U2FsdGVkX19LnNqqfCDPKKIWu5mnph44PKD+jenSqMQvVWxO6Nz1vdO+vWWQpk3DLBNwoBrUMw/XXGP4oa1Tpw==', 'henriquecarvalho')
+    var secretKey = bytes.toString(CryptoJS.enc.Utf8)
+
     axios.post('https://api.smtp2go.com/v3/email/send', {
-        api_key: 'api-8EE83DF07ECE11E8A036F23C91C88F4E',
-        to: ["Comercial Agilus <comercial@agilus.com.br>"],
+        api_key: secretKey,
+        to: ["Comercial Agilus <henrique@agilus.com.br>"],
         sender: "Site Agilus <site@agilus.com.br>",
         subject: 'Cliente interessado no Agilus CRM - contato pelo site',
         text_body: `Nome do cliente: ${nome}\nNome Empresa: ${nomeEmpresa}\nEmail: ${email}\nTelefone: ${telefone}`

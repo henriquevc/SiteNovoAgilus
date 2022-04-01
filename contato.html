@@ -8,18 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/output.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="/assets/css/build.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <title>Agilus</title>
+    <title>Agilus - Contato</title>
+    <script src="//code-sa1.jivosite.com/widget/WFZtAfr4QY" async></script>
 </head>
-<body class="text-grey">
+<body class="text-neutral-700">
     <header class="sticky top-0 z-30 py-2 bg-white border-b lg:border-b-0">
         <nav class="container flex flex-wrap items-center justify-between py-2 font-bold lg:mb-0">
             <div class="basis-1/2 lg:basis-2/12">
                 <a href="./index.html">
-                    <img src="/assets/images/logo-agilus.svg" alt="Logo da Agilus" width="164" class="w-[164px]">
+                    <img src="/assets/images/logo-agilus.svg" alt="Logo da Agilus" width="164" height="64" class="w-[164px] h-16">
                 </a>
             </div>
 
@@ -63,18 +64,22 @@
             </div>
         </nav>
     </header>
-
-    <!-- Modal -->
-    <div class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden h-screen overflow-x-hidden overflow-y-auto bg-opacity-50 bg-neutral-700 backdrop-blur-md sm:h-full" id="modal-cta">
-        <div class="flex items-center w-full h-full max-w-md px-4 sm:h-auto">
-            <div class="w-full h-screen overflow-y-auto bg-white rounded-lg shadow sm:overflow-y-hidden sm:h-auto">
-                <div class="flex justify-between px-6 py-6">
-                    <h3 class="text-xl font-medium text-gray-900">Entre em contato</h3>
-                    <button type="button" id="btn-close-modal" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm p-1.5 ml-auto inline-flex items-center">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
-                    </button>
+    <main class="container my-12 sm:my-16 md:my-24">
+        <section class="flex flex-col justify-center gap-12 px-2 lg:gap-16 sm:flex-row sm:px-4 md:px-0">
+            <div class="flex flex-col w-full space-y-8 sm:w-1/2">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-3xl font-bold text-center text-title">Fale conosco</h2>
+                    <p class="w-full mt-4 text-base text-center md:w-4/5">Entre em contato conosco para saber como a Agilus pode apoiar seu negócio. Preencha o formulário ou ligue para <strong>(11) 4040-8065</strong> e nossos especialistas lhe aconselharão sobre as melhores soluções para sua empresa.</p>
                 </div>
-                <form class="px-6 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8" id="form">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-3xl font-bold text-title">Onde estamos?</h2>
+                    <p class="w-full mt-4 text-base text-center md:w-2/3">A Agilus hoje está situada na zona sul de São Paulo - SP, próxima ao Metrô Santa Cruz.</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.101096542787!2d-46.6379829856188!3d-23.60070698466333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a33f3e803bf%3A0xbc36d409cec08de4!2sR.+Timburiba%2C+90+-+Vila+Mariana%2C+S%C3%A3o+Paulo+-+SP%2C+04119-080!5e0!3m2!1spt-BR!2sbr!4v1539522854429" height="280" frameborder="0" class="w-full mx-2 mt-4 md:mx-0 md:w-11/12 lg:w-3/4 xl:w-3/5"></iframe>
+                    <span class="mt-2 text-sm text-center">Rua Timburiba, 90 - Vila Mariana - São Paulo - SP - 04119-080</span>
+                </div>
+            </div>
+            <div class="flex justify-center w-full sm:w-1/2">
+                <form id="form" class="w-full pb-4 space-y-6 lg:w-4/5">
                     <div>
                         <label for="nome" class="block mb-2 text-sm font-medium text-gray-700">Seu nome</label>
                         <input type="text" name="nome" id="nome" placeholder="João Silva" class="input" required>
@@ -85,68 +90,26 @@
                     </div>
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Seu email</label>
-                        <input type="email" name="email" id="email" class="input" placeholder="nome@empresa.com" required>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 block w-full p-2.5" placeholder="nome@empresa.com" required>
                     </div>
                     <div>
                         <label for="telefone" class="block mb-2 text-sm font-medium text-gray-700">Telefone</label>
-                        <input type="tel" name="telefone" id="telefone" class="input" placeholder="(xx) xxxxx-xxxx" required>
+                        <input type="tel" name="telefone" id="telefone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 block w-full p-2.5" placeholder="(xx) xxxxx-xxxx" required>
                     </div>
-
                     <button id="btn-cta-enviar" type="submit" class="w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">Enviar</button>
-                    
                     <p class="block w-full font-extrabold text-center">ou</p>
-                    
                     <button id="btn-cta-whatsapp" type="submit" class="w-full text-center text-white bg-[#2CB742] focus:bg-green-900 rounded-lg btn flex items-center justify-center space-x-2">
                         <img src="/assets/images/whatsapp.svg" alt="whatsapp" class="w-6 h-6">
                         <span>Whatsapp</span>
                     </button>
                 </form>
             </div>
-        </div>
-    </div>
-    <!-- Fim do Modal -->
-
-    <section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-primary-50">
-        <div class="container">
-            <div class="flex flex-col-reverse items-center gap-8 md:my-16 lg:gap-24 xl:gap-36 lg:flex-row">
-                <div class="flex flex-col justify-center sm:w-2/3 md:w-3/4 lg:w-1/2">
-                    <h1 class="text-3xl font-semibold text-left lg:text-4xl text-title">Quem somos</h1>
-                    <p class="mt-8 text-base text-left">Fundada em 2001, a Agilus é uma empresa que leva soluções inovadoras para diversos ramos de atuação. Sabemos que existem muitas soluções genéricas, mas que não entendem a fundo o mercado que estão atuando e a necessidade real do cliente. Por isso está em nosso DNA estudar e entender o mercado, escutarmos nossos clientes e nos adaptarmos constantemente a todas as regras do negócio rapidamente.</p>
-                    <p class="mt-4 text-base text-left">Por isso está em nosso DNA estudar e entender o mercado, escutamos nossos clientes e nos adaptamos constantemente a todas as regras do mercado rapidamente.</p>
-                    <p class="mt-4 text-base text-left">Priorizamos o nível mais elevado de atendimento. Treinamos nossa equipe para dar o suporte que gostaríamos que a nossa empresa recebesse. Por isso, a Agilus sabe que cada negócio é único, com características e necessidades especificas, nossa equipe está em constante aprimoramento buscando novas soluções para tornar o seu dia a dia mais inteligente e produtivo.</p>
-                </div>
-                <div class="flex justify-center sm:w-2/3 md:w-3/4 lg:w-1/2">
-                    <img src="/assets/images/Agilus-equipe-inteira-recortada.png" alt="foto de toda a equipe da agilus" class="w-full">
-                </div>
-            </div>
-
-            <div class="flex flex-col items-center gap-8 md:my-16 lg:gap-24 xl:gap-36 lg:flex-row">
-                <div class="flex flex-row flex-wrap justify-center gap-8 sm:w-2/3 md:w-3/4 lg:w-1/2">
-                    <img src="/assets/images/agilus-equipe-desenvolvedores.jpg" alt="foto dos sócios da agilus">
-                </div>
-                <div class="flex flex-col justify-center sm:w-2/3 md:w-3/4 lg:w-1/2">
-                    <span style="font-size: 1px">o plano</span>
-                    <h1 class="text-3xl font-semibold text-center lg:text-4xl text-title">Missão</h1>
-                    <p class="mt-8 text-base text-center">Inspirar e incentivar o senso crítico de nossos colaboradores e fazer com que todos sintam-se felizes em fazerem parte da família Agilus. Tornar o nosso ambiente diário o melhor local de trabalho para que todos venham motivados e dedicados para aprender e evoluír constantemente, tanto como profissionais quanto como pessoas.</p>
-                </div>
-            </div>
-
-            <div class="flex flex-col-reverse items-center gap-8 md:my-16 lg:gap-24 xl:gap-36 lg:flex-row">
-                <div class="flex flex-col justify-center sm:w-2/3 md:w-3/4 lg:w-1/2">
-                    <h1 class="text-3xl font-semibold text-center lg:text-4xl text-title">Valores</h1>
-                    <p class="mt-8 text-base text-center">Ser reconhecida como uma das melhores empresas para se trabalhar no Brasil. Ser vista como um amplo espaço de aprendizado, desenvolvimento e valorização para os colaboradores, o que fará com que tragam cada vez melhores soluções aos nossos clientes.</p>
-                </div>
-                <div class="flex justify-center sm:w-2/3 md:w-3/4">
-                    <img src="/assets/images/agilus-equipe-suporte.jpg" alt="equipe do suporte">
-                </div>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <footer class="flex w-full pb-16 text-white bg-black">
         <section class="container grid grid-cols-1 gap-8 pt-16 lg:gap-16 lg:grid-cols-3 lg:pt-24">
             <aside>
-                <img src="/assets/images/logo-agilus-rosa.svg" alt="logotipo rosa">
+                <img src="/assets/images/logo-agilus-rosa.svg" alt="logotipo rosa" width="50" height="50">
                 <p class="pr-8 mt-8 text-base">A Agilus é uma empresa de desenvolvimento de sistemas que buscam auxiliar os clientes com uma linguagem e, principalmente, recursos próprios para solucionar as demandas diárias que o seu mercado possa lhe proporcionar.</p>
                 <p class="mt-8 text-xs text-gray-300">AGILUS INFORMATICA LTDA. - CNPJ: 04.331.349/0001-67</p>
             </aside>
@@ -180,14 +143,15 @@
             </aside>
         </section>
     </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.min.js" integrity="sha512-4b1zfeOuJCy8B/suCMGNcEkMcQkQ+/jQ6HlJIaYVGvg2ZydPvdp7GY0CuRVbNpSxNVFqwTAmls2ftKSkDI9vtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-utf8.min.js" integrity="sha512-XtjCqGV/vned5r5jnnVJEkfTdENYiubE+lJ600LBbwvm+uUzSlDBBFa/O4mJl2OJ4GV6pzfqBxIOT+T7UoYr0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({
-            disable: window.innerWidth <= 768
-        });
-    </script>
+        AOS.init()
+    </script> -->
     <script src="/assets/js/app.js"></script>
 </body>
 </html>

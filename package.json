@@ -6,13 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind": "npx tailwindcss -i ./assets/css/style.css -o ./assets/css/output.css --watch",
-    "build": "npx tailwindcss -o ./dist/build.css --minify"
+    "build": "npx tailwindcss -i ./assets/css/style.css -o ./assets/css/build.css --minify"
   },
-  "author": "",
+  "author": "henriquevc93@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.23"
-  }
+  },
+  "dependencies": {}
 }

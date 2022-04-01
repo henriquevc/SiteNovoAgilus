@@ -9,12 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="stylesheet" href="/assets/css/build.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
-    <title>Agilus</title>
+    <title>Agilus - Preços plano de saúde</title>
+    <script src="//code-sa1.jivosite.com/widget/WFZtAfr4QY" async></script>
 </head>
 <body class="text-neutral-700">
     <header class="sticky top-0 z-30 py-2 bg-white border-b lg:border-b-0">
@@ -59,6 +60,9 @@
                     <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Sobre.html">Empresa</a></li>
                     <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Contato.html">Contato</a></li>
                 </ul>
+            </div>
+            <div class="hidden lg:block">
+                <a href="https://agiluscrm.com.br/#/login" class="px-12 py-4 xl:px-20 bg-primary-100 text-primary-600">Login</a>
             </div>
         </nav>
     </header>
@@ -106,36 +110,37 @@
     <!-- Fim do Modal -->
 
     <main>
-        <section class="py-12 bg-secondary-50 md:py-16 lg:py-24">
+        <section class="py-12 bg-primary-50 md:py-16 lg:py-24">
             <div class="container flex flex-col w-full gap-8 lg:gap-16 md:flex-row sm:items-center md:items-start">
                 
                 <div class="flex flex-col w-full sm:pt-16 sm:w-1/2 md:w-1/3 xl:w-1/4" data-aos="fade-up" data-aos-duration="800">
-                    <h2 class="w-full mb-4 text-3xl font-bold lg:text-4xl text-title">Plano consignado</h2>
-                    <p class="w-full text-base">Veja e conheça todos os recursos disponiveis no sistema para consignado e entre em contato com a gente.</p>
+                    <h2 class="w-full mb-4 text-3xl font-bold lg:text-4xl text-title">Plano CRM</h2>
+                    <p class="w-full text-base">Veja e conheça todos os recursos disponiveis no sistema, escolha a melhor forma de recorrência da mensalidade e entre em contato com a gente.</p>
                 </div>
                 
                 <div class="flex flex-col w-full px-8 py-16 bg-white shadow-2xl lg:space-x-4 sm:px-12 xl:flex-row sm:w-2/3 xl:w-3/4" data-aos="fade-right" data-aos-duration="800">
                     <div class="flex flex-col items-center justify-center w-full xl:w-2/5">
-                        <div class="flex flex-wrap gap-4">
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(0)" id="btn-valor-0">Até 10 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(1)" id="btn-valor-1">Até 15 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(2)" id="btn-valor-2">Até 20 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(3)" id="btn-valor-3">Até 30 usuários</button>    
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(4)" id="btn-valor-4">A partir de 31 usuários</button>
+                        <div>
+                            <strong class="text-4xl font-extrabold" id="valor">R$50</strong>
+                            <span class="text-sm text-neutral-500">/<span id="recorrencia">mês</span> por usuário</span>
                         </div>
-                        
-                        <div class="mt-6">
-                            <strong class="text-4xl font-extrabold" id="valor"></strong>
-                            <span class="text-sm text-neutral-500">/<span id="recorrencia">mês</span> por filial</span>
+                        <div class="flex flex-row mt-3 space-x-2">
+                            <span id="textoCheckboxMes">por mês</span>
+                            <label for="toggle" class="flex items-center cursor-pointer">
+                                <div class="relative">
+                                    <input type="checkbox" id="toggle" class="w-full h-full sr-only">
+                                    <div class="block w-10 h-6 rounded-full bg-primary-800"></div>
+                                    <div class="absolute w-4 h-4 transition bg-white rounded-full dot left-1 top-1"></div>
+                                </div>
+                            </label>
+                            <span id="textoCheckboxAno">por ano</span>
                         </div>
-
                         <div class="flex justify-center w-full mt-12">
                             <button id="btn-cta" class="w-full px-8 py-4 text-lg font-semibold text-white bg-primary-800">
                                 Contratar
                             </button>
                         </div>
                     </div>
-                    
                     <ul class="flex flex-row flex-wrap w-full mt-4 text-sm sm:mt-8 xl:mt-0 xl:w-3/5 xl:justify-start">
                         <li class="my-2 sm:inline md:mx-1 icon-done">Sistema financeiro</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Gerenciamento de Leads</li>
@@ -162,37 +167,37 @@
             <h2 class="w-full mb-4 text-3xl font-bold text-center lg:text-4xl text-title">Por que ser Agilus</h2>
             <div class="grid gap-8 mt-16 sm:grid-cols-2 md:grid-cols-3">
                 <div class="p-8">
-                    <h3 class="mb-2 text-xl font-semibold">Experiência e Credibilidade</h3>
+                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Experiência e Credibilidade</h3>
                     <p class="text-base text-neutral-600">Desde 2001 consolidamos um nome de confiança perante ao mercado. O sistema foi crescendo de acordo com as necessidades e as sugestões dos clientes</p>
                 </div>
                 <div class="p-8">
-                    <h3 class="mb-2 text-xl font-semibold">Preço Justo / Custo Benefício</h3>
+                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Preço Justo / Custo Benefício</h3>
                     <p class="text-base text-neutral-600">Preço de acordo com a sua necessidade. O valor da mensalidade encaixa-se perfeitamente no seu bolso de acordo com a estrutura da empresa.</p>
                 </div>
                 <div class="p-8">
-                    <h3 class="mb-2 text-xl font-semibold">Inovação</h3>
+                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Inovação</h3>
                     <p class="text-base text-neutral-600">Seguimos as tendências do mercado para que o sistema fique sempre funcional às novidades. Teve alteração em alguma regra? O Agilus se adapta a ela.</p>
                 </div>
                 <div class="p-8">
-                    <h3 class="mb-2 text-xl font-semibold">Sistema Customizável</h3>
+                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Sistema Customizável</h3>
                     <p class="text-base text-neutral-600">Customize seu sistema como preferir. Quem define o que os funcionários terão de acesso é você! Inclua e remova funções com apenas um clique.</p>
                 </div>
                 <div class="p-8">
-                    <h3 class="mb-2 text-xl font-semibold">Parcerias</h3>
+                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Parcerias</h3>
                     <p class="text-base text-neutral-600">Armazene seus dados num servidor online e conte com toda segurança e infraestrutura da UOL Host. Integrações para atualizações de dados também estão sempre disponíveis.</p>
                 </div>
                 <div class="p-8">
-                    <h3 class="mb-2 text-xl font-semibold">Atendimento Diferenciado</h3>
+                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Atendimento Diferenciado</h3>
                     <p class="text-base text-neutral-600">Suporte diário por telefone, skype ou e-mail. Precisa de um auxílio presencial? Agende uma visita que vamos até sua empresa dar um treinamento.</p>
                 </div>
             </div>
         </section>
-        <section class="py-24 bg-secondary-50">
+        <section class="py-24 bg-primary-50">
             <div class="container text-center">
                 <h2 class="text-2xl font-bold text-title lg:text-3xl">
                     Ainda está com dúvidas?
                 </h2>
-                <button class="mt-8 text-white shadow-2xl btn bg-secondary-800 shadow-secondary-800" id="btn-cta2">Vamos conversar</button>
+                <button class="mt-8 text-white shadow-2xl btn bg-primary-800 shadow-primary-800" id="btn-cta2">Vamos conversar</button>
             </div>
         </section>
     </main>
@@ -237,55 +242,47 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.min.js" integrity="sha512-4b1zfeOuJCy8B/suCMGNcEkMcQkQ+/jQ6HlJIaYVGvg2ZydPvdp7GY0CuRVbNpSxNVFqwTAmls2ftKSkDI9vtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-utf8.min.js" integrity="sha512-XtjCqGV/vned5r5jnnVJEkfTdENYiubE+lJ600LBbwvm+uUzSlDBBFa/O4mJl2OJ4GV6pzfqBxIOT+T7UoYr0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         AOS.init();
     </script>
     <script>
         const planos = [
             {
-                id: 0,
-                nome: 'Até 10 usuários',
-                valorMensal: 550
-            },
-            {
-                id: 1,
-                nome: 'Até 15 usuários',
-                valorMensal: 750
-            },
-            {
-                id: 2,
-                nome: 'Até 20 usuários',
-                valorMensal: 950
-            },
-            {
-                id: 3,
-                nome: 'Até 30 usuários',
-                valorMensal: 1250
-            },
-            {
-                id: 4,
-                nome: 'A partir de 31 usuários',
-                valorMensal: 1550
+                nome: 'Avançado',
+                valorMensal: 50,
+                valorAnual: 540
             }
         ]
+        let quantidadeUsuarios = 10
 
-        const trocaValor = (id) => {
-            const textoValor = document.getElementById('valor')
-            
-            const selecionado = document.getElementsByClassName('selected')[0]
-            if (selecionado)
-                selecionado.classList.remove('selected')
+        const checkboxMesAno = document.getElementById('toggle')
+        const textoCheckboxAno = document.getElementById('textoCheckboxAno')
+        const textoCheckboxMes = document.getElementById('textoCheckboxMes')
+        const textoValor = document.querySelectorAll('#valor')
+        const textoRecorrencia = document.querySelectorAll('#recorrencia')
 
-            const botao = document.getElementById(`btn-valor-${id}`)
-            botao.classList.add('selected')
-            
-            const plano = planos.find(p => p.id === id)
-            const valor = plano.valorMensal
-            const valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-            textoValor.innerHTML = valorFormatado
-        }
+        if (!checkboxMesAno.checked)
+            textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
 
-        trocaValor(0) //selecionando o plano «Até 20 usuários»
+        checkboxMesAno.addEventListener('change', e => {
+            for (let i = 0; i < textoValor.length; i++) {
+                if (checkboxMesAno.checked) {
+                    textoValor[i].innerHTML = `R$${planos[i].valorAnual}`
+                    textoRecorrencia[i].innerHTML = 'ano'
+                    textoCheckboxAno.classList.remove('text-neutral-500', 'font-twin')
+                    textoCheckboxMes.classList.add('text-neutral-500', 'font-twin')
+                }
+                else {
+                    textoValor[i].innerHTML = `R$${planos[0].valorMensal}`
+                    textoRecorrencia[i].innerHTML = 'mês'
+                    textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
+                    textoCheckboxMes.classList.remove('text-neutral-500', 'font-twin')
+                }
+            }
+        })
     </script>
     <script src="/assets/js/app.js"></script>
 </body>

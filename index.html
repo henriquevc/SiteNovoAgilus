@@ -9,19 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="stylesheet" href="/assets/css/build.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet">
     <title>Agilus</title>
+    <script src="//code-sa1.jivosite.com/widget/WFZtAfr4QY" async></script>
 </head>
-<body class="text-neutral-700">
+<body class="text-grey">
     <header class="sticky top-0 z-30 py-2 bg-white border-b lg:border-b-0">
         <nav class="container flex flex-wrap items-center justify-between py-2 font-bold lg:mb-0">
             <div class="basis-1/2 lg:basis-2/12">
                 <a href="./index.html">
-                    <img src="/assets/images/logo-agilus.svg" alt="Logo da Agilus" width="164" class="w-[164px]">
+                    <img src="/assets/images/logo-agilus.svg" alt="Logo da Agilus" width="164" height="64" class="w-[164px] h-16">
                 </a>
             </div>
 
@@ -108,117 +107,104 @@
     </div>
     <!-- Fim do Modal -->
 
-    <main>
-        <section class="py-12 bg-primary-50 md:py-16 lg:py-24">
-            <div class="container flex flex-col w-full gap-8 lg:gap-16 md:flex-row sm:items-center md:items-start">
-                
-                <div class="flex flex-col w-full sm:pt-16 sm:w-1/2 md:w-1/3 xl:w-1/4" data-aos="fade-up" data-aos-duration="800">
-                    <h2 class="w-full mb-4 text-3xl font-bold lg:text-4xl text-title">Plano CRM</h2>
-                    <p class="w-full text-base">Veja e conheça todos os recursos disponiveis no sistema, escolha a melhor forma de recorrência da mensalidade e entre em contato com a gente.</p>
+    <section class="bg-primary-50 lg:bg-[url(/assets/images/Group-221.svg)] lg:bg-right-top lg:bg-no-repeat lg:bg-contain">
+        <div class="container flex flex-col-reverse py-8 space-x-0 lg:space-x-16 lg:space-y-0 lg:flex-row sm:py-10 md:py-16 lg:py-24 xl:py-36"> 
+            <aside class="mt-16 lg:mt-0 basis-full lg:basis-2/5" data-aos="fade-right" data-aos-duration="700">
+                <h1 class="mb-8 text-4xl font-extrabold text-title lg:text-5xl">A solução completa para seu negócio <span class="underline decoration-secondary-600 underline-offset-8">crescer</span></h1>
+                <p class="mb-8 text-lg text-grey">Controle seus leads, vendas e comissões, financeiro e crie fluxos de trabalhos poderosos e personalizados.</p>
+                <div class="flex mt-8">
+                    <button class="shadow-2xl btn btn-primary shadow-primary-300" id="btn-cta">Comece já!</button>
                 </div>
-                
-                <div class="flex flex-col w-full px-8 py-16 bg-white shadow-2xl lg:space-x-4 sm:px-12 xl:flex-row sm:w-2/3 xl:w-3/4" data-aos="fade-right" data-aos-duration="800">
-                    <div class="flex flex-col items-center justify-center w-full xl:w-2/5">
-                        <div>
-                            <strong class="text-4xl font-extrabold" id="valor">R$50</strong>
-                            <span class="text-sm text-neutral-500">/<span id="recorrencia">mês</span> por usuário</span>
-                        </div>
-                        <div class="flex flex-row mt-3 space-x-2">
-                            <span id="textoCheckboxMes">por mês</span>
-                            <label for="toggle" class="flex items-center cursor-pointer">
-                                <div class="relative">
-                                    <input type="checkbox" id="toggle" class="w-full h-full sr-only">
-                                    <div class="block w-10 h-6 rounded-full bg-primary-800"></div>
-                                    <div class="absolute w-4 h-4 transition bg-white rounded-full dot left-1 top-1"></div>
-                                </div>
-                            </label>
-                            <span id="textoCheckboxAno">por ano</span>
-                        </div>
-                        <div class="flex justify-center w-full mt-12">
-                            <button id="btn-cta" class="w-full px-8 py-4 text-lg font-semibold text-white bg-primary-800">
-                                Contratar
-                            </button>
-                        </div>
-                    </div>
-                    <ul class="flex flex-row flex-wrap w-full mt-4 text-sm sm:mt-8 xl:mt-0 xl:w-3/5 xl:justify-start">
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Sistema financeiro</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Gerenciamento de Leads</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Integração com seu site</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Importação de dados</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Distribuição de base de dados</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Linha do tempo</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle de atividades</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Gestão de vendas</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle de comissões</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Utilização em várias filiais</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Hierarquias de vendedores</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Cálculo de comissão</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Fórmulas de comissão</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Anexo de documentação</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Notificações</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Relatórios</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Integração com sistemas de higienização de cliente</li>
-                    </ul>
+            </aside>
+            <aside class="block -m-8 basis-full lg:hidden">
+                <img src="/assets/images/Group-221.svg" alt="Cards do sistema" width="1025" height="774">
+            </aside>
+        </div>
+    </section>
+    <section class="container mt-8 lg:mt-0">
+        <div class="grid grid-cols-1 sm:gap-8 lg:gap-16 lg:grid-cols-2 lg:p-24">
+            <aside class="px-6" data-aos="fade-right">
+                <img src="/assets/images/Group-224.svg" alt="Imagem do sistema 2" class="w-full scale-110 lg:scale-125" width="737" height="640">
+            </aside>
+            <aside class="lg:ml-16" data-aos="fade-down">
+                <h2 class="text-3xl font-bold sm:mt-4 sm:my-8 lg:text-4xl text-title">Nós entendemos do seu negócio!</h2>
+                <p class="mt-8 text-base">O Agilus CRM não é um sistema genérico onde você se adapta ao software para seu negócio funcionar.</p>
+                <p class="mt-4 text-base">Desenvolvemos módulos de acordo com as necessidades do mercado, com estruturas funcionais, seguindo as regras de negócio e terminologias que auxiliam no uso e no entendimento diário da sua equipe.</p>
+            </aside>
+        </div>
+    </section>
+    <section class="mt-8 sm:mt-16 lg:mt-0 bg-secondary-50">
+        <div class="container py-24">
+            <h3 class="mt-6 text-2xl font-bold lg:text-3xl text-title">Funcionalidades essenciais para o dia-a-dia</h3>
+            <p class="w-full mt-4 lg:w-1/2 text-grey">Alguns recursos são indispensáveis para que você saiba o caminho que sua empresa está tomando e para facilitar o trabalho de todo o seu time.</p>
+            <section class="grid grid-cols-1 gap-8 mx-2 mt-12 lg:grid-cols-3">
+                <div class="px-8 py-12 bg-white shadow-2xl shadow-secondary-100 lg:px-12 lg:py-16">
+                    <img src="/assets/images/workflow-networking-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
+                    <h4 class="text-xl font-bold lg:text-2xl text-title">Workflow</h4>
+                    <p class="mt-4">Crie rotinas que serão executadas de forma automática ou quando algo acontecer dentro do sistema.</p>
                 </div>
-            </div>
-        </section>
-        <section class="container py-12 md:py-16 lg:py-24">
-            <h2 class="w-full mb-4 text-3xl font-bold text-center lg:text-4xl text-title">Por que ser Agilus</h2>
-            <div class="grid gap-8 mt-16 sm:grid-cols-2 md:grid-cols-3">
-                <div class="p-8">
-                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Experiência e Credibilidade</h3>
-                    <p class="text-base text-neutral-600">Desde 2001 consolidamos um nome de confiança perante ao mercado. O sistema foi crescendo de acordo com as necessidades e as sugestões dos clientes</p>
+                <div class="px-8 py-12 bg-white shadow-2xl shadow-secondary-100 lg:px-12 lg:py-16">
+                    <img src="/assets/images/list-signs-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
+                    <h4 class="text-xl font-bold lg:text-2xl text-title">Notificações</h4>
+                    <p class="mt-4">Notifique sua equipe em situações que vise serem necessárias. Escolha entre a notificação em tela, e-mail ou WhatsApp.</p>
                 </div>
-                <div class="p-8">
-                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Preço Justo / Custo Benefício</h3>
-                    <p class="text-base text-neutral-600">Preço de acordo com a sua necessidade. O valor da mensalidade encaixa-se perfeitamente no seu bolso de acordo com a estrutura da empresa.</p>
+                <div class="px-8 py-12 bg-white shadow-2xl shadow-secondary-100 lg:px-12 lg:py-16">
+                    <img src="/assets/images/money-money-svgrepo-com.svg" alt="" class="w-16 h-16 mb-8 ml-4">
+                    <h4 class="text-xl font-bold lg:text-2xl text-title">Financeiro</h4>
+                    <p class="mt-4">Controle a vida financeira da sua empresa. Tenha, de forma fácil, suas receitas e despesas, esporádicas ou recorrentes, em relatórios e/ou dashboards customizados.</p>
                 </div>
-                <div class="p-8">
-                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Inovação</h3>
-                    <p class="text-base text-neutral-600">Seguimos as tendências do mercado para que o sistema fique sempre funcional às novidades. Teve alteração em alguma regra? O Agilus se adapta a ela.</p>
-                </div>
-                <div class="p-8">
-                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Sistema Customizável</h3>
-                    <p class="text-base text-neutral-600">Customize seu sistema como preferir. Quem define o que os funcionários terão de acesso é você! Inclua e remova funções com apenas um clique.</p>
-                </div>
-                <div class="p-8">
-                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Parcerias</h3>
-                    <p class="text-base text-neutral-600">Armazene seus dados num servidor online e conte com toda segurança e infraestrutura da UOL Host. Integrações para atualizações de dados também estão sempre disponíveis.</p>
-                </div>
-                <div class="p-8">
-                    <h3 class="mb-2 text-xl font-bold lg:text-2xl">Atendimento Diferenciado</h3>
-                    <p class="text-base text-neutral-600">Suporte diário por telefone, skype ou e-mail. Precisa de um auxílio presencial? Agende uma visita que vamos até sua empresa dar um treinamento.</p>
-                </div>
-            </div>
-        </section>
-        <section class="py-24 bg-primary-50">
-            <div class="container text-center">
-                <h2 class="text-2xl font-bold text-title lg:text-3xl">
-                    Ainda está com dúvidas?
-                </h2>
-                <button class="mt-8 text-white shadow-2xl btn bg-primary-800 shadow-primary-800" id="btn-cta2">Vamos conversar</button>
-            </div>
-        </section>
-    </main>
+            </section>
+        </div>
+    </section>
+    <section class="container py-12 sm:py-24">
+        <div class="flex flex-col-reverse md:flex-row" data-aos="fade-right" data-aos-duration="600">
+            <aside class="flex flex-col items-center justify-center w-full space-y-6 lg:flex-col md:w-1/2">
+                <h3 class="text-2xl font-bold md:w-2/3 lg:text-3xl text-title">Por telefone, e-mail, sms ou whatsapp! Conecte-se com o seu cliente.</h3>
+                <p class="text-base text-grey md:w-2/3">Você pode criar modelos de email, sms ou whatsapp para agilizar seus contatos, respostas ou notificações. Ganhe tempo e se preocupe com a estratégia.</p>
+            </aside>
+            <aside class="flex justify-center w-full md:w-1/2">
+                <img src="/assets/images/Content.svg" alt="imagem de exemplo" width="330" height="334">
+            </aside>
+        </div>
+    </section>
+    <section class="mt-16 bg-primary-50 lg:mt-0">
+        <div class="container flex flex-col content-center py-16 md:flex-row lg:py-24" data-aos="fade-down">
+            <aside class="flex justify-center w-full lg:w-1/2">
+                <img src="/assets/images/Smartphone.svg" alt="imagem da tela inicial do Agilus CRM" width="213" height="420">
+            </aside>
+            <aside class="flex flex-col items-center justify-center w-full mt-8 space-y-6 md:mt-0 lg:w-1/2">
+                <h3 class="text-2xl font-bold lg:text-3xl text-title md:w-2/3">Sem instalação de aplicativos, sem complicação. Acesse de qualquer lugar.</h3>
+                <p class="text-base text-grey md:w-2/3">O Agilus CRM é desenvolvido seguindo as melhores práticas e tecnologias do mercado. Sua equipe conectada o tempo todo, sem complicações. Acessou, usou.</p>
+            </aside>
+        </div>
+    </section>
+    <section class="bg-secondary-50">
+        <div class="container text-center py-36">
+            <h2 class="text-2xl font-bold text-title lg:text-3xl">
+                Interessado em aumentar sua produtividade?
+            </h2>
+            <button class="mt-8 text-white shadow-2xl btn bg-secondary-800 shadow-secondary-800" id="btn-cta2">Vamos conversar</button>
+        </div>
+    </section>
     <footer class="flex w-full pb-16 text-white bg-black">
         <section class="container grid grid-cols-1 gap-8 pt-16 lg:gap-16 lg:grid-cols-3 lg:pt-24">
             <aside>
-                <img src="/assets/images/logo-agilus-rosa.svg" alt="logotipo rosa">
+                <img src="/assets/images/logo-agilus-rosa.svg" alt="logo da Agilus rosa" width="50" height="50">
                 <p class="pr-8 mt-8 text-base">A Agilus é uma empresa de desenvolvimento de sistemas que buscam auxiliar os clientes com uma linguagem e, principalmente, recursos próprios para solucionar as demandas diárias que o seu mercado possa lhe proporcionar.</p>
                 <p class="mt-8 text-xs text-gray-300">AGILUS INFORMATICA LTDA. - CNPJ: 04.331.349/0001-67</p>
             </aside>
             <aside class="lg:col-span-2">
                 <div class="grid grid-cols-1 gap-4 mt-1 gap-y-8 sm:grid-cols-3">
-                    <div class="">
+                    <div>
                         <h3 class="mb-6 text-xl font-semibold">Produtos</h3>
-                        <ul class="space-y-4 text-md">
+                        <ul class="space-y-4 text-base">
                             <li><a href="./CRMPlanoSaude.html">Plano de saúde</a></li>
                             <li><a href="./CRMConsignado.html">Crédito consignado</a></li>
                         </ul>
                     </div>
                     <div>
                         <h3 class="mb-6 text-xl font-semibold">Empresa</h3>
-                        <ul class="space-y-4 text-md">
+                        <ul class="space-y-4 text-base">
                             <li><a href="./Sobre.html">Sobre</a></li>
                             <li><a href="./PoliticaPrivacidade.html">Politica de Privacidade</a></li>
                             <li><a href="./Contato.html">Contato</a></li>
@@ -226,59 +212,27 @@
                     </div>
                     <div>
                         <h3 class="mb-6 text-xl font-semibold">Social</h3>
-                        <ul class="space-y-4 text-md">
+                        <ul class="space-y-4 text-base">
                             <li><a href="https://www.linkedin.com/company/agilusinformatica/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
                             <li><a href="https://www.instagram.com/agilus_oficial/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                             <li><a href="https://www.facebook.com/agilusinformatica" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                            <li><a href="https://api.whatsapp.com/send?phone=+5511930426110" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                            <li><a href="https://api.whatsapp.com/send/?phone=5511930426110&text&app_absent=0" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
                         </ul>
                     </div>
                 </div>
             </aside>
         </section>
     </footer>
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.min.js" integrity="sha512-4b1zfeOuJCy8B/suCMGNcEkMcQkQ+/jQ6HlJIaYVGvg2ZydPvdp7GY0CuRVbNpSxNVFqwTAmls2ftKSkDI9vtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-utf8.min.js" integrity="sha512-XtjCqGV/vned5r5jnnVJEkfTdENYiubE+lJ600LBbwvm+uUzSlDBBFa/O4mJl2OJ4GV6pzfqBxIOT+T7UoYr0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        AOS.init();
-    </script>
-    <script>
-        const planos = [
-            {
-                nome: 'Avançado',
-                valorMensal: 50,
-                valorAnual: 540
-            }
-        ]
-        let quantidadeUsuarios = 10
-
-        const checkboxMesAno = document.getElementById('toggle')
-        const textoCheckboxAno = document.getElementById('textoCheckboxAno')
-        const textoCheckboxMes = document.getElementById('textoCheckboxMes')
-        const textoValor = document.querySelectorAll('#valor')
-        const textoRecorrencia = document.querySelectorAll('#recorrencia')
-
-        if (!checkboxMesAno.checked)
-            textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
-
-        checkboxMesAno.addEventListener('change', e => {
-            for (let i = 0; i < textoValor.length; i++) {
-                if (checkboxMesAno.checked) {
-                    textoValor[i].innerHTML = `R$${planos[i].valorAnual}`
-                    textoRecorrencia[i].innerHTML = 'ano'
-                    textoCheckboxAno.classList.remove('text-neutral-500', 'font-twin')
-                    textoCheckboxMes.classList.add('text-neutral-500', 'font-twin')
-                }
-                else {
-                    textoValor[i].innerHTML = `R$${planos[0].valorMensal}`
-                    textoRecorrencia[i].innerHTML = 'mês'
-                    textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
-                    textoCheckboxMes.classList.remove('text-neutral-500', 'font-twin')
-                }
-            }
-        })
+        AOS.init({
+            disable: window.innerWidth <= 768
+        });
     </script>
     <script src="/assets/js/app.js"></script>
 </body>
