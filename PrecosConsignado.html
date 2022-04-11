@@ -277,6 +277,7 @@
                 valorMensal: 1550
             }
         ]
+        const planoSelecionado = planos[0]
 
         const trocaValor = (id) => {
             const textoValor = document.getElementById('valor')
@@ -288,8 +289,8 @@
             const botao = document.getElementById(`btn-valor-${id}`)
             botao.classList.add('selected')
             
-            const plano = planos.find(p => p.id === id)
-            const valor = plano.valorMensal
+            this.planoSelecionado = planos.find(p => p.id === id)
+            const valor = planoSelecionado.valorMensal
             const valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
             textoValor.innerHTML = valorFormatado
         }

@@ -66,10 +66,16 @@ btnCtaWhatsapp.addEventListener('click', () => {
 })
 
 btnCtaEnviar.addEventListener('click', () => {
-    let { nome, nomeEmpresa, email, telefone } = pegarDadosForm()
+    let { nome, nomeEmpresa, email, telefone, ramos } = pegarDadosForm()
     if (!nome || !email || !telefone) {
         return
     }
+
+    let textoRamos = ramos.length > 1 ? ramos.join(', ') : ramos[0]
+    if (!textoRamos) {
+        textoRamos = `Não informado`
+    }
+    let titlePage = document.title
 
     // Decrypt
     var bytes = CryptoJS.AES.decrypt('U2FsdGVkX19LnNqqfCDPKKIWu5mnph44PKD+jenSqMQvVWxO6Nz1vdO+vWWQpk3DLBNwoBrUMw/XXGP4oa1Tpw==', 'henriquecarvalho')
@@ -77,10 +83,17 @@ btnCtaEnviar.addEventListener('click', () => {
 
     axios.post('https://api.smtp2go.com/v3/email/send', {
         api_key: secretKey,
-        to: ["Comercial Agilus <henrique@agilus.com.br>"],
+        to: ["Comercial Agilus <henriquevc93@gmail.com>"],
         sender: "Site Agilus <site@agilus.com.br>",
         subject: 'Cliente interessado no Agilus CRM - contato pelo site',
-        text_body: `Nome do cliente: ${nome}\nNome Empresa: ${nomeEmpresa}\nEmail: ${email}\nTelefone: ${telefone}`
+        text_body:
+`Nome do cliente: ${nome}
+Nome Empresa: ${nomeEmpresa}
+Email: ${email}
+Telefone: ${telefone}
+Ramos: ${textoRamos}
+Tela que o cliente estava: ${titlePage}
+${this.planoSelecionado ? 'Plano Selecionado: ' + this.planoSelecionado.nome + ' - R$' + this.planoSelecionado.valorMensal : ''}`,
     }).then(() => {
         if (modalCta) {
             (toggleModal())()
@@ -104,6 +117,10 @@ function pegarDadosForm () {
         nome: document.querySelector('input[type=text]').value,
         nomeEmpresa: document.getElementById('nomeEmpresa').value,
         email: document.querySelector('input[type=email]').value,
-        telefone: document.querySelector('input[type=tel]').value
+        telefone: document.querySelector('input[type=tel]').value,
+        ramos: [
+            document.getElementById('planoSaude') && document.getElementById('planoSaude').checked ? 'Plano de Saúde' : null,
+            document.getElementById('consignado') && document.getElementById('consignado').checked ? 'Consignado' : null
+        ].filter(item => item != null)
     }
 }
