@@ -83,7 +83,7 @@ btnCtaEnviar.addEventListener('click', () => {
 
     axios.post('https://api.smtp2go.com/v3/email/send', {
         api_key: secretKey,
-        to: ["Comercial Agilus <henriquevc93@gmail.com>"],
+        to: ["Comercial Agilus <comercial@agilus.com.br>"],
         sender: "Site Agilus <site@agilus.com.br>",
         subject: 'Cliente interessado no Agilus CRM - contato pelo site',
         text_body:
