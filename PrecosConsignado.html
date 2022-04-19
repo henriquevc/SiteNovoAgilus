@@ -290,7 +290,8 @@
             botao.classList.add('selected')
             
             this.planoSelecionado = planos.find(p => p.id === id)
-            const valor = planoSelecionado.valorMensal
+            const valor = this.planoSelecionado.valorMensal
+            console.log('🚀 ~ file: PrecosConsignado.html ~ line 295 ~ trocaValor ~ valor', valor)
             const valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
             textoValor.innerHTML = valorFormatado
         }
