@@ -611,6 +611,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -1319,6 +1324,11 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-color: #EA6CBD;
 }
 
+.decoration-primary-600 {
+  -webkit-text-decoration-color: #480DA3;
+          text-decoration-color: #480DA3;
+}
+
 .underline-offset-4 {
   text-underline-offset: 4px;
 }
@@ -1760,6 +1770,10 @@ input:checked ~ .dot {
     gap: 4rem;
   }
 
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
   .md\:gap-x-12 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
@@ -1812,6 +1826,11 @@ input:checked ~ .dot {
   .lg\:-my-12 {
     margin-top: -3rem;
     margin-bottom: -3rem;
+  }
+
+  .lg\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   .lg\:mx-48 {
@@ -1943,6 +1962,10 @@ input:checked ~ .dot {
 
   .lg\:gap-16 {
     gap: 4rem;
+  }
+
+  .lg\:gap-20 {
+    gap: 5rem;
   }
 
   .lg\:gap-24 {
@@ -2151,6 +2174,10 @@ input:checked ~ .dot {
 
   .xl\:justify-start {
     justify-content: flex-start;
+  }
+
+  .xl\:gap-24 {
+    gap: 6rem;
   }
 
   .xl\:gap-36 {
