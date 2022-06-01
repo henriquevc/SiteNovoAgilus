@@ -62,7 +62,7 @@ btnCtaWhatsapp.addEventListener('click', () => {
         return
     }
     let mensagem = `Olá. Meu nome é ${nome} ${nomeEmpresa ? '(da empresa ' + nomeEmpresa + ')' : ''} e gostaria de mais informações sobre o sistema da Agilus.`
-    window.open(`https://api.whatsapp.com/send?phone=+5511930426110&text=${encodeURI(mensagem)}`, '_blank')
+    window.open(`https://api.whatsapp.com/send?l=pt&phone=5511930426110&text=${encodeURI(mensagem)}`, '_blank')
 })
 
 btnCtaEnviar.addEventListener('click', () => {
