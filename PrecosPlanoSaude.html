@@ -120,28 +120,27 @@
                 
                 <div class="flex flex-col w-full px-8 py-16 bg-white shadow-2xl lg:space-x-4 sm:px-12 xl:flex-row sm:w-2/3 xl:w-3/4" data-aos="fade-right" data-aos-duration="800">
                     <div class="flex flex-col items-center justify-center w-full xl:w-2/5">
-                        <div>
-                            <strong class="text-4xl font-extrabold" id="valor">R$50</strong>
+                        <div class="flex flex-wrap gap-4">
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(0)" id="btn-valor-0">Até 5 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(1)" id="btn-valor-1">Até 10 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(2)" id="btn-valor-2">Até 15 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(3)" id="btn-valor-3">Até 20 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(4)" id="btn-valor-4">Até 30 usuários</button>   
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(5)" id="btn-valor-5">A partir de 31 usuários</button>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <strong class="text-4xl font-extrabold" id="valor"></strong>
                             <span class="text-sm text-neutral-500">/<span id="recorrencia">mês</span> por usuário</span>
                         </div>
-                        <div class="flex flex-row mt-3 space-x-2">
-                            <span id="textoCheckboxMes">por mês</span>
-                            <label for="toggle" class="flex items-center cursor-pointer">
-                                <div class="relative">
-                                    <input type="checkbox" id="toggle" class="w-full h-full sr-only">
-                                    <div class="block w-10 h-6 rounded-full bg-primary-800"></div>
-                                    <div class="absolute w-4 h-4 transition bg-white rounded-full dot left-1 top-1"></div>
-                                </div>
-                            </label>
-                            <span id="textoCheckboxAno">por ano</span>
-                        </div>
+
                         <div class="flex justify-center w-full mt-12">
                             <button id="btn-cta" class="w-full px-8 py-4 text-lg font-semibold text-white bg-primary-800">
                                 Contratar
                             </button>
                         </div>
                     </div>
-                    <ul class="flex flex-row flex-wrap w-full mt-4 text-sm sm:mt-8 xl:mt-0 xl:w-3/5 xl:justify-start">
+                    <ul class="flex flex-row flex-wrap items-center w-full mt-4 text-sm sm:mt-8 xl:mt-0 xl:w-3/5 xl:justify-start">
                         <li class="my-2 sm:inline md:mx-1 icon-done">Sistema financeiro</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Gerenciamento de Leads</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Integração com seu site</li>
@@ -252,38 +251,82 @@
     <script>
         const planos = [
             {
-                nome: 'Avançado',
-                valorMensal: 50,
-                valorAnual: 540
+                id: 0,
+                nome: 'Até 5 usuários',
+                valorMensal: 75
+            },
+            {
+                id: 1,
+                nome: 'Até 10 usuários',
+                valorMensal: 70
+            },
+            {
+                id: 2,
+                nome: 'Até 15 usuários',
+                valorMensal: 65
+            },
+            {
+                id: 3,
+                nome: 'Até 20 usuários',
+                valorMensal: 60
+            },
+            {
+                id: 4,
+                nome: 'Até 30 usuários',
+                valorMensal: 55
+            },
+            {
+                id: 5,
+                nome: 'A partir de 31 usuários',
+                valorMensal: 50
             }
         ]
-        let quantidadeUsuarios = 10
+        // let quantidadeUsuarios = 10
 
-        const checkboxMesAno = document.getElementById('toggle')
-        const textoCheckboxAno = document.getElementById('textoCheckboxAno')
-        const textoCheckboxMes = document.getElementById('textoCheckboxMes')
-        const textoValor = document.querySelectorAll('#valor')
-        const textoRecorrencia = document.querySelectorAll('#recorrencia')
+        // const checkboxMesAno = document.getElementById('toggle')
+        // const textoCheckboxAno = document.getElementById('textoCheckboxAno')
+        // const textoCheckboxMes = document.getElementById('textoCheckboxMes')
+        // const textoValor = document.querySelectorAll('#valor')
+        // const textoRecorrencia = document.querySelectorAll('#recorrencia')
 
-        if (!checkboxMesAno.checked)
-            textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
+        // if (!checkboxMesAno.checked)
+        //     textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
 
-        checkboxMesAno.addEventListener('change', e => {
-            for (let i = 0; i < textoValor.length; i++) {
-                if (checkboxMesAno.checked) {
-                    textoValor[i].innerHTML = `R$${planos[i].valorAnual}`
-                    textoRecorrencia[i].innerHTML = 'ano'
-                    textoCheckboxAno.classList.remove('text-neutral-500', 'font-twin')
-                    textoCheckboxMes.classList.add('text-neutral-500', 'font-twin')
-                }
-                else {
-                    textoValor[i].innerHTML = `R$${planos[0].valorMensal}`
-                    textoRecorrencia[i].innerHTML = 'mês'
-                    textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
-                    textoCheckboxMes.classList.remove('text-neutral-500', 'font-twin')
-                }
-            }
-        })
+        // checkboxMesAno.addEventListener('change', e => {
+        //     for (let i = 0; i < textoValor.length; i++) {
+        //         if (checkboxMesAno.checked) {
+        //             textoValor[i].innerHTML = `R$${planos[i].valorAnual}`
+        //             textoRecorrencia[i].innerHTML = 'ano'
+        //             textoCheckboxAno.classList.remove('text-neutral-500', 'font-twin')
+        //             textoCheckboxMes.classList.add('text-neutral-500', 'font-twin')
+        //         }
+        //         else {
+        //             textoValor[i].innerHTML = `R$${planos[0].valorMensal}`
+        //             textoRecorrencia[i].innerHTML = 'mês'
+        //             textoCheckboxAno.classList.add('text-neutral-500', 'font-twin')
+        //             textoCheckboxMes.classList.remove('text-neutral-500', 'font-twin')
+        //         }
+        //     }
+        // })
+        let planoSelecionado = planos[0]
+
+        const trocaValor = (id) => {
+            const textoValor = document.getElementById('valor')
+            
+            const selecionado = document.getElementsByClassName('selected')[0]
+            if (selecionado)
+                selecionado.classList.remove('selected')
+
+            const botao = document.getElementById(`btn-valor-${id}`)
+            botao.classList.add('selected')
+            
+            this.planoSelecionado = planos.find(p => p.id === id)
+            const valor = this.planoSelecionado.valorMensal
+            const valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+            textoValor.innerHTML = valorFormatado
+        }
+
+        trocaValor(3) //selecionando o plano «Até 20 usuários» para vim como padrão
     </script>
     <script src="/assets/js/app.js"></script>
 </body>
