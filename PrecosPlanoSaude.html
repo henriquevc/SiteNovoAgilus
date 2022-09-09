@@ -95,7 +95,16 @@
                         <input type="tel" name="telefone" id="telefone" class="input" placeholder="(xx) xxxxx-xxxx" required>
                     </div>
 
-                    <button id="btn-cta-enviar" type="submit" class="w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">Enviar</button>
+                    <button id="btn-cta-enviar" type="submit" class="inline-flex items-center justify-center w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">
+                        <span>Enviar</span>
+                        <div class="hidden">
+                            <svg class="w-5 h-5 mr-3 -ml-1 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            Enviando...
+                        </div>
+                    </button>
                     
                     <p class="block w-full font-extrabold text-center">ou</p>
                     
@@ -124,14 +133,14 @@
                             <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(0)" id="btn-valor-0">Até 5 usuários</button>
                             <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(1)" id="btn-valor-1">Até 10 usuários</button>
                             <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(2)" id="btn-valor-2">Até 15 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(3)" id="btn-valor-3">Até 20 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(4)" id="btn-valor-4">Até 30 usuários</button>   
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(3)" id="btn-valor-3">Até 20 usuários</button>    
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(4)" id="btn-valor-4">Até 30 usuários</button>
                             <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(5)" id="btn-valor-5">A partir de 31 usuários</button>
                         </div>
                         
                         <div class="mt-6">
                             <strong class="text-4xl font-extrabold" id="valor"></strong>
-                            <span class="text-sm text-neutral-500">/<span id="recorrencia">mês</span> por usuário</span>
+                            <span class="text-sm text-neutral-500">/mês por usuário</span>
                         </div>
 
                         <div class="flex justify-center w-full mt-12">
@@ -140,6 +149,7 @@
                             </button>
                         </div>
                     </div>
+
                     <ul class="flex flex-row flex-wrap items-center w-full mt-4 text-sm sm:mt-8 xl:mt-0 xl:w-3/5 xl:justify-start">
                         <li class="my-2 sm:inline md:mx-1 icon-done">Sistema financeiro</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Gerenciamento de Leads</li>
@@ -279,8 +289,34 @@
                 id: 5,
                 nome: 'A partir de 31 usuários',
                 valorMensal: 50
-            }
+            },
         ]
+        const planoSelecionado = planos[0]
+
+        const trocaValor = (id) => {
+            const textoValor = document.getElementById('valor')
+            
+            const selecionado = document.getElementsByClassName('selected')[0]
+            if (selecionado)
+                selecionado.classList.remove('selected')
+
+            const botao = document.getElementById(`btn-valor-${id}`)
+            botao.classList.add('selected')
+            
+            this.planoSelecionado = planos.find(p => p.id === id)
+            const valor = this.planoSelecionado.valorMensal
+            const valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+            textoValor.innerHTML = valorFormatado
+        }
+
+        trocaValor(3) //selecionando o plano «Até 20 usuários»
+        // const planos = [
+        //     {
+        //         nome: 'Avançado',
+        //         valorMensal: 50,
+        //         valorAnual: 540
+        //     }
+        // ]
         // let quantidadeUsuarios = 10
 
         // const checkboxMesAno = document.getElementById('toggle')
@@ -308,25 +344,6 @@
         //         }
         //     }
         // })
-        let planoSelecionado = planos[0]
-
-        const trocaValor = (id) => {
-            const textoValor = document.getElementById('valor')
-            
-            const selecionado = document.getElementsByClassName('selected')[0]
-            if (selecionado)
-                selecionado.classList.remove('selected')
-
-            const botao = document.getElementById(`btn-valor-${id}`)
-            botao.classList.add('selected')
-            
-            this.planoSelecionado = planos.find(p => p.id === id)
-            const valor = this.planoSelecionado.valorMensal
-            const valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-            textoValor.innerHTML = valorFormatado
-        }
-
-        trocaValor(3) //selecionando o plano «Até 20 usuários» para vim como padrão
     </script>
     <script src="/assets/js/app.js"></script>
 </body>
