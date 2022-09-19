@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="/assets/css/build.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <title>Agilus - Preços consignado</title>
     <script src="//code-sa1.jivosite.com/widget/WFZtAfr4QY" async></script>
 </head>
 <body class="text-neutral-700">
+
     <header class="sticky top-0 z-30 py-2 bg-white border-b lg:border-b-0">
         <nav class="container flex flex-wrap items-center justify-between py-2 font-bold lg:mb-0">
             <div class="basis-1/2 lg:basis-2/12">
@@ -120,23 +120,24 @@
             <div class="container flex flex-col w-full gap-8 lg:gap-16 md:flex-row sm:items-center md:items-start">
                 
                 <div class="flex flex-col w-full sm:pt-16 sm:w-1/2 md:w-1/3 xl:w-1/4" data-aos="fade-up" data-aos-duration="800">
-                    <h2 class="w-full mb-4 text-3xl font-bold lg:text-4xl text-title">Plano consignado</h2>
+                    <h2 class="w-full mb-4 text-3xl font-bold lg:text-4xl text-title">CRM para Consignado</h2>
                     <p class="w-full text-base">Veja e conheça todos os recursos disponiveis no sistema para consignado e entre em contato com a gente.</p>
                 </div>
                 
                 <div class="flex flex-col w-full px-8 py-16 bg-white shadow-2xl lg:space-x-4 sm:px-12 xl:flex-row sm:w-2/3 xl:w-3/4" data-aos="fade-right" data-aos-duration="800">
                     <div class="flex flex-col items-center justify-center w-full xl:w-2/5">
                         <div class="flex flex-wrap gap-4">
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(0)" id="btn-valor-0">Até 10 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(1)" id="btn-valor-1">Até 15 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(2)" id="btn-valor-2">Até 20 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(3)" id="btn-valor-3">Até 30 usuários</button>    
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(4)" id="btn-valor-4">A partir de 31 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(0)" id="btn-valor-0">Até 5 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(1)" id="btn-valor-1">Até 10 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(2)" id="btn-valor-2">Até 15 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(3)" id="btn-valor-3">Até 20 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(4)" id="btn-valor-4">Até 30 usuários</button>    
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(5)" id="btn-valor-5">A partir de 31 usuários</button>
                         </div>
                         
                         <div class="mt-6">
                             <strong class="text-4xl font-extrabold" id="valor"></strong>
-                            <span class="text-sm text-neutral-500">/<span id="recorrencia">mês</span> por filial</span>
+                            <span class="text-sm text-neutral-500">/mês por usuário</span>
                         </div>
 
                         <div class="flex justify-center w-full mt-12">
@@ -154,10 +155,10 @@
                         <li class="my-2 sm:inline md:mx-1 icon-done">Controle total do comissionamento</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Utilização em várias filiais</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Contratos para refinanciamento</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Cadastro de Clientes, Filiais, Agentes, entre outros</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Cadastro de Clientes, Filiais, Vendedores, entre outros</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Gestão de vendas</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Controle de comissões</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Hierarquia ilimitada entre Agentes</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Hierarquia ilimitada entre Vendedores</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Cálculo de comissão</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Fórmulas de comissão</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Rateio de comissão entre equipes</li>
@@ -169,12 +170,18 @@
                         <li class="my-2 sm:inline md:mx-1 icon-done">Controle de compra de dívida/portabilidade e refinanciamentos</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Restrição de acessos por perfil</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Integração com sistemas de higienização de clientes</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Integração com sistemas de telefonia</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Sem necessidade de instalação</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Funciona em qualquer sistema operacional</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Bloquio de IP's</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Bloquio de acessos pelo celular</li>
+                        
                     </ul>
                 </div>
             </div>
         </section>
         <section class="container py-12 md:py-16 lg:py-24">
-            <h2 class="w-full mb-4 text-3xl font-bold text-center lg:text-4xl text-title">Por que ser Agilus</h2>
+            <h2 class="w-full mb-4 text-3xl font-bold text-center lg:text-4xl text-title">Por que ser Agilus?</h2>
             <div class="grid gap-8 mt-16 sm:grid-cols-2 md:grid-cols-3">
                 <div class="p-8">
                     <h3 class="mb-2 text-xl font-semibold">Experiência e Credibilidade</h3>
@@ -263,28 +270,33 @@
         const planos = [
             {
                 id: 0,
-                nome: 'Até 10 usuários',
-                valorMensal: 550
+                nome: 'Até 5 usuários',
+                valorMensal: 75
             },
             {
                 id: 1,
-                nome: 'Até 15 usuários',
-                valorMensal: 750
+                nome: 'Até 10 usuários',
+                valorMensal: 70
             },
             {
                 id: 2,
-                nome: 'Até 20 usuários',
-                valorMensal: 950
+                nome: 'Até 15 usuários',
+                valorMensal: 65
             },
             {
                 id: 3,
-                nome: 'Até 30 usuários',
-                valorMensal: 1250
+                nome: 'Até 20 usuários',
+                valorMensal: 60
             },
             {
                 id: 4,
+                nome: 'Até 30 usuários',
+                valorMensal: 55
+            },
+            {
+                id: 5,
                 nome: 'A partir de 31 usuários',
-                valorMensal: 1550
+                valorMensal: 50
             }
         ]
         const planoSelecionado = planos[0]
@@ -305,7 +317,7 @@
             textoValor.innerHTML = valorFormatado
         }
 
-        trocaValor(0) //selecionando o plano «Até 20 usuários»
+        trocaValor(3) //selecionando o plano «Até 20 usuários»
     </script>
     <script src="/assets/js/app.js"></script>
 </body>
