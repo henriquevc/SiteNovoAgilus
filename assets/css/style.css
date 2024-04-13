@@ -33,3 +33,11 @@ input:checked ~ .dot {
 .selected {
   @apply text-white bg-primary-600;
 }
+
+.tooltip {
+  @apply absolute invisible;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply z-50 visible;
+}
