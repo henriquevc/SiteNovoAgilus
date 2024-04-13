@@ -127,18 +127,28 @@
                 <div class="flex flex-col w-full px-8 py-16 bg-white shadow-2xl lg:space-x-4 sm:px-12 xl:flex-row sm:w-2/3 xl:w-3/4" data-aos="fade-right" data-aos-duration="800">
                     <div class="flex flex-col items-center justify-center w-full xl:w-2/5">
                         <div class="flex flex-wrap gap-4">
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(0)" id="btn-valor-0">Até 3 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(1)" id="btn-valor-1">Até 5 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(2)" id="btn-valor-2">Até 10 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(3)" id="btn-valor-3">Até 15 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(4)" id="btn-valor-4">Até 20 usuários</button>
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(5)" id="btn-valor-5">Até 30 usuários</button>    
-                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(6)" id="btn-valor-6">Até 40 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(0)" id="btn-valor-0">03 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(1)" id="btn-valor-1">05 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(2)" id="btn-valor-2">10 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(3)" id="btn-valor-3">15 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(4)" id="btn-valor-4">20 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(5)" id="btn-valor-5">30 usuários</button>    
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(6)" id="btn-valor-6">40 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(7)" id="btn-valor-7">50 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(8)" id="btn-valor-8">75 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(9)" id="btn-valor-9">100 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(10)" id="btn-valor-10">150 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(11)" id="btn-valor-11">200 usuários</button>
+                            <button class="px-3 py-2 border rounded-lg" onclick="trocaValor(12)" id="btn-valor-12">300 usuários ou mais</button>
                         </div>
                         
                         <div class="mt-6">
                             <strong class="text-4xl font-extrabold" id="valor"></strong>
-                            <span class="text-sm text-neutral-500">/mês por usuário</span>
+                            <span class="text-sm text-neutral-500">/por mês</span>
+                        </div>
+                        <div class="mt-2">
+                            <strong class="text-xl font-bold" id="valorPorUsuario"></strong>
+                            <span class="text-sm text-neutral-500">/por usuário</span>
                         </div>
 
                         <div class="flex justify-center w-full mt-12">
@@ -149,11 +159,15 @@
                     </div>
                     
                     <ul class="flex flex-row flex-wrap w-full mt-4 text-sm sm:mt-8 xl:mt-0 xl:w-3/5 xl:justify-start">
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Prospecção completa</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Método de trabalho simplificado e ágil</li>
+                        <li class="p-2 my-2 text-base text-white border rounded-lg sm:inline md:mx-1 bg-primary-800" id="armazenamento"></li>
+                        <li class="p-2 my-2 text-base text-white border rounded-lg sm:inline md:mx-1 bg-primary-800" id="indicador"></li>
+                        <li class="p-2 my-2 text-base text-white border rounded-lg sm:inline md:mx-1 bg-primary-800" id="relatorio"></li>
+                        
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Prospecção de negócios</li>
+                        <!-- <li class="my-2 sm:inline md:mx-1 icon-done">Método de trabalho simplificado e ágil</li> -->
                         <li class="my-2 sm:inline md:mx-1 icon-done">Status customizados</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Importação de dados</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle total do comissionamento</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle de comissionamento</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Utilização em várias filiais</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Contratos para refinanciamento</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Cadastro de Clientes, Filiais, Vendedores, entre outros</li>
@@ -167,13 +181,11 @@
                         <li class="my-2 sm:inline md:mx-1 icon-done">Produtos detalhado, com todas as regras de Banco</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Relatórios</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Controle de adiantamento de comissão</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Módulo para televendas</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Controle de compra de dívida/portabilidade e refinanciamentos</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Restrição de acessos por perfil</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Integração com sistemas de higienização de clientes</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Integração com sistemas de telefonia</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Integração com sistemas de higienização e telefonia</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Sem necessidade de instalação</li>
-                        <li class="my-2 sm:inline md:mx-1 icon-done">Funciona em qualquer sistema operacional</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Funciona em qualquer navegador</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Bloqueio de IP's</li>
                         <li class="my-2 sm:inline md:mx-1 icon-done">Bloqueio de acessos pelo celular</li>
                     </ul>
@@ -270,45 +282,119 @@
         const planos = [
             {
                 id: 0,
-                nome: 'Até 3 usuários',
-                valorMensal: 240
+                qtdeUsuarios: 3,
+                valorMensal: 300,
+                armazenamento: 3,
+                indicadores: 1,
+                relatorio: 1
             },    
             {
                 id: 1,
-                nome: 'Até 5 usuários',
-                valorMensal: 375
+                qtdeUsuarios: 5,
+                valorMensal: 475,
+                armazenamento: 3,
+                indicadores: 2,
+                relatorio: 2
             },
             {
                 id: 2,
-                nome: 'Até 10 usuários',
-                valorMensal: 700
+                qtdeUsuarios: 10,
+                valorMensal: 900,
+                armazenamento: 3,
+                indicadores: 3,
+                relatorio: 3
             },
             {
                 id: 3,
-                nome: 'Até 15 usuários',
-                valorMensal: 975
+                qtdeUsuarios: 15,
+                valorMensal: 1275,
+                armazenamento: 3,
+                indicadores: 4,
+                relatorio: 4
             },
             {
                 id: 4,
-                nome: 'Até 20 usuários',
-                valorMensal: 1200
+                qtdeUsuarios: 20,
+                valorMensal: 1600,
+                armazenamento: 5,
+                indicadores: 5,
+                relatorio: 5
             },
             {
                 id: 5,
-                nome: 'Até 30 usuários',
-                valorMensal: 1650
+                qtdeUsuarios: 30,
+                valorMensal: 2250,
+                armazenamento: 5,
+                indicadores: 6,
+                relatorio: 6
             },
             {
                 id: 6,
-                nome: 'Até 40 usuários',
-                valorMensal: 2000
+                qtdeUsuarios: 40,
+                valorMensal: 2800,
+                armazenamento: 5,
+                indicadores: 7,
+                relatorio: 7
+            },
+            {
+                id: 7,
+                qtdeUsuarios: 50,
+                valorMensal: 3250,
+                armazenamento: 5,
+                indicadores: 10,
+                relatorio: 10
+            },
+            {
+                id: 8,
+                qtdeUsuarios: 75,
+                valorMensal: 4500,
+                armazenamento: 5,
+                indicadores: 15,
+                relatorio: 15
+            },
+            {
+                id: 9,
+                qtdeUsuarios: 100,
+                valorMensal: 5500,
+                armazenamento: 10,
+                indicadores: 20,
+                relatorio: 20
+            },
+            {
+                id: 10,
+                qtdeUsuarios: 150,
+                valorMensal: 7500,
+                armazenamento: 15,
+                indicadores: 30,
+                relatorio: 30
+            },
+            {
+                id: 11,
+                qtdeUsuarios: 200,
+                valorMensal: 9000,
+                armazenamento: 20,
+                indicadores: 50,
+                relatorio: 50
+            },
+            {
+                id: 12,
+                qtdeUsuarios: 300,
+                valorMensal: 12000,
+                armazenamento: 30,
+                indicadores: 70,
+                relatorio: 70
             }
+
         ]
         const planoSelecionado = planos[0]
 
         const trocaValor = (id) => {
             const textoValor = document.getElementById('valor')
-            
+            const textoValorPorUsuario = document.getElementById('valorPorUsuario')
+            const textoArmazenamento = document.getElementById('armazenamento')
+            const textoIndicador = document.getElementById('indicador')
+            const textoRelatorio = document.getElementById('relatorio')
+
             const selecionado = document.getElementsByClassName('selected')[0]
             if (selecionado)
                 selecionado.classList.remove('selected')
@@ -318,8 +404,16 @@
             
             this.planoSelecionado = planos.find(p => p.id === id)
             const valor = this.planoSelecionado.valorMensal
+            const valorPorUsuario = this.planoSelecionado.valorMensal / this.planoSelecionado.qtdeUsuarios
             const valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+            const valorFormatadoPorUsuario = valorPorUsuario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
             textoValor.innerHTML = valorFormatado
+            textoValorPorUsuario.innerHTML = valorFormatadoPorUsuario
+            textoArmazenamento.innerHTML = this.planoSelecionado.armazenamento.toString() + 'GB de armazenamento'
+            textoIndicador.innerHTML = this.planoSelecionado.indicadores.toString() + ' indicadores'
+            textoRelatorio.innerHTML = this.planoSelecionado.relatorio.toString() + ' relatórios'
+
         }
 
         trocaValor(3) //selecionando o plano «Até 20 usuários»
