@@ -84,29 +84,53 @@ btnCtaEnviar.addEventListener('click', () => {
     var bytes = CryptoJS.AES.decrypt('U2FsdGVkX19LnNqqfCDPKKIWu5mnph44PKD+jenSqMQvVWxO6Nz1vdO+vWWQpk3DLBNwoBrUMw/XXGP4oa1Tpw==', 'henriquecarvalho')
     var secretKey = bytes.toString(CryptoJS.enc.Utf8)
 
-    axios.post('https://api.smtp2go.com/v3/email/send', {
-        api_key: secretKey,
-        to: ["Tiago Agilus <tiago@agilus.com.br>"],
-        sender: "Site Agilus <site@agilus.com.br>",
-        subject: 'Cliente interessado no Agilus CRM - contato pelo site',
-        text_body:
-`Nome do cliente: ${nome}
-Nome Empresa: ${nomeEmpresa}
-Email: ${email}
-Telefone: ${telefone}
-Ramos: ${textoRamos}
-Tela que o cliente estava: ${titlePage}
-${this.planoSelecionado ? 'Plano Selecionado: ' + this.planoSelecionado.nome + ' - R$' + this.planoSelecionado.valorMensal : ''}`,
-    }).then(() => {
-        toggleButtonEnviar()
-        if (modalCta) {
-            (toggleModal())()
+//     axios.post('https://api.smtp2go.com/v3/email/send', {
+//         api_key: secretKey,
+//         to: ["Tiago Agilus <tiago@agilus.com.br>"],
+//         sender: "Site Agilus <site@agilus.com.br>",
+//         subject: 'Cliente interessado no Agilus CRM - contato pelo site',
+//         text_body:
+// `Nome do cliente: ${nome}
+// Nome Empresa: ${nomeEmpresa}
+// Email: ${email}
+// Telefone: ${telefone}
+// Ramos: ${textoRamos}
+// Tela que o cliente estava: ${titlePage}
+// ${this.planoSelecionado ? 'Plano Selecionado: ' + this.planoSelecionado.nome + ' - R$' + this.planoSelecionado.valorMensal : ''}`,
+//     }).then(() => {
+//         toggleButtonEnviar()
+//         if (modalCta) {
+//             (toggleModal())()
+//         }
+//         alert('Recebemos os seus dados e já entraremos em contato! Obrigado')
+//     }).catch(error => {
+//         toggleButtonEnviar()
+//         alert('Não foi possível enviar o contato. Fale com a gente pelo número (11) 4040-8065')
+//         console.error('Email não enviado. Erro: ' + error)
+//     })
+
+    axios({
+        url: 'https://agiluscrm.com.br:40000/api/Armazem/Armazenar',
+        method: 'post',
+        data: {
+            Nome: nome,
+            CpfCnpj: '',
+            DataNascimento: null,
+            Chave: 'b69d322a-9496-480d-abff-9337dbea9c6e',
+            Telefones: [
+                {Numero: telefone, Ddd: '', Tipo: ''}
+            ],
+            Emails: [
+                {Endereco: email, Tipo: ''}
+            ],
+            FiltroSimuladorFaixaEtaria: {}
         }
-        alert('Recebemos os seus dados e já entraremos em contato! Obrigado')
+    }).then(() => {
+        console.log('cliente incluido na campanha do Agilus CRM')
     }).catch(error => {
+        console.error('Cliete não enviado para o Agilus CRM. Erro: ' + error)
+    }).finally(() => {
         toggleButtonEnviar()
-        alert('Não foi possível enviar o contato. Fale com a gente pelo número (11) 4040-8065')
-        console.error('Email não enviado. Erro: ' + error)
     })
 })
 
