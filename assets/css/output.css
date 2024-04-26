@@ -701,10 +701,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: inline-flex;
 }
 
-.table {
-  display: table;
-}
-
 .grid {
   display: grid;
 }
@@ -811,10 +807,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .basis-full {
   flex-basis: 100%;
-}
-
-.border-collapse {
-  border-collapse: collapse;
 }
 
 .scale-110 {
@@ -1896,8 +1888,8 @@ input:checked ~ .dot {
     align-items: flex-start;
   }
 
-  .md\:gap-2 {
-    gap: 0.5rem;
+  .md\:gap-4 {
+    gap: 1rem;
   }
 
   .md\:gap-16 {
@@ -2116,6 +2108,10 @@ input:checked ~ .dot {
 
   .lg\:gap-20 {
     gap: 5rem;
+  }
+
+  .lg\:gap-2 {
+    gap: 0.5rem;
   }
 
   .lg\:gap-x-16 {
@@ -2341,6 +2337,10 @@ input:checked ~ .dot {
 
   .xl\:gap-36 {
     gap: 9rem;
+  }
+
+  .xl\:gap-2 {
+    gap: 0.5rem;
   }
 
   .xl\:px-20 {

@@ -13,7 +13,22 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <title>Agilus - Contato</title>
-    <script src="//code-sa1.jivosite.com/widget/WFZtAfr4QY" async></script>
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://chat.agiluscrm.com.br";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'tBrhEFvusWnFiKJpUqDx5QkR',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
 </head>
 <body class="text-neutral-700">
     <header class="sticky top-0 z-30 py-2 bg-white border-b lg:border-b-0">

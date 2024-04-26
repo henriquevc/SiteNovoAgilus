@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="stylesheet" href="/assets/css/build.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -64,9 +64,9 @@
         <img src="/assets/images/logo-agilus.svg" alt="Logo da Empresa" width="200px">
     </div>
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-24">
-        <div class="flex flex-col max-w-lg mx-auto mt-4 md:max-w-xl lg:mt-32">
-            <h1 class="text-6xl font-extrabold text-center lg:text-left text-primary-600">Cadastro AgilusCRM</h1>
-            <p class="max-w-md p-2 mt-4 text-lg text-center lg:text-left text-slate-700">Faça seu cadastro para poder começar a utilizar o sistema</p>
+        <div class="flex flex-col items-center max-w-lg mx-auto mt-4 md:max-w-xl lg:mt-32">
+            <h1 class="text-6xl font-extrabold text-center text-primary-600">Cadastro AgilusCRM</h1>
+            <p class="max-w-md p-2 mt-4 text-lg text-center text-slate-700">Faça seu cadastro para poder começar a utilizar o sistema</p>
         </div>
         
         <form class="relative max-w-md mx-auto md:max-w-lg lg:m-0" id="cadastroForm">
@@ -124,172 +124,172 @@
             <fieldset class="p-4 mb-8 bg-white rounded-lg shadow-xl lg:p-8">
                 <legend class="px-4 text-lg font-bold text-white rounded-full bg-primary-600">Planos</legend>
                 <div class="mb-2 required">Escolha o plano desejado:</div>
-                <div class="grid md:grid-cols-2 md:gap-2">
+                <div class="grid xl:grid-cols-2 xl:gap-2">
                     <div>
                         <input class="hidden" id="3_usuarios" type="radio" name="plano" value="3_usuarios" required>
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl" for="3_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="3_usuarios">
                             <span class="text-xs font-semibold uppercase">3 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$300,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>3GB de Armazenamento</li>
-                                <li>1 indicador customizado</li>
-                                <li>1 relatório customizado</li>
+                                <li>3GB de Armazenamento<sup>1</sup></li>
+                                <li>1 relatório customizado<sup>2</sup></li>
+                                <li>1 indicador customizado<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="5_usuarios" type="radio" name="plano" value="5_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl" for="5_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="5_usuarios">
                             <span class="text-xs font-semibold uppercase">5 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$475,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>3GB de Armazenamento</li>
-                                <li>2 relatórios customizados</li>
-                                <li>2 indicadores customizados</li>
+                                <li>3GB de Armazenamento<sup>1</sup></li>
+                                <li>2 relatórios customizados<sup>2</sup></li>
+                                <li>2 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="10_usuarios" type="radio" name="plano" value="10_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl" for="10_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="10_usuarios">
                             <span class="text-xs font-semibold uppercase">10 Usuários</span>
                             <span class="mt-2 text-xl font-bold">R$900,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>3GB de Armazenamento</li>
-                                <li>3 relatórios customizados</li>
-                                <li>3 indicadores customizados</li>
+                                <li>3GB de Armazenamento<sup>1</sup></li>
+                                <li>3 relatórios customizados<sup>2</sup></li>
+                                <li>3 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="15_usuarios" type="radio" name="plano" value="15_usuarios" >
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl" for="15_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="15_usuarios">
                             <span class="text-xs font-semibold uppercase">15 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$1.275,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>3GB de Armazenamento</li>
-                                <li>4 relatórios customizados</li>
-                                <li>4 indicadores customizados</li>
+                                <li>3GB de Armazenamento<sup>1</sup></li>
+                                <li>4 relatórios customizados<sup>2</sup></li>
+                                <li>4 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="20_usuarios" type="radio" name="plano" value="20_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl" for="20_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="20_usuarios">
                             <span class="text-xs font-semibold uppercase">20 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$1.600,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento</li>
-                                <li>5 relatórios customizados</li>
-                                <li>5 indicadores customizados</li>
+                                <li>5GB de Armazenamento<sup>1</sup></li>
+                                <li>5 relatórios customizados<sup>2</sup></li>
+                                <li>5 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="30_usuarios" type="radio" name="plano" value="30_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl checked:border-3" for="30_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="30_usuarios">
                             <span class="text-xs font-semibold uppercase">30 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$2.250,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento</li>
-                                <li>6 relatórios customizados</li>
-                                <li>6 indicadores customizados</li>
+                                <li>5GB de Armazenamento<sup>1</sup></li>
+                                <li>6 relatórios customizados<sup>2</sup></li>
+                                <li>6 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="40_usuarios" type="radio" name="plano" value="40_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl checked:border-3" for="40_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="40_usuarios">
                             <span class="text-xs font-semibold uppercase">40 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$2.800,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento</li>
-                                <li>7 relatórios customizados</li>
-                                <li>7 indicadores customizados</li>
+                                <li>5GB de Armazenamento<sup>1</sup></li>
+                                <li>7 relatórios customizados<sup>2</sup></li>
+                                <li>7 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="50_usuarios" type="radio" name="plano" value="50_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl checked:border-3" for="50_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="50_usuarios">
                             <span class="text-xs font-semibold uppercase">50 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$3.250,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento</li>
-                                <li>10 relatórios customizados</li>
-                                <li>10 indicadores customizados</li>
+                                <li>5GB de Armazenamento<sup>1</sup></li>
+                                <li>10 relatórios customizados<sup>2</sup></li>
+                                <li>10 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="75_usuarios" type="radio" name="plano" value="75_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl checked:border-3" for="75_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="75_usuarios">
                             <span class="text-xs font-semibold uppercase">75 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$4.500,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento</li>
-                                <li>15 relatórios customizados</li>
-                                <li>15 indicadores customizados</li>
+                                <li>5GB de Armazenamento<sup>1</sup></li>
+                                <li>15 relatórios customizados<sup>2</sup></li>
+                                <li>15 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="100_usuarios" type="radio" name="plano" value="100_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl checked:border-3" for="100_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="100_usuarios">
                             <span class="text-xs font-semibold uppercase">100 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$5.500,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>10GB de Armazenamento</li>
-                                <li>20 relatórios customizados</li>
-                                <li>20 indicadores customizados</li>
+                                <li>10GB de Armazenamento<sup>1</sup></li>
+                                <li>20 relatórios customizados<sup>2</sup></li>
+                                <li>20 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="150_usuarios" type="radio" name="plano" value="150_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl checked:border-3" for="150_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="150_usuarios">
                             <span class="text-xs font-semibold uppercase">150 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$7.500,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>15GB de Armazenamento</li>
-                                <li>30 relatórios customizados</li>
-                                <li>30 indicadores customizados</li>
+                                <li>15GB de Armazenamento<sup>1</sup></li>
+                                <li>30 relatórios customizados<sup>2</sup></li>
+                                <li>30 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="200_usuarios" type="radio" name="plano" value="200_usuarios">
-                        <label class="flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl checked:border-3" for="200_usuarios">
+                        <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="200_usuarios">
                             <span class="text-xs font-semibold uppercase">200 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$ 9.000,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>20GB de Armazenamento</li>
-                                <li>50 relatórios customizados</li>
-                                <li>50 indicadores customizados</li>
+                                <li>20GB de Armazenamento<sup>1</sup></li>
+                                <li>50 relatórios customizados<sup>2</sup></li>
+                                <li>50 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
                         <input class="hidden" id="300_usuarios" type="radio" name="plano" value="300_usuarios">
-                        <label class="box-border flex flex-col p-4 mb-3 border border-gray-200 cursor-pointer rounded-xl checked:border-3" for="300_usuarios">
+                        <label class="box-border flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="300_usuarios">
                             <span class="text-xs font-semibold uppercase">300 usuários ou mais<sup>4</sup></span>
                             <span class="mt-2 text-xl font-bold">R$12.000,00/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>30GB de Armazenamento</li>
-                                <li>70 relatórios customizados</li>
-                                <li>70 indicadores customizados</li>
+                                <li>30GB de Armazenamento<sup>1</sup></li>
+                                <li>70 relatórios customizados<sup>2</sup></li>
+                                <li>70 indicadores customizados<sup>3</sup></li>
                             </ul>
                         </label>
                     </div>
                 </div>
                 <div class="mt-4 text-xs">
-                    <div class="mb-1">1 - Excedente: R$300,00 pacote de 10 usuários</div>
-                    <div class="mb-1">2 - Adicional: 5GB -R$20,00</div>
+                    <div class="mb-1">1 - Adicional: 5GB -R$20,00</div>
+                    <div class="mb-1">2 - Excedente: a partir de R$50,00 por relatório</div>
                     <div class="mb-1">3 - Excedente: a partir de R$50,00 por indicador</div>
-                    <div class="mb-1">4 - Excedente: a partir de R$50,00 por relatório</div>
+                    <div class="mb-1">4 - Excedente: R$300,00 pacote de 10 usuários</div>
                 </div>
             </fieldset>
-            <button type="submit" class="sticky inline-flex items-center justify-center w-full my-4 text-center text-white rounded-lg bottom-4 btn bg-primary-700 focus:ring-4 focus:ring-primary-300">
+            <button type="submit" id="btnCadastrar" class="sticky inline-flex items-center justify-center w-full my-4 text-center text-white rounded-lg bottom-4 btn bg-primary-700 focus:ring-4 focus:ring-primary-300">
                 <span>Cadastrar</span>
                 <div class="hidden">
                     <svg class="w-5 h-5 mr-3 -ml-1 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -299,14 +299,6 @@
                     Enviando...
                 </div>
             </button>
-            <!-- <button type="submit" class="btn-primary">Cadastrar</button>
-            <div class="hidden">
-                <svg class="w-5 h-5 mr-3 -ml-1 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Enviando...
-            </div> -->
         </form>
     </div>
     
@@ -400,10 +392,8 @@
         
         $('form').on('submit', event => {
             event.preventDefault()
+            toggleButtonEnviar()
             const data = Object.fromEntries(new FormData(event.target).entries())
-            if (!data.plano) {
-                alert('Selecione o plano que deseja contratar')
-            }
             let arraySocios = []
             for (let i = 1; i <= numSocios; i++) {
                 arraySocios.push({
@@ -420,32 +410,31 @@
                 delete data[`email_socio${i}`]
             }
             data.socios = arraySocios
-            console.log(data)
             axios({
                 method: 'POST',
                 url: `http://localhost:55461/api/ConfirmacaoCadastro/IncluirFichaCadastro`,
                 data: data
             }).then(() => {
                 console.log('cliente enviado com sucesso')
+                toggleButtonEnviar()
             }).catch(error => {
-                console.error('Cliete não enviado para o Agilus CRM. Erro: ' + error)
+                console.error('cliente não enviado para o Agilus CRM. Erro: ' + error)
+                toggleButtonEnviar()
             })
         })
 
-        
-
         function toggleButtonEnviar () {
-
-            const textoEl = btnCtaEnviar.children[0]
-            const loadingEl = btnCtaEnviar.children[1]
+            let btnCadastrar = document.getElementById('btnCadastrar')
+            const textoEl = btnCadastrar.children[0]
+            const loadingEl = btnCadastrar.children[1]
             textoEl.classList.toggle('hidden')
             loadingEl.classList.toggle('flex')
             loadingEl.classList.toggle('hidden')
             if (!loadingEl.classList.contains('hidden')) {
-                btnCtaEnviar.setAttribute('disabled', 'disabled')
+                btnCadastrar.setAttribute('disabled', 'disabled')
             }
             else {
-                btnCtaEnviar.removeAttribute('disabled')
+                btnCadastrar.removeAttribute('disabled')
             }
         }
     </script>

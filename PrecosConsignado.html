@@ -14,7 +14,22 @@
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <title>Agilus - Preços consignado</title>
-    <script src="//code-sa1.jivosite.com/widget/WFZtAfr4QY" async></script>
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://chat.agiluscrm.com.br";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'tBrhEFvusWnFiKJpUqDx5QkR',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
 </head>
 <body class="text-neutral-700">
 
