@@ -34,6 +34,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Importar biblioteca para máscara de campos -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <!-- Importar biblioteca de validação do formulário -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <style>
         .required::after {
             content: '*';
@@ -56,6 +58,16 @@
             border-width: 2px;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             color: #480da3;
+        }
+        #ramo_error:has(+ label:not(:empty)) {
+            border: 1px solid red;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+        }
+        label:not(:empty) + #plano_error {
+            border: 2px solid red;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
         }
     </style>
 </head>
@@ -84,10 +96,10 @@
                 <legend class="px-4 font-bold text-white rounded-full bg-primary-600">Dados da Empresa</legend>
                 <label for="cnpj_cpf" class="block mb-1 text-sm font-medium text-gray-700 required">CNPJ ou CPF (máx. 14 caracteres):</label>
                 <input type="text" id="cnpj_cpf" name="cnpj_cpf" required class="input">
-                <label for="razao_social" class="block mt-2 mb-1 text-sm font-medium text-gray-700 required">Razão Social:</label>
-                <input type="text" id="razao_social" name="razao_social" class="input">
-                <label for="nome_fantasia" class="block mt-2 mb-1 text-sm font-medium text-gray-700 required">Nome Fantasia:</label>
-                <input type="text" id="nome_fantasia" name="nome_fantasia" class="input" required>
+                <label for="razao_social" class="block mt-2 mb-1 text-sm font-medium text-gray-700 required">Razão Social ou Nome:</label>
+                <input type="text" id="razao_social" name="razao_social" class="input" required>
+                <label for="nome_fantasia" class="block mt-2 mb-1 text-sm font-medium text-gray-700">Nome Fantasia:</label>
+                <input type="text" id="nome_fantasia" name="nome_fantasia" class="input">
             </fieldset>
 
             <!-- Endereço -->
@@ -96,7 +108,7 @@
                 <div class="flex flex-row items-end gap-2">
                     <div class="grow">
                         <label class="block mb-1 text-sm font-medium text-gray-700 required">CEP:</label>
-                        <input type="text" id="cep" name="cep" class="input">
+                        <input type="text" id="cep" name="cep" required class="input">
                     </div>
                     <button type="button" onclick="buscarEndereco()" class="btn-primary">Buscar</button>
                 </div>
@@ -125,9 +137,35 @@
                 <input type="tel" id="celular_contato" name="celular_contato" required class="input">
             </fieldset>
             
+            <!-- Sócios/Responsáveis -->
+            <fieldset class="p-4 mb-8 bg-white rounded-lg shadow-xl lg:p-8">
+                <legend class="px-4 text-lg font-bold text-white rounded-full bg-primary-600">Sócios/Responsáveis</legend>
+                <div id="sociosContainer">
+                    <div id="socio1" class="p-4 border rounded-lg">
+                        <h3>Sócio 1</h3>
+                        <div class="flex items-center gap-2">
+                            <div class="grow">
+                                <label for="nome_socio1" class="block mb-1 text-sm font-medium text-gray-700 required">Nome do Sócio:</label>
+                                <input type="text" id="nome_socio1" name="nome_socio1" class="input" required>
+                                <label for="cpf_socio1" class="block mt-2 mb-1 text-sm font-medium text-gray-700 required">CPF do Sócio:</label>
+                                <input type="text" id="cpf_socio1" name="cpf_socio1" class="input" maxlength="14" minlength="14" required>
+                                <label for="data_nascimento_socio1" class="block mt-2 mb-1 text-sm font-medium text-gray-700 required">Data de Nascimento:</label>
+                                <input type="text" id="data_nascimento_socio1" name="data_nascimento_socio1" class="input data required">
+                                <label for="celular_socio1" class="block mt-2 mb-1 text-sm font-medium text-gray-700 required">Celular do Sócio:</label>
+                                <input type="tel" id="celular_socio1" name="celular_socio1" class="input" required>
+                                <label for="email_socio1" class="block mt-2 mb-1 text-sm font-medium text-gray-700 required">E-mail do Sócio:</label>
+                                <input type="email" id="email_socio1" name="email_socio1" class="input" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Aqui serão adicionados os campos de sócios dinamicamente -->
+                </div>
+                <button type="button" onclick="adicionarSocio()" class="my-4 btn-primary">Adicionar Sócio</button>
+            </fieldset>
+
             <!-- Dados da testemunha -->
             <fieldset class="p-4 mb-8 bg-white rounded-lg shadow-xl lg:p-8">
-                <legend class="px-2 -mb-2 text-lg font-bold text-white rounded-full bg-primary-600">Dados da testemunha</legend>
+                <legend class="px-4 -mb-2 text-lg font-bold text-white rounded-full bg-primary-600">Dados da testemunha</legend>
                 <p class="mb-4 text-sm font-medium text-gray-700">Insira os dados de uma testemunha para a assinatura do contrato</p>
                 <label for="nome_testemunha" class="block mt-2 mb-1 text-sm font-medium text-gray-700 required">Nome:</label>
                 <input type="text" id="nome_testemunha" name="nome_testemunha" required class="input">
@@ -138,21 +176,12 @@
                 <label for="email_testemunha" class="block mt-2 mb-1 text-sm font-medium text-gray-700 required">E-mail:</label>
                 <input type="email" id="email_testemunha" name="email_testemunha" required class="input">
             </fieldset>
-            
-            <!-- Sócios/Responsáveis -->
-            <fieldset class="p-4 mb-8 bg-white rounded-lg shadow-xl lg:p-8">
-                <legend class="px-4 text-lg font-bold text-white rounded-full bg-primary-600">Sócios/Responsáveis</legend>
-                <div id="sociosContainer">
-                    <!-- Aqui serão adicionados os campos de sócios dinamicamente -->
-                </div>
-                <button type="button" onclick="adicionarSocio()" class="my-4 btn-primary">Adicionar Sócio</button>
-            </fieldset>
 
             <!-- Planos -->
             <fieldset class="p-4 mb-8 bg-white rounded-lg shadow-xl lg:p-8">
                 <legend class="px-4 text-lg font-bold text-white rounded-full bg-primary-600">Planos</legend>
                 <div class="mb-3 required">Qual vai ser o ramo trabalhado?</div>
-                <div class="flex flex-row mb-8 space-x-4">
+                <div class="flex flex-row space-x-4" id="ramo_error">
                     <div class="flex flex-row items-center space-x-2">
                         <input type="checkbox" name="ramo" id="consignado" class="cursor-pointer relative w-6 h-6 aspect-square !appearance-none !bg-none checked:bg-primary-600 bg-white border border-gray-300 shadow-sm rounded !outline-none !ring-0 !text-transparent !ring-offset-0 checked:!border-primary-600 hover:!border-primary-600 cursor-pointer focus-visible:!outline-offset-2 focus-visible:!outline-2 focus-visible:!outline-primary-400/30 focus-visible:border-primary-400 after:w-[35%] after:h-[53%] after:absolute after:opacity-0 after:top-[40%] after:left-[50%] after:-translate-x-2/4 after:-translate-y-2/4 after:rotate-[25deg] after:drop-shadow-[1px_0.5px_1px_rgba(56,149,248,0.5)] after:border-r-[0.17em] after:border-r-white after:border-b-[0.17em] after:border-b-white checked:after:opacity-100 checked:after:rotate-45">
                         <label for="consignado" class="cursor-pointer">Consignado</label>
@@ -162,10 +191,10 @@
                         <label for="plano_saude" class="cursor-pointer">Plano de saúde</label>
                     </div>
                 </div>
-                <div class="mb-2 required">Escolha o plano desejado:</div>
-                <div class="grid xl:grid-cols-2 xl:gap-2">
+                <div class="mt-8 mb-2 required">Escolha o plano desejado:</div>
+                <div class="grid xl:grid-cols-2 xl:gap-2" id="plano_error">
                     <div>
-                        <input class="hidden" id="3_usuarios" type="radio" name="plano" value="3_usuarios" required>
+                        <input class="hidden" id="3_usuarios" type="radio" name="plano" value="3_usuarios">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="3_usuarios">
                             <span class="text-xs font-semibold uppercase">3 usuários</span>
                             <span class="mt-2 text-xl font-bold">R$300,00/mês</span>
@@ -340,35 +369,13 @@
                 </div>
             </button>
         </form>
-        <!-- <button onClick="teste()" class="btn">teste</button> -->
+        <!-- <button onClick="teste()" class="fixed btn top-4">teste</button> -->
     </div>
     
     
     <script>
-        function teste () {
-            const data = Object.fromEntries(new FormData($('#form').target).entries())
-            data.ramos = [
-                $('#plano_saude').is(':checked') ? 'Plano de Saúde' : null,
-                $('#consignado').is(':checked') ? 'Consignado' : null
-            ].filter(item => item != null).toString()
-            let arraySocios = []
-            for (let i = 1; i <= numSocios; i++) {
-                arraySocios.push({
-                    nome_socio: data[`nome_socio${i}`],
-                    cpf_socio: data[`cpf_socio${i}`],
-                    data_nascimento_socio: data[`data_nascimento_socio${i}`],
-                    celular_socio: data[`celular_socio${i}`],
-                    email_socio: data[`email_socio${i}`],
-                })
-                delete data[`nome_socio${i}`]
-                delete data[`cpf_socio${i}`]
-                delete data[`data_nascimento_socio${i}`]
-                delete data[`celular_socio${i}`]
-                delete data[`email_socio${i}`]
-            }
-            data.socios = arraySocios
-            console.log(data)
-        }
+        function teste () {}
+        
         let maskCpfCnpjBehavior = function (val) {
             return val.replace(/\D/g, '').length <= 11 ? '000.000.000-009' : '00.000.000/0000-00'
         },
@@ -383,10 +390,17 @@
                 field.mask(maskTelBehavior.apply({}, arguments), options)
             }
         }
-        //adicionar mascara CNPJ/CPF e telefone/celular
+        //adicionar mascara CNPJ/CPF
         $("#cnpj_cpf").mask(maskCpfCnpjBehavior, optionsCpfCnpj)
-        $("#celular_contato").mask(maskTelBehavior, optionsTel)
+        $('#cpf_socio1').mask('000.000.000-00')
         $('#cpf_testemunha').mask('000.000.000-00')
+
+        //adicionar mascara de telefone
+        $("#celular_contato").mask(maskTelBehavior, optionsTel)
+        $("#celular_socio1").mask(maskTelBehavior, optionsTel)
+        
+        //adicionar mascara de data de nascimento
+        $('#data_nascimento_socio1').mask('00/00/0000')
         $('#data_nascimento_testemunha').mask('00/00/0000')
 
         //adicionar mascara do CEP
@@ -414,7 +428,7 @@
         }
 
         // Função para adicionar campos de sócios
-        let numSocios = 0
+        let numSocios = 1
         function adicionarSocio() {
             numSocios++
             const novoSocio = `
@@ -448,6 +462,11 @@
             $(`#cpf_socio${numSocios}`).mask('000.000.000-00')
             $(`#data_nascimento_socio${numSocios}`).mask('00/00/0000')
             $(`#celular_socio${numSocios}`).mask(maskTelBehavior, optionsTel)
+
+            //adicionando validação nos campos do novo sócio
+            $(`#cpf_socio${numSocios}`).rules('add', {minlength: 14, messages: {minlength: 'Digite um CPF válido'}})
+            $(`#data_nascimento_socio${numSocios}`).rules('add', {minlength: 10, messages: {minlength: 'Digite uma data de nascimento válida'}})
+            $(`#celular_socio${numSocios}`).rules('add', {minlength: 14, messages: {minlength: 'Digite um número válido'}})
         }
 
         // Função para remover campos de sócios
@@ -458,40 +477,138 @@
 
         $('form').on('submit', event => {
             event.preventDefault()
-            toggleButtonEnviar()
-            const data = Object.fromEntries(new FormData(event.target).entries())
-            data.ramos = [
-                $('#plano_saude').is(':checked') ? 'Plano de Saúde' : null,
-                $('#consignado').is(':checked') ? 'Consignado' : null
-            ].filter(item => item != null).toString()
-            let arraySocios = []
-            for (let i = 1; i <= numSocios; i++) {
-                arraySocios.push({
-                    nome_socio: data[`nome_socio${i}`],
-                    cpf_socio: data[`cpf_socio${i}`],
-                    data_nascimento_socio: data[`data_nascimento_socio${i}`],
-                    celular_socio: data[`celular_socio${i}`],
-                    email_socio: data[`email_socio${i}`],
+            if ($('form').valid()) {
+                toggleButtonEnviar()
+                const data = Object.fromEntries(new FormData(event.target).entries())
+                data.ramos = [
+                    $('#plano_saude').is(':checked') ? 'Plano de Saúde' : null,
+                    $('#consignado').is(':checked') ? 'Consignado' : null
+                ].filter(item => item != null).toString()
+                let arraySocios = []
+                for (let i = 1; i <= numSocios; i++) {
+                    arraySocios.push({
+                        nome_socio: data[`nome_socio${i}`],
+                        cpf_socio: data[`cpf_socio${i}`],
+                        data_nascimento_socio: data[`data_nascimento_socio${i}`],
+                        celular_socio: data[`celular_socio${i}`],
+                        email_socio: data[`email_socio${i}`],
+                    })
+                    delete data[`nome_socio${i}`]
+                    delete data[`cpf_socio${i}`]
+                    delete data[`data_nascimento_socio${i}`]
+                    delete data[`celular_socio${i}`]
+                    delete data[`email_socio${i}`]
+                }
+                data.socios = arraySocios
+                axios({
+                    method: 'POST',
+                    url: `https://agiluscrm.com.br:40000/api/ConfirmacaoCadastro/IncluirFichaCadastro`,
+                    // url: `http://localhost:55461/api/ConfirmacaoCadastro/IncluirFichaCadastro`,
+                    data: data
+                }).then(() => {
+                    console.log('cliente enviado com sucesso')
+                    toggleButtonEnviar()
+                    alert('Dados enviados com sucesso.')
+                }).catch(error => {
+                    alert('Erro ao enviar os dados do formulário, tente novamente.')
+                    console.error('cliente não enviado para o Agilus CRM. Erro: ', error)
+                    toggleButtonEnviar()
                 })
-                delete data[`nome_socio${i}`]
-                delete data[`cpf_socio${i}`]
-                delete data[`data_nascimento_socio${i}`]
-                delete data[`celular_socio${i}`]
-                delete data[`email_socio${i}`]
             }
-            data.socios = arraySocios
-            axios({
-                method: 'POST',
-                url: `https://agiluscrm.com.br:40000/api/ConfirmacaoCadastro/IncluirFichaCadastro`,
-                // url: `http://localhost:55461/api/ConfirmacaoCadastro/IncluirFichaCadastro`,
-                data: data
-            }).then(() => {
-                console.log('cliente enviado com sucesso')
-                toggleButtonEnviar()
-            }).catch(error => {
-                console.error('cliente não enviado para o Agilus CRM. Erro: ' + error)
-                toggleButtonEnviar()
-            })
+            else {
+                alert('Preencha os campos corretamente e tente novamente.')
+            }
+        })
+        
+        $.validator.messages.required = 'Campo obrigatório'
+        $.validator.messages.email = 'Digite um email válido'
+        $.validator.messages.minlength = 'Insira pelo menos {0} dígitos'
+        $('#cadastroForm').validate({
+            ignore: [],
+            debug: true,
+            errorClass: 'error text-red-500 text-sm',
+            rules: {
+                cnpj_cpf: {
+                    required: true,
+                    minlength: 14
+                },
+                cep: {
+                    minlength: 9
+                },
+                celular_contato: {
+                    minlength: 14
+                },
+                cpf_socio1: {
+                    minlength: 14
+                },
+                data_nascimento_socio1: {
+                    minlength: 10
+                },
+                celular_socio1: {
+                    minlength: 14
+                },
+                cpf_testemunha: {
+                    minlength: 14
+                },
+                data_nascimento_testemunha: {
+                    minlength: 10
+                },
+                celular_testemunha: {
+                    minlength: 14
+                },
+                ramo: {
+                    required: true
+                },
+                plano: {
+                    required: true
+                }
+            },
+            messages: {
+                cnpj_cpf: {
+                    minlength: 'Digite pelo menos 11 dígitos'
+                },
+                ramo: {
+                    required: 'Selecione pelo menos 1 opção'
+                },
+                plano: {
+                    required: 'Selecione um plano:'
+                },
+                cep: {
+                    minlength: 'Digite pelo menos 8 dígitos'
+                },
+                celular_contato: {
+                    minlength: 'Digite um número válido'
+                },
+                data_nascimento_socio1: {
+                    minlength: 'Digite uma data de nascimento válida'
+                },
+                cpf_socio1: {
+                    minlength: 'Digite um cpf válido'
+                },
+                celular_socio1: {
+                    minlength: 'Digite um número válido'
+                },
+                cpf_testemunha: {
+                    minlength: 'Digite um cpf válido'
+                },
+                data_nascimento_testemunha: {
+                    minlength: 'Digite uma data de nascimento válida'
+                },
+                celular_testemunha: {
+                    minlength: 'Digite um número válido'
+                },
+            },
+            errorPlacement: function(error, element) {
+                if (element.attr("name") === "ramo") {
+                    error.insertAfter('#ramo_error')
+                }
+                else if (element.is(":radio")) {
+                    error.insertBefore('#plano_error')
+                }
+                else {
+                    error.insertAfter(element)
+                }
+            }
         })
 
         function toggleButtonEnviar () {
