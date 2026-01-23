@@ -1,7 +1,5 @@
 const menuPS = document.getElementById('menu-ps') // li produtos e serviços
-const menuP = document.getElementById('menu-p') // li preços
 const submenuPS = document.getElementById('submenu-ps') // lista dentro de produtos e serviços
-const submenuP = document.getElementById('submenu-p') // lista dentro de preços
 const buttonMenuHamburguer = document.getElementById('nav-toggle') // menu hamburguer
 const navContent = document.getElementById('nav-content') // links do header
 const btnCta = document.getElementById('btn-cta') // botão de cta (click-to-action)
