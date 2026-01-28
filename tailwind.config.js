@@ -18,6 +18,7 @@ module.exports = {
                 serif: ['Georgia', 'serif'],
             },
             colors: {
+
                 primary: {
                      50: '#F3EEFA',
                     100: '#DDD2FA',
@@ -42,6 +43,7 @@ module.exports = {
                     800: '#BE4C96',
                     900: '#A73E82'
                 },
+                'primary-light': "rgba(73, 13, 163, 0.05)",
                 title: '#2D1D61',
                 grey: '#363049',
                 dark: '#2d2d2d',

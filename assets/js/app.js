@@ -1,9 +1,8 @@
-const menuPS = document.getElementById('menu-ps') // li produtos e serviços
-const submenuPS = document.getElementById('submenu-ps') // lista dentro de produtos e serviços
 const buttonMenuHamburguer = document.getElementById('nav-toggle') // menu hamburguer
 const navContent = document.getElementById('nav-content') // links do header
 const btnCta = document.getElementById('btn-cta') // botão de cta (click-to-action)
 const btnCta2 = document.getElementById('btn-cta2')
+const btnCta3 = document.getElementById('btn-cta3')
 const modalCta = document.getElementById('modal-cta') // modal de cta (click-to-action)
 const btnCloseModalCta = document.getElementById('btn-close-modal')
 const formModalCta = document.getElementById('form')
@@ -20,31 +19,21 @@ buttonMenuHamburguer.addEventListener('click', () => {
     navContent.classList.toggle('hidden')
 })
 
-menuPS.addEventListener('click', () => {
-    toggleSubMenu(submenuPS)
-})
-
-function toggleSubMenu (element) {
-    element.classList.toggle('hidden')
-    element.classList.toggle('flex')
-}
-
-submenuPS.addEventListener('mouseleave', () => {
-    toggleSubMenu(submenuPS)
-})
-
 if (btnCta) {
     btnCta.addEventListener('click', toggleModal())
 }
 if (btnCta2) {
     btnCta2.addEventListener('click', toggleModal())
 }
+if (btnCta3) {
+    btnCta3.addEventListener('click', toggleModal())
+}
 if (btnCloseModalCta) {
     btnCloseModalCta.addEventListener('click', toggleModal())
 }
 
 formModalCta.addEventListener('submit', event => {
-  event.preventDefault()
+    event.preventDefault()
 })
 
 btnCtaWhatsapp.addEventListener('click', () => {
@@ -57,6 +46,17 @@ btnCtaWhatsapp.addEventListener('click', () => {
 })
 
 btnCtaEnviar.addEventListener('click', () => {
+    // Captcha Validation
+    const captchaInput = document.getElementById('captcha')
+    const captchaText = document.getElementById('text-captcha')
+    if (captchaInput && captchaText) {
+        if (parseInt(captchaInput.value) !== parseInt(captchaText.dataset.result)) {
+            alert('Captcha incorreto. Por favor, resolva a conta novamente.')
+            initCaptcha()
+            return
+        }
+    }
+
     let { nome, nomeEmpresa, email, telefone, ramos } = pegarDadosForm()
     if (!nome || !email || !telefone) {
         return
@@ -114,10 +114,10 @@ btnCtaEnviar.addEventListener('click', () => {
             DataNascimento: null,
             Chave: 'ce128c97-5b3a-4547-8716-f83d62317311',
             Telefones: [
-                {Numero: telefone, Ddd: '', Tipo: ''}
+                { Numero: telefone, Ddd: '', Tipo: '' }
             ],
             Emails: [
-                {Endereco: email, Tipo: ''}
+                { Endereco: email, Tipo: '' }
             ],
             FiltroSimuladorFaixaEtaria: {}
         }
@@ -130,14 +130,17 @@ btnCtaEnviar.addEventListener('click', () => {
     })
 })
 
-function toggleModal () {
+function toggleModal() {
     return () => {
         modalCta.classList.toggle('flex')
         modalCta.classList.toggle('hidden')
+        if (!modalCta.classList.contains('hidden')) {
+            initCaptcha()
+        }
     }
 }
 
-function toggleButtonEnviar () {
+function toggleButtonEnviar() {
     const textoEl = btnCtaEnviar.children[0]
     const loadingEl = btnCtaEnviar.children[1]
     textoEl.classList.toggle('hidden')
@@ -151,7 +154,7 @@ function toggleButtonEnviar () {
     }
 }
 
-function pegarDadosForm () {
+function pegarDadosForm() {
     return {
         nome: document.querySelector('input[type=text]').value,
         nomeEmpresa: document.getElementById('nomeEmpresa').value,
@@ -163,3 +166,18 @@ function pegarDadosForm () {
         ].filter(item => item != null)
     }
 }
+
+function initCaptcha() {
+    const span = document.getElementById('text-captcha')
+    const input = document.getElementById('captcha')
+    if (span && input) {
+        const n1 = Math.floor(Math.random() * 10)
+        const n2 = Math.floor(Math.random() * 10)
+        span.textContent = `${n1} + ${n2}`
+        span.dataset.result = n1 + n2
+        input.value = ''
+    }
+}
+
+// Init on load
+initCaptcha()

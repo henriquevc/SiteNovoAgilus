@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/build.css">
+    <link rel="stylesheet" href="/assets/css/output.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <title>Agilus - Página Inicial</title>
@@ -61,21 +61,11 @@
 
             <div class="flex-grow hidden w-full pt-6 lg:w-auto lg:flex lg:items-center lg:justify-center lg:pt-0" id="nav-content">
                 <ul class="items-center justify-end flex-1 mb-4 text-lg lg:flex lg:justify-center lg:mb-0 lg:text-base">
-                    <li class="block py-2 mx-9 lg:inline-block lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
-                        <div class="cursor-pointer" id="menu-ps" class="relative">Produtos</div>
-                        <div id="submenu-ps" class="z-20 flex-wrap hidden mt-4 text-base bg-white divide-x-0 lg:absolute lg:flex-nowrap lg:shadow-2xl lg:py-8">
-                            <div class="space-y-2">
-                                <h3 class="px-6 font-bold lg:px-12">CRM</h3>
-                                <ul class="w-full mt-2 font-normal cursor-pointer lg:mt-4">
-                                    <li class="px-8 py-2.5 lg:px-16 lg:hover:bg-primary-600 lg:hover:text-white lg:hover:font-bold"><a href="./CRMPlanoSaude.html">Plano de saúde</a></li>
-                                    <li class="px-8 py-2.5 lg:px-16 lg:hover:bg-primary-600 lg:hover:text-white lg:hover:font-bold"><a href="./CRMConsignado.html">Consignado</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
+                        <a href="#produto">Produto</a>
                     </li>
                     <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
-                        <a href="./Precos.html">Preços</a>
-                        
+                        <a href="#precos">Preços</a>
                     </li>
                     <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Sobre.html">Empresa</a></li>
                     <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Contato.html">Contato</a></li>
@@ -114,15 +104,9 @@
                         <label for="telefone" class="block mb-2 text-sm font-medium text-gray-700">Telefone</label>
                         <input type="tel" name="telefone" id="telefone" class="input" placeholder="(xx) xxxxx-xxxx" required>
                     </div>
-                    <div class="flex flex-row space-x-8">
-                        <div class="flex flex-row items-center space-x-2">
-                            <input type="checkbox" class="w-5 h-5 rounded-lg accent-primary-700" id="planoSaude" />
-                            <label for="planoSaude" class="text-sm font-medium text-gray-700">Plano de saúde</label>
-                        </div>
-                        <div class="flex flex-row items-center my-2 space-x-2">
-                            <input type="checkbox" class="w-5 h-5 rounded-lg accent-primary-700" id="consignado">
-                            <label for="consignado" class="text-sm font-medium text-gray-700">Consignado</label>
-                        </div>
+                    <div>
+                        <label for="captcha" class="block mb-2 text-sm font-medium text-gray-700">Pergunta de segurança: <span id="text-captcha"></span></label>
+                        <input type="number" name="captcha" id="captcha" class="input" placeholder="Digite o resultado" required>
                     </div>
 
                     <button id="btn-cta-enviar" type="submit" class="inline-flex items-center justify-center w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">
@@ -162,19 +146,56 @@
             </aside>
         </div>
     </section>
-    <section class="container mt-8 lg:mt-0 lg:p-24">
-        <h2 class="text-3xl font-bold text-center sm:mt-4 sm:my-8 lg:my-12 xl:my-16 lg:text-4xl text-title">Um CRM, múltiplos ramos!</h2>
-        <div class="grid grid-cols-1 sm:gap-8 md:gap-12 lg:gap-20 xl:gap-24 lg:grid-cols-2 ">
-            <aside class="px-6 py-8 lg:px-12" data-aos="fade-right">
-                <h3 class="text-2xl font-bold underline sm:mt-4 sm:my-8 lg:text-3xl text-title decoration-secondary-600 underline-offset-8">Crédito consignado</h3>
-                <p class="my-8 text-base">O Agilus é o sistema para crédito consignado que vai tornar sua gestão mais simples. Todo o fluxo da operação você fará por dentro do sistema, desde o trabalho dos operadores, simulações, agendamentos, histórico, controle de vendas, metas, documentação, comissionamento, entre outras funcionalidades. Tudo é feito por dentro do nosso sistema.</p>
-                <a href="./CRMConsignado.html" class="btn btn-secondary">Conheça mais</a>
+    <section class="container mt-16 sm:py-12 md:py-16 lg:py-20 sm:mt-0" id="produto">
+        <div class="text-center">
+            <h2 class="my-4 text-3xl font-bold lg:text-4xl text-title">Saiba tudo do início ao fim da operação</h2>
+            <p class="max-w-2xl mx-auto text-base">Feito por quem entende do mercado, sem soluções genéricas. Pensamos nas dificuldades que sua operação tem no dia a dia e criamos soluções que resolvem seu problema.</p>
+        </div>
+        <div class="grid grid-cols-1 px-8 mt-12 sm:px-0 sm:grid-cols-2 md:grid-cols-3 gap-x-4 sm:gap-x-8 gap-y-8 md:gap-x-12 lg:gap-x-16">
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="/assets/images/leads_icon.svg" alt="Leads icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Televendas</h4>
+                <p class="text-base text-grey">Trabalhe seus clientes de formas diferentes, por fila ou por distribuição. Filtre-os por status, campanhas, insira ocorrências e tenha todo o histórico do que foi negociado.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="/assets/images/campanhas_icon.svg" alt="Campanhas icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Esteira de Contratos</h4>
+                <p class="text-base text-grey">Controle os contratos da sua empresa com mais facilidade. Mantenha os documentos do cliente em seu próprio cadastro, facilitando a localização dos mesmos.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="/assets/images/automacoes_icon.svg" alt="Automações icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Relatórios</h4>
+                <p class="text-base text-grey">Relatórios para todo o controle da empresa, desde o acompanhamento do telemarketing, para saber como está a produção, relatórios de vendas e comissões.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="/assets/images/comissoes_icon.svg" alt="Comissões icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Integrações</h4>
+                <p class="text-base text-grey">Utiliza algum sistema de busca de telefonia ou de consulta de dados? Possuimos integração com os maiores do mercado. Basta dar um clique e o sistema consulta e atualiza para você!</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="/assets/images/financeiro_icon.svg" alt="Financeiro icone" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Importação de Dados</h4>
+                <p class="text-base text-grey">Deseja importar o seu mailling ou então os contratos do banco? Faça você mesmo de dentro da sua empresa. Você terá todo o suporte necessário para importar de maneira fácil e rápida. Basta seguir os modelos existentes.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2 text-center sm:space-y-4">
+                <img src="/assets/images/indicadores_icon.svg" alt="comissoes icon" class="w-8 h-8">
+                <h4 class="text-xl font-bold lg:text-2xl text-title">Distribuição/Campanha</h4>
+                <p class="text-base text-grey">Crie suas campanhas, filas ou faça a distribuição dos clientes para seus operadores de maneira fácil e detalhada. Filtre bancos, valores, cidades, idade e/ou qualquer outra informação que você tenha disponível na sua carteira de clientes.</p>
+            </div>
+        </div>
+    </section>
+    <section class="pt-16 pb-8 md:py-16 lg:py-20 bg-primary-50" id="produto">
+        <div class="container flex flex-col-reverse justify-center space-x-0 space-y-4 space-y-reverse sm:space-y-0 lg:space-x-16 lg:flex-row">
+            <aside class="text-center basis-full lg:basis-3/5" data-aos="fade-right" data-aos-duration="700">
+                <h1 class="mb-8 text-4xl font-extrabold text-title lg:text-5xl">O gerenciador de <span class="underline decoration-secondary-600 underline-offset-4">consignado</span> que a sua empresa precisa!</h1>
+                <p class="mb-8 text-lg lg:mb-10 text-grey">Desde o momento da prospecção até o pagamento de comissão, temos todos os módulos para auxiliar a sua empresa a reduzir processos repetitivos e tornar a operação mais lucrativa.</p>
+                <div class="flex justify-center">
+                    <button class="btn btn-secondary" id="btn-cta2">Comece agora</button>
+                </div>
             </aside>
-            <aside class="px-6 py-8 lg:px-12" data-aos="fade-down">
-                <h3 class="text-2xl font-bold underline sm:mt-4 sm:my-8 lg:text-3xl text-title decoration-primary-600 underline-offset-8">Plano de saúde</h3>
-                <p class="my-8 text-base">O AgilusCRM é a solução perfeita para a sua corretora. Tenha controle sobre seus leads, contatos, agenda de atendimentos, propostas, comissionamentos a receber e a pagar, simulações, integração com o seu site e muito mais. Faça tudo por dentro do nosso sistema, de onde você estiver.</p>
-                <a href="./CRMPlanoSaude.html" class="btn btn-primary">Conheça mais</a>
-            </aside>
+            <!-- <aside class="basis-full lg:basis-3/5" style="margin-top: -64px">
+                <img src="/assets/images/Card.svg" alt="Imagem do sistema" class="w-full" data-aos="fade-up">
+            </aside> -->
         </div>
     </section>
     <section class="container mt-8 lg:mt-0">
@@ -189,7 +210,7 @@
             </aside>
         </div>
     </section>
-    <section class="mt-8 sm:mt-16 lg:mt-0 bg-secondary-50">
+    <section class="mt-8 sm:mt-16 lg:mt-0 bg-primary-50">
         <div class="container py-24">
             <h3 class="mt-6 text-2xl font-bold lg:text-3xl text-title">Funcionalidades essenciais para o dia-a-dia</h3>
             <p class="w-full mt-4 lg:w-1/2 text-grey">Alguns recursos são indispensáveis para que você saiba o caminho que sua empresa está tomando e para facilitar o trabalho de todo o seu time.</p>
@@ -223,23 +244,418 @@
             </aside>
         </div>
     </section>
+    <section class="bg-primary-50">
+        <div class="container grid grid-cols-1 gap-8 lg:gap-16 py-12 mt-16 bg-left-top bg-cover sm:py-16 md:py-24 sm:mt-0 sm:grid-cols-2 lg:bg-[url(/assets/images/aspas-grande.svg)] bg-no-repeat" style="background-size: 86px 72px;background-position: 68px 110px;">
+            <aside class="flex flex-col lg:pl-8">
+                <h2 class="w-full text-3xl font-bold lg:w-7/12 text-title lg:text-4xl">Seus dados são seus de verdade!</h2>
+                <p class="mt-4 text-lg">Não vendemos, compartilhamos ou negociamos base, aqui levamos a sério a segurança de dados.</p>
+                <div class="self-end w-full p-8 pl-16 mt-12 bg-white rounded-lg lg:w-2/3 text-grey" style="background-image: url(/assets/images/aspas-pequena.svg); background-repeat: no-repeat; background-position: 32px 32px;">
+                    Nossa politica de dados é rigida, o sistema é nosso, mas os dados são seus. Diferente de outros sistemas, nós não negociamos nenhuma base de dados. Nosso foco é desenvolver o melhor CRM para a sua empresa.
+                </div>
+            </aside>
+            <aside class="flex flex-col gap-8 lg:gap-16 lg:mt-20">
+                <div class="w-full p-8 pl-16 bg-white rounded-lg lg:w-3/4 text-grey" style="background-image: url(/assets/images/aspas-pequena.svg); background-repeat: no-repeat; background-position: 32px 32px;">
+                    <p>Nossos servidores estão alocados em um datacenter Tier 3, com um sistema autossustentado, com equipamentos de refrigeração e alimentação de energia redundantes além de link de internet de alta capacidade.</p>
+                </div>
+                <div class="w-full p-8 pl-16 bg-white rounded-lg lg:w-2/3 text-grey" style="background-image: url(/assets/images/aspas-pequena.svg); background-repeat: no-repeat; background-position: 32px 32px;">
+                    <p>Uptime de 98%, possímos uma infra estrutura robusta, a Agilus garante um funcionamento, com o mínimo de impacto em sua operação.</p>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <section class="container mt-16 sm:py-16 md:py-24 sm:mt-0">
+        <div class="flex flex-col items-center lg:flex-row lg:justify-between">
+            <aside class="flex flex-col justify-center space-y-4 lg:w-1/2">
+                <h2 class="text-3xl font-bold lg:text-4xl text-title">Vem para a Agilus</h2>
+                <p class="text-base lg:w-4/5 text-grey">Aqui sua empresa tem suporte de qualidade, pessoas qualificadas para entender sua necessidade e te ajudar a crescer.</p>
+            </aside>
+            <aside class="grid grid-cols-1 mt-8 lg:mt-0 sm:w-full lg:w-5/12 gap-y-8 sm:gap-x-4 sm:grid-cols-2">
+                <div class="flex flex-row items-center space-x-8">
+                    <img src="/assets/images/leads_icon.svg" alt="leads icone" class="w-8 h-8">
+                    <div>
+                        <h3 class="text-3xl font-bold text-title">3.000+</h4>
+                        <p class="text-sm">Usuários diários</p>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center space-x-8">
+                    <img src="/assets/images/financeiro_icon.svg" alt="financeiro icone" class="w-8 h-8">
+                    <div>
+                        <h3 class="text-3xl font-bold text-title">24/7</h4>
+                        <p class="text-sm">Disponibilidade do sistema</p>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center space-x-8">
+                    <img src="/assets/images/comissoes_icon.svg" alt="comissões icone" class="w-8 h-8">
+                    <div>
+                        <h3 class="text-3xl font-bold text-title">99%</h4>
+                        <p class="text-sm">Altíssima satisfação dos clientes com o suporte</p>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center space-x-8">
+                    <img src="/assets/images/lista_icon.svg" alt="lista icone" class="w-8 h-8">
+                    <div>
+                        <h3 class="text-3xl font-bold text-title">26+1</h4>
+                        <p class="text-sm">Disponível em todo território nacional</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
     <section class="mt-16 bg-primary-50 lg:mt-0">
         <div class="container flex flex-col content-center py-16 md:flex-row lg:py-24" data-aos="fade-down">
             <aside class="flex justify-center w-full lg:w-1/2">
                 <img src="/assets/images/Smartphone.svg" alt="imagem da tela inicial do Agilus CRM" width="213" height="420">
             </aside>
             <aside class="flex flex-col items-center justify-center w-full mt-8 space-y-6 md:mt-0 lg:w-1/2">
-                <h3 class="text-2xl font-bold lg:text-3xl text-title md:w-2/3">Sem instalação de aplicativos, sem complicação. Acesse de qualquer lugar.</h3>
-                <p class="text-base text-grey md:w-2/3">O Agilus CRM é desenvolvido seguindo as melhores práticas e tecnologias do mercado. Sua equipe conectada o tempo todo, sem complicações. Acessou, usou.</p>
+                <div class="flex flex-col items-center justify-center w-full mt-8 space-y-6 md:mt-0">
+                    <h3 class="text-2xl font-bold lg:text-3xl text-title md:w-2/3">
+                        Sem instalação de aplicativos, sem complicação. Acesse de qualquer lugar.
+                    </h3>
+                    <p class="text-base text-grey md:w-2/3">O Agilus CRM é desenvolvido seguindo as melhores práticas 
+                        e tecnologias do mercado. Sua equipe conectada o tempo todo, sem complicações. Acessou, usou.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center justify-center w-full mt-8 space-y-6">
+                    <h3 class="text-2xl font-bold lg:text-3xl text-title md:w-2/3">
+                        Acesso simples, disponível em alguns cliques.
+                    </h3>
+                    <p class="text-base text-grey md:w-2/3">
+                        Com apenas alguns cliques, você consegue gerenciar toda sua empresa de qualquer lugar.
+                    </p>
+                </div>
             </aside>
         </div>
     </section>
-    <section class="bg-secondary-50">
-        <div class="container text-center py-36">
+    <!-- Preços -->
+    <section class="container pt-16 pb-8 text-center md:py-16 lg:py-20" id="precos">
+        <h2 class="mt-16 mb-6 text-4xl font-extrabold text-title lg:text-3xl">Planos flexíveis para crescer com você</h2>
+        <p class="mb-4 text-base text-grey/70">Escolha o plano ideal para o número de usuários da sua operação:</p>
+        <p class="text-sm text-grey/70">Todos os planos incluem upgrade a qualquer momento, desconto por pontualidade e suporte dedicado.</p>
+        <div class="max-w-6xl p-8 mx-auto mt-16 border rounded-lg bg-primary-50 md:p-12">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b-2 hover:bg-primary-50/50">
+                            <th class="px-4 py-4 font-semibold text-left text-gray-700">Pacote</th>
+                            <th class="px-4 py-4 font-semibold text-center text-gray-700">Mensal</th>
+                            <th class="px-4 py-4 font-semibold text-center text-gray-700">Semestral</th>
+                            <th class="px-4 py-4 font-semibold text-center rounded-t-lg text-primary-600" style="background-color: rgba(72, 13, 163, 0.05)">
+                                Anual
+                                <span class="block text-xs font-normal text-primary/80">Mais escolhido</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="pricing-table-body">
+                        <tr class="border-b border-slate-50" data-row-index="0">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">3 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 450,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 405,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-10%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 345,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-23%</span>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-slate-50" data-row-index="1">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">5 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 725,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 650,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-10%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 550,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-24%</span>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-slate-50" data-row-index="2">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">10 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 1.400,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 1.250,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-11%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 1.050,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-25%</span>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-slate-50" data-row-index="3">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">15 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 2.025,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 1.800,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-11%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 345,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-23%</span>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-slate-50" data-row-index="4">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">20 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 2.600,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 2.300,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-12%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 1.900,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-27%</span>
+                            </td>
+                        </tr>
+                        <tr class="hidden border-b border-slate-50 pricing-row-hidden" data-row-index="5">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">30 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 3.750,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 3.300,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-10%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 2.700,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-23%</span>
+                            </td>
+                        </tr>
+                        <tr class="hidden border-b border-slate-50 pricing-row-hidden" data-row-index="6">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">40 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 4.800,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 4.200,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-13%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 3.400,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-29%</span>
+                            </td>
+                        </tr>
+                        <tr class="hidden border-b border-slate-50 pricing-row-hidden" data-row-index="7">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">50 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 5.700,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 5.000,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-13%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 4.000,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-30%</span>
+                            </td>
+                        </tr>
+                        <tr class="hidden border-b border-slate-50 pricing-row-hidden" data-row-index="8">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">75 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 8.250,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 7.125,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-14%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 5.625,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-32%</span>
+                            </td>
+                        </tr>
+                        <tr class="hidden border-b border-slate-50 pricing-row-hidden" data-row-index="9">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">100 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 10.500,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 9.000,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-14%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 7.000,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-33%</span>
+                            </td>
+                        </tr>
+                        <tr class="hidden border-b border-slate-50 pricing-row-hidden" data-row-index="10">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">150 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 15.000,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 12.750,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-15%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 9.750,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-35%</span>
+                            </td>
+                        </tr>
+                        <tr class="hidden border-b border-slate-50 pricing-row-hidden" data-row-index="11">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">200 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 19.000,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 16.000,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-16%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 12.000,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-37%</span>
+                            </td>
+                        </tr>
+                        <tr class="hidden border-b border-slate-50 pricing-row-hidden" data-row-index="12">
+                            <td class="px-4 py-4 font-medium text-left text-foreground">300 usuários</td>
+                            <td class="px-4 py-4 text-center text-foreground/80">R$ 27.000,00</td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <span>R$ 22.500,00</span>
+                                    <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-17%</span>
+                                </div>    
+                            </td>
+                            <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
+                                R$ 16.500,00
+                                <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-39%</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="flex justify-center mt-8">
+                <button id="btn-show-more-prices" class="inline-flex items-center gap-3 px-4 py-2 text-sm font-semibold text-primary-600">
+                    Carregar mais planos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 lucide lucide-chevron-down" data-loc="client\src\components\PricingTable.tsx:128"><path d="m6 9 6 6 6-6"></path></svg>
+                </button>
+                <button id="btn-show-less-prices" class="inline-flex items-center hidden gap-3 px-4 py-2 text-sm font-semibold text-primary-600">
+                    Mostrar menos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 rotate-180 lucide lucide-chevron-down" data-loc="client\src\components\PricingTable.tsx:142"><path d="m6 9 6 6 6-6"></path></svg>
+                </button>
+            </div>
+            <!-- <div class="flex flex-col justify-center sm:items-center">
+                <div class="flex">
+                    <div class="inline-flex w-full rounded-md" role="group">
+                        <button type="button" onclick="mudaPeriodo('Mensal')" id="btn-periodo-Mensal" 
+                            class="px-6 py-3 text-lg font-medium text-gray-900 bg-white border-b-2 border-primary-800 hover:bg-primary-100">
+                            Mensal
+                        </button>
+                        <button type="button" onclick="mudaPeriodo('Semestral')" id="btn-periodo-Semestral" 
+                            class="px-6 py-3 text-lg font-medium text-gray-900 bg-white border-b-2 border-primary-800 hover:bg-primary-100">
+                            Semestral
+                        </button>
+                        <button type="button" onclick="mudaPeriodo('Anual')" id="btn-periodo-Anual"     
+                            class="px-6 py-3 text-lg font-medium text-gray-900 bg-white border-b-2 border-primary-800 hover:bg-primary-100">
+                            Anual
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center w-full px-8 py-16 bg-white shadow-2xl lg:space-y-4 sm:px-12 xl:flex-row sm:w-2/3 xl:w-3/4" data-aos="fade-right" data-aos-duration="800">
+                    <div class="flex flex-col items-center justify-center w-full xl:w-2/5">
+                        <div class="flex flex-wrap gap-4" id="plan-buttons-consignado"></div>
+                        <div class="mt-6">
+                            <strong class="text-4xl font-extrabold" id="valor-consignado"></strong>
+                            <div class="flex flex-col ml-1">
+                                <span class="text-sm text-neutral-500">/por mês</span>
+                                <span class="text-xs text-neutral-400" id="info-faturamento"></span>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <strong class="text-xl font-bold" id="valorPorUsuario-consignado"></strong>
+                            <span class="text-sm text-neutral-500">/por usuário</span>
+                        </div>
+                        <div class="flex justify-center w-full mt-12">
+                            <button id="btn-cta" class="w-full px-8 py-4 text-lg font-semibold text-white bg-primary-800">
+                                Contratar
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="flex flex-row flex-wrap w-full mt-4 text-sm sm:mt-8 xl:mt-0 xl:w-3/5 xl:justify-start">
+                        <!-- <li class="p-2 my-2 text-base text-white border rounded-lg sm:inline md:mx-1 bg-primary-800" id="armazenamento"></li>
+                        <li class="p-2 my-2 text-base text-white border rounded-lg sm:inline md:mx-1 bg-primary-800" id="indicador"></li>
+                        <li class="p-2 my-2 text-base text-white border rounded-lg sm:inline md:mx-1 bg-primary-800" id="relatorio"></li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Prospecção de negócios</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Status customizados</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Importação de dados</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle de comissionamento</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Utilização em várias filiais</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Contratos para refinanciamento</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Cadastro de Clientes, Filiais, Vendedores, entre outros</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Gestão de vendas</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle de comissões</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Hierarquia ilimitada entre Vendedores</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Cálculo de comissão</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Fórmulas de comissão</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Rateio de comissão entre equipes</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Anexo de documentação</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Produtos detalhado, com todas as regras de Banco</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Relatórios</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle de adiantamento de comissão</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Controle de compra de dívida/portabilidade e refinanciamentos</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Restrição de acessos por perfil</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Integração com sistemas de higienização e telefonia</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Sem necessidade de instalação</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Funciona em qualquer navegador</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Bloqueio de IP's</li>
+                        <li class="my-2 sm:inline md:mx-1 icon-done">Bloqueio de acessos pelo celular</li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+        <button class="my-16 shadow-2xl btn btn-primary shadow-primary-600" id="btn-cta3">Solicitar demonstração</button>
+    </section>
+    
+    <section class="bg-primary-50">
+        <div class="container py-32 text-center">
             <h2 class="text-2xl font-bold text-title lg:text-3xl">
-                Interessado em aumentar sua produtividade?
+                Perguntas frequentes
             </h2>
-            <button class="mt-8 text-white shadow-2xl btn bg-secondary-800 shadow-secondary-800" id="btn-cta2">Vamos conversar</button>
+                <div class="max-w-2xl mx-auto mt-16 space-y-4">
+                    <div class="bg-white border rounded-lg border-slate-100">
+                        <button type="button" id="faq-0-toggle" class="flex items-center justify-between w-full p-6 faq-toggle" aria-expanded="false" aria-controls="faq-0">
+                            <p class="font-semibold text-left">Posso trocar de plano depois?</p>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div id="faq-0" class="hidden p-6 border-t border-slate-100 faq-answer" role="region" aria-labelledby="faq-0-toggle">
+                            <p class="text-left text-grey">Sim, você pode trocar de plano a qualquer momento. Basta entrar em contato com nosso suporte para solicitar a mudança.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border rounded-lg border-slate-100">
+                        <button type="button" id="faq-1-toggle" class="flex items-center justify-between w-full p-6 faq-toggle" aria-expanded="false" aria-controls="faq-1">
+                            <p class="font-semibold text-left">O Agilus substitui ferramentas de dados?</p>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div id="faq-1" class="hidden p-6 border-t border-slate-100 faq-answer" role="region" aria-labelledby="faq-1-toggle">
+                            <p class="text-left text-grey"">Não. O Agilus complementa essas ferramentas, garantindo que os dados gerem vendas e controle.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border rounded-lg border-slate-100">
+                        <button type="button" id="faq-2-toggle" class="flex items-center justify-between w-full p-6 faq-toggle" aria-expanded="false" aria-controls="faq-2">
+                            <p class="font-semibold text-left">Consigo importar minha base atual?</p>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div id="faq-2" class="hidden p-6 border-t border-slate-100 faq-answer" role="region" aria-labelledby="faq-2-toggle">
+                            <p class="text-left text-grey"">Sim. Trabalhamos com importação simples e assistida.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border rounded-lg border-slate-100">
+                        <button type="button" id="faq-3-toggle" class="flex items-center justify-between w-full p-6 faq-toggle" aria-expanded="false" aria-controls="faq-3">
+                            <p class="font-semibold text-left">Existe contrato de fidelidade?</p>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div id="faq-3" class="hidden p-6 border-t border-slate-100 faq-answer" role="region" aria-labelledby="faq-3-toggle">
+                            <p class="text-left text-grey"">Depende do plano escolhido. Planos semestrais e anuais possuem condições especiais.</p>
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
     <footer class="flex w-full pb-16 text-white bg-black">
@@ -254,7 +670,6 @@
                     <div>
                         <h3 class="mb-6 text-xl font-semibold">Produtos</h3>
                         <ul class="space-y-4 text-base">
-                            <li><a href="./CRMPlanoSaude.html">Plano de saúde</a></li>
                             <li><a href="./CRMConsignado.html">Crédito consignado</a></li>
                             <li><a href="http://agilus.com.br/organizadorcolunas/publish.htm">Formata Layout</a></li>
                         </ul>
@@ -289,6 +704,141 @@
     <script>
         AOS.init({
             disable: window.innerWidth <= 768
+        });
+        // Dados dos planos
+        const planos = [
+            { id: 0, qtdeUsuarios: 3, valorMensal: 450, valorSemestral: 405, valorAnual: 345, armazenamento: 3, indicadores: 1, relatorio: 1 },
+            { id: 1, qtdeUsuarios: 5, valorMensal: 725, valorSemestral: 650, valorAnual: 550, armazenamento: 3, indicadores: 2, relatorio: 2 },
+            { id: 2, qtdeUsuarios: 10, valorMensal: 1400, valorSemestral: 1250, valorAnual: 1050, armazenamento: 3, indicadores: 3, relatorio: 3 },
+            { id: 3, qtdeUsuarios: 15, valorMensal: 2025, valorSemestral: 1800, valorAnual: 1500, armazenamento: 3, indicadores: 4, relatorio: 4 },
+            { id: 4, qtdeUsuarios: 20, valorMensal: 2600, valorSemestral: 2300, valorAnual: 1900, armazenamento: 5, indicadores: 5, relatorio: 5 },
+            { id: 5, qtdeUsuarios: 30, valorMensal: 3750, valorSemestral: 3300, valorAnual: 2700, armazenamento: 5, indicadores: 6, relatorio: 6 },
+            { id: 6, qtdeUsuarios: 40, valorMensal: 4800, valorSemestral: 4200, valorAnual: 3400, armazenamento: 5, indicadores: 7, relatorio: 7 },
+            { id: 7, qtdeUsuarios: 50, valorMensal: 5750, valorSemestral: 5000, valorAnual: 4325, armazenamento: 5, indicadores: 10, relatorio: 10 },
+            { id: 8, qtdeUsuarios: 75, valorMensal: 8250, valorSemestral: 7125, valorAnual: 5625, armazenamento: 5, indicadores: 15, relatorio: 15 },
+            { id: 9, qtdeUsuarios: 100, valorMensal: 10500, valorSemestral: 9000, valorAnual: 7000, armazenamento: 10, indicadores: 20, relatorio: 20 },
+            { id: 10, qtdeUsuarios: 150, valorMensal: 15000, valorSemestral: 12750, valorAnual: 9750, armazenamento: 15, indicadores: 30, relatorio: 30 },
+            { id: 11, qtdeUsuarios: 200, valorMensal: 19000, valorSemestral: 16000, valorAnual: 12000, armazenamento: 20, indicadores: 50, relatorio: 50 },
+            { id: 12, qtdeUsuarios: 300, valorMensal: 27000, valorSemestral: 22500, valorAnual: 16500, armazenamento: 30, indicadores: 70, relatorio: 70 }
+        ];
+
+        // Renderização dos botões de planos para cada aba
+        // function renderPlanButtons(prefix) {
+        //     const container = document.getElementById(`plan-buttons-${prefix}`);
+        //     container.innerHTML = '';
+        //     planos.forEach((plano, idx) => {
+        //         let label = '';
+        //         if (plano.qtdeUsuarios === 3) label = '03 usuários';
+        //         else if (plano.qtdeUsuarios === 5) label = '05 usuários';
+        //         else if (plano.qtdeUsuarios === 300) label = '300 usuários ou mais';
+        //         else label = `${plano.qtdeUsuarios} usuários`;
+        //         const btn = document.createElement('button');
+        //         btn.className = 'px-3 py-2 border rounded-lg';
+        //         btn.id = `btn-valor-${prefix}-${idx}`;
+        //         btn.textContent = label;
+        //         btn.onclick = () => trocaValor(prefix, idx);
+        //         container.appendChild(btn);
+        //     });
+        // }
+        // let planoSelecionado = null;
+        // let periodoAtual = 'Mensal';
+
+        // function mudaPeriodo(periodo) {
+        //     periodoAtual = periodo;
+            
+        //     // Update Toggle UI
+        //     ['Mensal', 'Semestral', 'Anual'].forEach(p => {
+        //         const btn = document.getElementById(`btn-periodo-${p}`);
+        //         if (p === periodoAtual) {
+        //             btn.classList.add('bg-primary-800', 'text-white');
+        //             btn.classList.remove('bg-white', 'text-gray-900', 'hover:bg-primary-100');
+        //         } else {
+        //             btn.classList.add('bg-white', 'text-gray-900','hover:bg-primary-100');
+        //             btn.classList.remove('bg-primary-800', 'text-white');
+        //         }
+        //     });
+
+        //     // Refresh displayed price
+        //     if (planoSelecionado) {
+        //         trocaValor('consignado', planoSelecionado.id);
+        //     }
+        // }
+
+        // Troca valores e destaca botão selecionado
+        function trocaValor(prefix, id) {
+            const textoValor = document.getElementById(`valor-${prefix}`);
+            const textoValorPorUsuario = document.getElementById(`valorPorUsuario-${prefix}`);
+            const infoFaturamento = document.getElementById('info-faturamento');
+
+            // Remove seleção anterior
+            document.querySelectorAll(`#plan-buttons-${prefix} .selected`).forEach(el => el.classList.remove('selected'));
+            const botao = document.getElementById(`btn-valor-${prefix}-${id}`);
+            if(botao) botao.classList.add('selected');
+
+            const plano = planos[id];
+            
+            // Calculate details based on current period
+            const keyValor = `valor${periodoAtual}`; // valorMensal, valorSemestral, valorAnual
+            const rawValue = plano[keyValor];
+            
+            const valorFormatado = rawValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            const valorPorUsuario = rawValue / plano.qtdeUsuarios;
+            const valorFormatadoPorUsuario = valorPorUsuario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            
+            textoValor.innerHTML = valorFormatado;
+            textoValorPorUsuario.innerHTML = valorFormatadoPorUsuario;
+            
+            let info = '';
+            if (periodoAtual === 'Semestral') info = '(cobrado semestralmente)';
+            if (periodoAtual === 'Anual') info = '(cobrado anualmente)';
+            if(infoFaturamento) infoFaturamento.textContent = info;
+
+            planoSelecionado = plano;
+        }
+
+        // Inicialização
+        // renderPlanButtons('consignado');
+        // trocaValor('consignado', 3); // padrão: 15 usuários
+        // mudaPeriodo('Anual')
+
+        // Funcionalidade de mostrar mais linhas da tabela de preços
+        const btnShowMore = document.getElementById('btn-show-more-prices');
+        const btnShowLess = document.getElementById('btn-show-less-prices');
+        const hiddenRows = document.querySelectorAll('.pricing-row-hidden');
+
+        if (btnShowMore) {
+            btnShowMore.addEventListener('click', function() {
+                hiddenRows.forEach(row => {
+                    row.classList.remove('hidden');
+                });
+                btnShowMore.classList.add('hidden');
+                btnShowLess.classList.remove('hidden');
+            });
+        }
+
+        if (btnShowLess) {
+            btnShowLess.addEventListener('click', function() {
+                hiddenRows.forEach(row => {
+                    row.classList.add('hidden');
+                });
+                btnShowLess.classList.add('hidden');
+                btnShowMore.classList.remove('hidden');
+            });
+        }
+
+        // FAQ toggle: abrir/fechar respostas ao clicar
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('aria-controls');
+                const panel = document.getElementById(targetId);
+                const icon = btn.querySelector('.faq-icon');
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+                // alterna estado
+                btn.setAttribute('aria-expanded', String(!expanded));
+                if (panel) panel.classList.toggle('hidden');
+                if (icon) icon.textContent = expanded ? '+' : '-';
+            });
         });
     </script>
     <script src="/assets/js/app.js"></script>

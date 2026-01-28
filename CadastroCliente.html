@@ -187,66 +187,78 @@
                         <input type="checkbox" name="ramo" id="consignado" class="cursor-pointer relative w-6 h-6 aspect-square !appearance-none !bg-none checked:bg-primary-600 bg-white border border-gray-300 shadow-sm rounded !outline-none !ring-0 !text-transparent !ring-offset-0 checked:!border-primary-600 hover:!border-primary-600 focus-visible:!outline-offset-2 focus-visible:!outline-2 focus-visible:!outline-primary-400/30 focus-visible:border-primary-400 after:w-[35%] after:h-[53%] after:absolute after:opacity-0 after:top-[40%] after:left-[50%] after:-translate-x-2/4 after:-translate-y-2/4 after:rotate-[25deg] after:drop-shadow-[1px_0.5px_1px_rgba(56,149,248,0.5)] after:border-r-[0.17em] after:border-r-white after:border-b-[0.17em] after:border-b-white checked:after:opacity-100 checked:after:rotate-45">
                         <label for="consignado" class="cursor-pointer">Consignado</label>
                     </div>
-                    <div class="flex flex-row items-center space-x-2">
-                        <input type="checkbox" name="ramo" id="plano_saude" class="cursor-pointer relative w-6 h-6 aspect-square !appearance-none !bg-none checked:bg-primary-600 bg-white border border-gray-300 shadow-sm rounded !outline-none !ring-0 !text-transparent !ring-offset-0 checked:!border-primary-600 hover:!border-primary-600 focus-visible:!outline-offset-2 focus-visible:!outline-2 focus-visible:!outline-primary-400/30 focus-visible:border-primary-400 after:w-[35%] after:h-[53%] after:absolute after:opacity-0 after:top-[40%] after:left-[50%] after:-translate-x-2/4 after:-translate-y-2/4 after:rotate-[25deg] after:drop-shadow-[1px_0.5px_1px_rgba(56,149,248,0.5)] after:border-r-[0.17em] after:border-r-white after:border-b-[0.17em] after:border-b-white checked:after:opacity-100 checked:after:rotate-45">
-                        <label for="plano_saude" class="cursor-pointer">Plano de saúde</label>
+                </div>
+                <div class="mt-8 mb-2 required">Escolha a recorrência:</div>
+                <div class="flex flex-row mb-8 space-x-6">
+                    <div class="flex items-center">
+                        <input type="radio" id="mensal" name="recorrencia" value="mensal" checked class="cursor-pointer">
+                        <label for="mensal" class="ml-2 cursor-pointer">Mensal</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="semestral" name="recorrencia" value="semestral" class="cursor-pointer">
+                        <label for="semestral" class="ml-2 cursor-pointer">Semestral</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="anual" name="recorrencia" value="anual" class="cursor-pointer">
+                        <label for="anual" class="ml-2 cursor-pointer">Anual</label>
                     </div>
                 </div>
                 <div class="mt-8 mb-2 required">Escolha o plano desejado:</div>
                 <div class="grid xl:grid-cols-2 xl:gap-2" id="plano_error">
                     <div>
-                        <input class="hidden" id="3_usuarios" type="radio" name="plano" value="3_usuarios">
+                        <input class="hidden" id="3_usuarios" type="radio" name="plano" value="3_usuarios" data-plan-index="0">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="3_usuarios">
                             <span class="text-xs font-semibold uppercase">3 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$300,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$450,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>3GB de Armazenamento<sup>1</sup></li>
-                                <li>1 relatório customizado<sup>2</sup></li>
-                                <li>1 indicador customizado<sup>3</sup></li>
+                                <li>30 mil registros<sup>1</sup></li>
+                                <li>2GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="5_usuarios" type="radio" name="plano" value="5_usuarios">
+                        <input class="hidden" id="5_usuarios" type="radio" name="plano" value="5_usuarios" data-plan-index="1">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl peer-checked:text-primary-600" for="5_usuarios">
                             <span class="text-xs font-semibold uppercase">5 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$475,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$725,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>3GB de Armazenamento<sup>1</sup></li>
-                                <li>2 relatórios customizados<sup>2</sup></li>
-                                <li>2 indicadores customizados<sup>3</sup></li>
+                                <li>50 mil registros<sup>1</sup></li>
+                                <li>3GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="10_usuarios" type="radio" name="plano" value="10_usuarios">
+                        <input class="hidden" id="10_usuarios" type="radio" name="plano" value="10_usuarios" data-plan-index="2">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="10_usuarios">
                             <span class="text-xs font-semibold uppercase">10 Usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$900,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$1.400,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>3GB de Armazenamento<sup>1</sup></li>
-                                <li>3 relatórios customizados<sup>2</sup></li>
-                                <li>3 indicadores customizados<sup>3</sup></li>
+                                <li>100 mil registros<sup>2</sup></li>
+                                <li>5GB de Armazenamento<sup>1</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="15_usuarios" type="radio" name="plano" value="15_usuarios" >
+                        <input class="hidden" id="15_usuarios" type="radio" name="plano" value="15_usuarios" data-plan-index="3">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="15_usuarios">
                             <span class="text-xs font-semibold uppercase">15 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$1.275,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$2.025,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>3GB de Armazenamento<sup>1</sup></li>
-                                <li>4 relatórios customizados<sup>2</sup></li>
-                                <li>4 indicadores customizados<sup>3</sup></li>
+                                <li>150 mil registros<sup>1</sup></li>
+                                <li>10GB de Armazenamento<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="20_usuarios" type="radio" name="plano" value="20_usuarios">
+                        <input class="hidden" id="20_usuarios" type="radio" name="plano" value="20_usuarios" data-plan-index="4">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl" for="20_usuarios">
                             <span class="text-xs font-semibold uppercase">20 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$1.600,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$2.600,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>5GB de Armazenamento<sup>1</sup></li>
                                 <li>5 relatórios customizados<sup>2</sup></li>
@@ -255,10 +267,11 @@
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="30_usuarios" type="radio" name="plano" value="30_usuarios">
+                        <input class="hidden" id="30_usuarios" type="radio" name="plano" value="30_usuarios" data-plan-index="5">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="30_usuarios">
                             <span class="text-xs font-semibold uppercase">30 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$2.250,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$3.750,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>5GB de Armazenamento<sup>1</sup></li>
                                 <li>6 relatórios customizados<sup>2</sup></li>
@@ -267,10 +280,11 @@
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="40_usuarios" type="radio" name="plano" value="40_usuarios">
+                        <input class="hidden" id="40_usuarios" type="radio" name="plano" value="40_usuarios" data-plan-index="6">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="40_usuarios">
                             <span class="text-xs font-semibold uppercase">40 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$2.800,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$4.800,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>5GB de Armazenamento<sup>1</sup></li>
                                 <li>7 relatórios customizados<sup>2</sup></li>
@@ -279,10 +293,11 @@
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="50_usuarios" type="radio" name="plano" value="50_usuarios">
+                        <input class="hidden" id="50_usuarios" type="radio" name="plano" value="50_usuarios" data-plan-index="7">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="50_usuarios">
                             <span class="text-xs font-semibold uppercase">50 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$3.250,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$5.750,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>5GB de Armazenamento<sup>1</sup></li>
                                 <li>10 relatórios customizados<sup>2</sup></li>
@@ -291,10 +306,11 @@
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="75_usuarios" type="radio" name="plano" value="75_usuarios">
+                        <input class="hidden" id="75_usuarios" type="radio" name="plano" value="75_usuarios" data-plan-index="8">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="75_usuarios">
                             <span class="text-xs font-semibold uppercase">75 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$4.500,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$8.250,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>5GB de Armazenamento<sup>1</sup></li>
                                 <li>15 relatórios customizados<sup>2</sup></li>
@@ -303,10 +319,11 @@
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="100_usuarios" type="radio" name="plano" value="100_usuarios">
+                        <input class="hidden" id="100_usuarios" type="radio" name="plano" value="100_usuarios" data-plan-index="9">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="100_usuarios">
                             <span class="text-xs font-semibold uppercase">100 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$5.500,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$10.500,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>10GB de Armazenamento<sup>1</sup></li>
                                 <li>20 relatórios customizados<sup>2</sup></li>
@@ -315,10 +332,11 @@
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="150_usuarios" type="radio" name="plano" value="150_usuarios">
+                        <input class="hidden" id="150_usuarios" type="radio" name="plano" value="150_usuarios" data-plan-index="10">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="150_usuarios">
                             <span class="text-xs font-semibold uppercase">150 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$7.500,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$15.000,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>15GB de Armazenamento<sup>1</sup></li>
                                 <li>30 relatórios customizados<sup>2</sup></li>
@@ -327,10 +345,11 @@
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="200_usuarios" type="radio" name="plano" value="200_usuarios">
+                        <input class="hidden" id="200_usuarios" type="radio" name="plano" value="200_usuarios" data-plan-index="11">
                         <label class="flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="200_usuarios">
                             <span class="text-xs font-semibold uppercase">200 usuários</span>
-                            <span class="mt-2 text-xl font-bold">R$ 9.000,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$19.000,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>20GB de Armazenamento<sup>1</sup></li>
                                 <li>50 relatórios customizados<sup>2</sup></li>
@@ -339,10 +358,11 @@
                         </label>
                     </div>
                     <div>
-                        <input class="hidden" id="300_usuarios" type="radio" name="plano" value="300_usuarios">
+                        <input class="hidden" id="300_usuarios" type="radio" name="plano" value="300_usuarios" data-plan-index="12">
                         <label class="box-border flex flex-col p-4 mb-3 border border-gray-300 cursor-pointer rounded-xl checked:border-3" for="300_usuarios">
                             <span class="text-xs font-semibold uppercase">300 usuários ou mais<sup>4</sup></span>
-                            <span class="mt-2 text-xl font-bold">R$12.000,00/mês</span>
+                            <span class="mt-2 text-xl font-bold price-value">R$27.000,00</span>
+                            <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>30GB de Armazenamento<sup>1</sup></li>
                                 <li>70 relatórios customizados<sup>2</sup></li>
@@ -375,8 +395,6 @@
     
     
     <script>
-        function teste () {}
-        
         let maskCpfCnpjBehavior = function (val) {
             return val.replace(/\D/g, '').length <= 11 ? '000.000.000-009' : '00.000.000/0000-00'
         },
@@ -700,6 +718,43 @@
             }
             return true;
         }
+    
+        const planos = [
+            { id: 0, qtdeUsuarios: 3, valorMensal: 450, valorSemestral: 405, valorAnual: 345, armazenamento: 3, indicadores: 1, relatorio: 1 },
+            { id: 1, qtdeUsuarios: 5, valorMensal: 725, valorSemestral: 650, valorAnual: 550, armazenamento: 3, indicadores: 2, relatorio: 2 },
+            { id: 2, qtdeUsuarios: 10, valorMensal: 1400, valorSemestral: 1250, valorAnual: 1050, armazenamento: 3, indicadores: 3, relatorio: 3 },
+            { id: 3, qtdeUsuarios: 15, valorMensal: 2025, valorSemestral: 1800, valorAnual: 1500, armazenamento: 3, indicadores: 4, relatorio: 4 },
+            { id: 4, qtdeUsuarios: 20, valorMensal: 2600, valorSemestral: 2300, valorAnual: 1900, armazenamento: 5, indicadores: 5, relatorio: 5 },
+            { id: 5, qtdeUsuarios: 30, valorMensal: 3750, valorSemestral: 3300, valorAnual: 2700, armazenamento: 5, indicadores: 6, relatorio: 6 },
+            { id: 6, qtdeUsuarios: 40, valorMensal: 4800, valorSemestral: 4200, valorAnual: 3400, armazenamento: 5, indicadores: 7, relatorio: 7 },
+            { id: 7, qtdeUsuarios: 50, valorMensal: 5750, valorSemestral: 5000, valorAnual: 4325, armazenamento: 5, indicadores: 10, relatorio: 10 },
+            { id: 8, qtdeUsuarios: 75, valorMensal: 8250, valorSemestral: 7125, valorAnual: 5625, armazenamento: 5, indicadores: 15, relatorio: 15 },
+            { id: 9, qtdeUsuarios: 100, valorMensal: 10500, valorSemestral: 9000, valorAnual: 7000, armazenamento: 10, indicadores: 20, relatorio: 20 },
+            { id: 10, qtdeUsuarios: 150, valorMensal: 15000, valorSemestral: 12750, valorAnual: 9750, armazenamento: 15, indicadores: 30, relatorio: 30 },
+            { id: 11, qtdeUsuarios: 200, valorMensal: 19000, valorSemestral: 16000, valorAnual: 12000, armazenamento: 20, indicadores: 50, relatorio: 50 },
+            { id: 12, qtdeUsuarios: 300, valorMensal: 27000, valorSemestral: 22500, valorAnual: 16500, armazenamento: 30, indicadores: 70, relatorio: 70 }
+        ];
+
+        // Função para atualizar preços quando a recorrência mudar
+        function atualizarPrecos() {
+            const recorrenciaSelecionada = document.querySelector('input[name="recorrencia"]:checked').value;
+
+            document.querySelectorAll('input[name="plano"]').forEach(input => {
+                const planIndex = parseInt(input.getAttribute('data-plan-index'));
+                const plano = planos[planIndex];
+                const valor = plano[`valor${recorrenciaSelecionada.charAt(0).toUpperCase() + recorrenciaSelecionada.slice(1)}`];
+                const priceElement = input.parentElement.querySelector('.price-value');
+
+                if (priceElement) {
+                    priceElement.textContent = 'R$' + valor.toLocaleString('pt-BR') + ',00';
+                }
+            });
+        }
+
+        // Adicionar listener para mudança de recorrência
+        document.querySelectorAll('input[name="recorrencia"]').forEach(input => {
+            input.addEventListener('change', atualizarPrecos);
+        });
     </script>
 </body>
 </html>

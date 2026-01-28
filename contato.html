@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/build.css">
+    <link rel="stylesheet" href="/assets/css/output.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <title>Agilus - Contato</title>
@@ -49,21 +49,11 @@
 
             <div class="flex-grow hidden w-full pt-6 lg:w-auto lg:flex lg:items-center lg:justify-center lg:pt-0" id="nav-content">
                 <ul class="items-center justify-end flex-1 mb-4 text-lg lg:flex lg:justify-center lg:mb-0 lg:text-base">
-                    <li class="block py-2 mx-9 lg:inline-block lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
-                        <div class="cursor-pointer" id="menu-ps" class="relative">Produtos</div>
-                        <div id="submenu-ps" class="z-20 flex-wrap hidden mt-4 text-base bg-white divide-x-0 lg:absolute lg:flex-nowrap lg:shadow-2xl lg:py-8">
-                            <div class="space-y-2">
-                                <h3 class="px-6 font-bold lg:px-12">CRM</h3>
-                                <ul class="w-full mt-2 font-normal cursor-pointer lg:mt-4">
-                                    <li class="px-8 py-2.5 lg:px-16 lg:hover:bg-primary-600 lg:hover:text-white lg:hover:font-bold"><a href="./CRMPlanoSaude.html">Plano de saúde</a></li>
-                                    <li class="px-8 py-2.5 lg:px-16 lg:hover:bg-primary-600 lg:hover:text-white lg:hover:font-bold"><a href="./CRMConsignado.html">Consignado</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
+                        <a href="./index.html#produto">Produto</a>
                     </li>
                     <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2">
-                        <a href="./Precos.html">Preços</a>
-                        
+                        <a href="./index.html#precos">Preços</a>
                     </li>
                     <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Sobre.html">Empresa</a></li>
                     <li class="py-2 mx-9 lg:hover:underline lg:hover:underline-offset-8 lg:hover:decoration-primary-700 lg:hover:decoration-2"><a href="./Contato.html">Contato</a></li>
@@ -79,13 +69,16 @@
             <div class="flex flex-col w-full space-y-8 sm:w-1/2">
                 <div class="flex flex-col items-center">
                     <h2 class="text-3xl font-bold text-center text-title">Fale conosco</h2>
-                    <p class="w-full mt-4 text-base text-center md:w-4/5">Entre em contato conosco para saber como a Agilus pode apoiar seu negócio. Preencha o formulário ou ligue para <strong>(11) 4040-8065</strong> e nossos especialistas lhe aconselharão sobre as melhores soluções para sua empresa.</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <h2 class="text-3xl font-bold text-title">Onde estamos?</h2>
-                    <p class="w-full mt-4 text-base text-center md:w-2/3">A Agilus hoje está situada na zona sul de São Paulo - SP, próxima ao Metrô Santa Cruz.</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.101096542787!2d-46.6379829856188!3d-23.60070698466333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a33f3e803bf%3A0xbc36d409cec08de4!2sR.+Timburiba%2C+90+-+Vila+Mariana%2C+S%C3%A3o+Paulo+-+SP%2C+04119-080!5e0!3m2!1spt-BR!2sbr!4v1539522854429" height="280" frameborder="0" class="w-full mx-2 mt-4 md:mx-0 md:w-11/12 lg:w-3/4 xl:w-3/5"></iframe>
-                    <span class="mt-2 text-sm text-center">Rua Timburiba, 90 - Vila Mariana - São Paulo - SP - 04119-080</span>
+                    <div class="w-full mt-4 text-base text-center md:w-4/5">
+                        Entre em contato conosco para saber como a Agilus pode apoiar seu negócio. 
+                        Preencha o formulário ou 
+                        <a class="inline-flex items-center mx-1 font-bold text-green-600" 
+                            href="https://api.whatsapp.com/send?l=pt&phone=5511930426110" 
+                            target="_blank">
+                            <img src="/assets/images/whats_app_verde.png" class="size-4" alt="whatsapp" width="16px" height="16px">
+                            clique aqui
+                        </a> para falar com nossos especialistas que lhe aconselharão sobre as melhores soluções para sua empresa.
+                    </div>
                 </div>
             </div>
             <div class="flex justify-center w-full sm:w-1/2">
@@ -106,7 +99,7 @@
                         <label for="telefone" class="block mb-2 text-sm font-medium text-gray-700">Telefone</label>
                         <input type="tel" name="telefone" id="telefone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 block w-full p-2.5" placeholder="(xx) xxxxx-xxxx" required>
                     </div>
-                    <div class="flex flex-row space-x-8">
+                    <!-- <div class="flex flex-row space-x-8">
                         <div class="flex flex-row items-center space-x-2">
                             <input type="checkbox" class="w-5 h-5 rounded-lg accent-primary-700" id="planoSaude" />
                             <label for="planoSaude" class="text-sm font-medium text-gray-700">Plano de saúde</label>
@@ -115,6 +108,10 @@
                             <input type="checkbox" class="w-5 h-5 rounded-lg accent-primary-700" id="consignado">
                             <label for="consignado" class="text-sm font-medium text-gray-700">Consignado</label>
                         </div>
+                    </div> -->
+                    <div>
+                        <label for="captcha" class="block mb-2 text-sm font-medium text-gray-700">Pergunta de segurança: <span id="text-captcha"></span></label>
+                        <input type="number" name="captcha" id="captcha" class="input" placeholder="Digite o resultado" required>
                     </div>
                     <button id="btn-cta-enviar" type="submit" class="inline-flex items-center justify-center w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">
                         <span>Enviar</span>
@@ -147,8 +144,7 @@
                     <div class="">
                         <h3 class="mb-6 text-xl font-semibold">Produtos</h3>
                         <ul class="space-y-4 text-md">
-                            <li><a href="./CRMPlanoSaude.html">Plano de saúde</a></li>
-                            <li><a href="./CRMConsignado.html">Crédito consignado</a></li>
+                            <li><a href="./index.html#produto">Crédito consignado</a></li>
                             <li><a href="http://agilus.com.br/organizadorcolunas/publish.htm">Formata Layout</a></li>
                         </ul>
                     </div>

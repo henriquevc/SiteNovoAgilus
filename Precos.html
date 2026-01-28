@@ -14,7 +14,7 @@
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
-    <title>Agilus - Preços | Plano de Saúde </title>
+    <title>Agilus - Preços</title>
     <script>
       (function(d,t) {
         var BASE_URL="https://chat.agilusservices.com.br";
@@ -57,7 +57,6 @@
                             <div class="space-y-2">
                                 <h3 class="px-6 font-bold lg:px-12">CRM</h3>
                                 <ul class="w-full mt-2 font-normal cursor-pointer lg:mt-4">
-                                    <li class="px-8 py-2.5 lg:px-16 lg:hover:bg-primary-600 lg:hover:text-white lg:hover:font-bold"><a href="./CRMPlanoSaude.html">Plano de saúde</a></li>
                                     <li class="px-8 py-2.5 lg:px-16 lg:hover:bg-primary-600 lg:hover:text-white lg:hover:font-bold"><a href="./CRMConsignado.html">Consignado</a></li>
                                 </ul>
                             </div>
@@ -103,6 +102,10 @@
                         <label for="telefone" class="block mb-2 text-sm font-medium text-gray-700">Telefone</label>
                         <input type="tel" name="telefone" id="telefone" class="input" placeholder="(xx) xxxxx-xxxx" required>
                     </div>
+                    <div>
+                        <label for="captcha" class="block mb-2 text-sm font-medium text-gray-700">Pergunta de segurança: <span id="text-captcha"></span></label>
+                        <input type="number" name="captcha" id="captcha" class="input" placeholder="Digite o resultado" required>
+                    </div>
 
                     <button id="btn-cta-enviar" type="submit" class="inline-flex items-center justify-center w-full text-center text-white rounded-lg btn bg-primary-700 focus:ring-4 focus:ring-primary-300">
                         <span>Enviar</span>
@@ -130,64 +133,7 @@
     <main>
         <section class="py-12 bg-primary-50 md:py-16 lg:py-24">
             <div class="container">
-                <!-- Tabs -->
-                <div class="flex justify-center mb-8">
-                    <button id="tab-saude" class="flex items-center gap-2 px-6 py-2 font-bold border-b-2 border-primary-700 text-primary-700 tab-active">
-                        <span>Plano de Saúde</span>
-                        <span id="indicator-saude" class="material-icons text-primary-700" style="display:inline;">check_circle</span>
-                    </button>
-                    <button id="tab-consignado" class="flex items-center gap-2 px-6 py-2 font-bold border-b-2 border-transparent text-neutral-700">
-                        <span>Consignado</span>
-                        <span id="indicator-consignado" class="material-icons text-primary-700" style="display:none;">check_circle</span>
-                    </button>
-                </div>
-                <!-- Tab Contents -->
-                <div id="content-saude">
-                    <div class="flex flex-col w-full gap-8 lg:gap-16 md:flex-row sm:items-center md:items-start">
-                        <div class="flex flex-col w-full sm:pt-16 sm:w-1/2 md:w-1/3 xl:w-1/4" data-aos="fade-up" data-aos-duration="800">
-                            <h2 class="w-full mb-4 text-3xl font-bold lg:text-4xl text-title">CRM para Plano de saúde</h2>
-                            <p class="w-full text-base">Veja e conheça todos os recursos disponíveis no sistema, escolha a melhor forma de recorrência da mensalidade e entre em contato com a gente.</p>
-                        </div>
-                        <div class="flex flex-col w-full px-8 py-16 bg-white shadow-2xl lg:space-x-4 sm:px-12 xl:flex-row sm:w-2/3 xl:w-3/4" data-aos="fade-right" data-aos-duration="800">
-                            <div class="flex flex-col items-center justify-center w-full xl:w-2/5">
-                                <div class="flex flex-wrap gap-4" id="plan-buttons-saude"></div>
-                                <div class="mt-6">
-                                    <strong class="text-4xl font-extrabold" id="valor-saude"></strong>
-                                    <span class="text-sm text-neutral-500">/por mês</span>
-                                </div>
-                                <div class="mt-2">
-                                    <strong class="text-xl font-bold" id="valorPorUsuario-saude"></strong>
-                                    <span class="text-sm text-neutral-500">/por usuário</span>
-                                </div>
-                                <div class="flex justify-center w-full mt-12">
-                                    <button id="btn-cta" class="w-full px-8 py-4 text-lg font-semibold text-white bg-primary-800">
-                                        Contratar
-                                    </button>
-                                </div>
-                            </div>
-                            <ul class="flex flex-row flex-wrap items-center w-full mt-4 text-sm sm:mt-8 xl:mt-0 xl:w-3/5 xl:justify-start h-max">
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Sistema financeiro</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Gerenciamento de Leads</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Integração com seu site</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Importação de dados</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Distribuição de base de dados</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Linha do tempo</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Controle de atividades</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Gestão de vendas</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Controle de comissões</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Utilização em várias filiais</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Hierarquias de vendedores</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Cálculo de comissão</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Fórmulas de comissão</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Anexo de documentação</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Notificações</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Relatórios</li>
-                                <li class="my-3 sm:inline md:mx-1 icon-done">Integração com sistemas de higienização de cliente</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="content-consignado" style="display:none;">
+                <div id="content-consignado">
                     <div class="flex flex-col w-full gap-8 lg:gap-16 md:flex-row sm:items-center md:items-start">
                         <div class="flex flex-col w-full sm:pt-16 sm:w-1/2 md:w-1/3 xl:w-1/4" data-aos="fade-up" data-aos-duration="800">
                             <h2 class="w-full mb-4 text-3xl font-bold lg:text-4xl text-title">CRM para Consignado</h2>
@@ -195,10 +141,26 @@
                         </div>
                         <div class="flex flex-col w-full px-8 py-16 bg-white shadow-2xl lg:space-x-4 sm:px-12 xl:flex-row sm:w-2/3 xl:w-3/4" data-aos="fade-right" data-aos-duration="800">
                             <div class="flex flex-col items-center justify-center w-full xl:w-2/5">
+                                <div class="flex justify-center w-full mb-6">
+                                    <div class="inline-flex shadow-sm rounded-md" role="group">
+                                        <button type="button" onclick="mudaPeriodo('Mensal')" id="btn-periodo-Mensal" class="px-4 py-2 text-sm font-medium border border-gray-200 rounded-l-lg focus:z-10 focus:ring-2 focus:ring-primary-700 bg-primary-800 text-white border-primary-800">
+                                            Mensal
+                                        </button>
+                                        <button type="button" onclick="mudaPeriodo('Semestral')" id="btn-periodo-Semestral" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-primary-700 focus:text-primary-700">
+                                            Semestral
+                                        </button>
+                                        <button type="button" onclick="mudaPeriodo('Anual')" id="btn-periodo-Anual" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-primary-700 focus:text-primary-700">
+                                            Anual
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="flex flex-wrap gap-4" id="plan-buttons-consignado"></div>
                                 <div class="mt-6">
                                     <strong class="text-4xl font-extrabold" id="valor-consignado"></strong>
-                                    <span class="text-sm text-neutral-500">/por mês</span>
+                                    <div class="flex flex-col ml-1">
+                                        <span class="text-sm text-neutral-500">/por mês</span>
+                                        <span class="text-xs text-neutral-400" id="info-faturamento"></span>
+                                    </div>
                                 </div>
                                 <div class="mt-2">
                                     <strong class="text-xl font-bold" id="valorPorUsuario-consignado"></strong>
@@ -294,7 +256,6 @@
                     <div class="">
                         <h3 class="mb-6 text-xl font-semibold">Produtos</h3>
                         <ul class="space-y-4 text-md">
-                            <li><a href="./CRMPlanoSaude.html">Plano de saúde</a></li>
                             <li><a href="./CRMConsignado.html">Crédito consignado</a></li>
                             <li><a href="http://agilus.com.br/organizadorcolunas/publish.htm">Formata Layout</a></li>
                         </ul>
@@ -332,19 +293,19 @@
 
         // Dados dos planos
         const planos = [
-            { id: 0, qtdeUsuarios: 3, valorMensal: 300, armazenamento: 3, indicadores: 1, relatorio: 1 },
-            { id: 1, qtdeUsuarios: 5, valorMensal: 475, armazenamento: 3, indicadores: 2, relatorio: 2 },
-            { id: 2, qtdeUsuarios: 10, valorMensal: 900, armazenamento: 3, indicadores: 3, relatorio: 3 },
-            { id: 3, qtdeUsuarios: 15, valorMensal: 1275, armazenamento: 3, indicadores: 4, relatorio: 4 },
-            { id: 4, qtdeUsuarios: 20, valorMensal: 1600, armazenamento: 5, indicadores: 5, relatorio: 5 },
-            { id: 5, qtdeUsuarios: 30, valorMensal: 2250, armazenamento: 5, indicadores: 6, relatorio: 6 },
-            { id: 6, qtdeUsuarios: 40, valorMensal: 2800, armazenamento: 5, indicadores: 7, relatorio: 7 },
-            { id: 7, qtdeUsuarios: 50, valorMensal: 3250, armazenamento: 5, indicadores: 10, relatorio: 10 },
-            { id: 8, qtdeUsuarios: 75, valorMensal: 4500, armazenamento: 5, indicadores: 15, relatorio: 15 },
-            { id: 9, qtdeUsuarios: 100, valorMensal: 5500, armazenamento: 10, indicadores: 20, relatorio: 20 },
-            { id: 10, qtdeUsuarios: 150, valorMensal: 7500, armazenamento: 15, indicadores: 30, relatorio: 30 },
-            { id: 11, qtdeUsuarios: 200, valorMensal: 9000, armazenamento: 20, indicadores: 50, relatorio: 50 },
-            { id: 12, qtdeUsuarios: 300, valorMensal: 12000, armazenamento: 30, indicadores: 70, relatorio: 70 }
+            { id: 0, qtdeUsuarios: 3, valorMensal: 450, valorSemestral: 405, valorAnual: 345, armazenamento: 3, indicadores: 1, relatorio: 1 },
+            { id: 1, qtdeUsuarios: 5, valorMensal: 725, valorSemestral: 650, valorAnual: 550, armazenamento: 3, indicadores: 2, relatorio: 2 },
+            { id: 2, qtdeUsuarios: 10, valorMensal: 1400, valorSemestral: 1250, valorAnual: 1050, armazenamento: 3, indicadores: 3, relatorio: 3 },
+            { id: 3, qtdeUsuarios: 15, valorMensal: 2025, valorSemestral: 1800, valorAnual: 1500, armazenamento: 3, indicadores: 4, relatorio: 4 },
+            { id: 4, qtdeUsuarios: 20, valorMensal: 2600, valorSemestral: 2300, valorAnual: 1950, armazenamento: 5, indicadores: 5, relatorio: 5 },
+            { id: 5, qtdeUsuarios: 30, valorMensal: 3750, valorSemestral: 3300, valorAnual: 2800, armazenamento: 5, indicadores: 6, relatorio: 6 },
+            { id: 6, qtdeUsuarios: 40, valorMensal: 4800, valorSemestral: 4200, valorAnual: 3600, armazenamento: 5, indicadores: 7, relatorio: 7 },
+            { id: 7, qtdeUsuarios: 50, valorMensal: 5750, valorSemestral: 5175, valorAnual: 4325, armazenamento: 5, indicadores: 10, relatorio: 10 },
+            { id: 8, qtdeUsuarios: 75, valorMensal: 8250, valorSemestral: 7425, valorAnual: 6175, armazenamento: 5, indicadores: 15, relatorio: 15 },
+            { id: 9, qtdeUsuarios: 100, valorMensal: 10500, valorSemestral: 9450, valorAnual: 7875, armazenamento: 10, indicadores: 20, relatorio: 20 },
+            { id: 10, qtdeUsuarios: 150, valorMensal: 15000, valorSemestral: 13500, valorAnual: 11250, armazenamento: 15, indicadores: 30, relatorio: 30 },
+            { id: 11, qtdeUsuarios: 200, valorMensal: 19000, valorSemestral: 17100, valorAnual: 14250, armazenamento: 20, indicadores: 50, relatorio: 50 },
+            { id: 12, qtdeUsuarios: 300, valorMensal: 27000, valorSemestral: 24300, valorAnual: 20250, armazenamento: 30, indicadores: 70, relatorio: 70 }
         ];
 
         // Renderização dos botões de planos para cada aba
@@ -366,59 +327,63 @@
             });
         }
         let planoSelecionado = null;
+        let periodoAtual = 'Mensal';
+
+        function mudaPeriodo(periodo) {
+            periodoAtual = periodo;
+            
+            // Update Toggle UI
+            ['Mensal', 'Semestral', 'Anual'].forEach(p => {
+                const btn = document.getElementById(`btn-periodo-${p}`);
+                if (p === periodo) {
+                    btn.classList.add('bg-primary-800', 'text-white', 'border-primary-800');
+                    btn.classList.remove('bg-white', 'text-gray-900', 'border-gray-200', 'hover:bg-gray-100');
+                } else {
+                    btn.classList.add('bg-white', 'text-gray-900', 'border-gray-200', 'hover:bg-gray-100');
+                    btn.classList.remove('bg-primary-800', 'text-white', 'border-primary-800');
+                }
+            });
+
+            // Refresh displayed price
+            if (planoSelecionado) {
+                trocaValor('consignado', planoSelecionado.id);
+            }
+        }
 
         // Troca valores e destaca botão selecionado
         function trocaValor(prefix, id) {
             const textoValor = document.getElementById(`valor-${prefix}`);
             const textoValorPorUsuario = document.getElementById(`valorPorUsuario-${prefix}`);
+            const infoFaturamento = document.getElementById('info-faturamento');
+
             // Remove seleção anterior
             document.querySelectorAll(`#plan-buttons-${prefix} .selected`).forEach(el => el.classList.remove('selected'));
             const botao = document.getElementById(`btn-valor-${prefix}-${id}`);
-            botao.classList.add('selected');
+            if(botao) botao.classList.add('selected');
+
             const plano = planos[id];
-            const valorFormatado = plano.valorMensal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-            const valorPorUsuario = plano.valorMensal / plano.qtdeUsuarios;
+            
+            // Calculate details based on current period
+            const keyValor = `valor${periodoAtual}`; // valorMensal, valorSemestral, valorAnual
+            const rawValue = plano[keyValor];
+            
+            const valorFormatado = rawValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            const valorPorUsuario = rawValue / plano.qtdeUsuarios;
             const valorFormatadoPorUsuario = valorPorUsuario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            
             textoValor.innerHTML = valorFormatado;
             textoValorPorUsuario.innerHTML = valorFormatadoPorUsuario;
+            
+            let info = '';
+            if (periodoAtual === 'Semestral') info = '(cobrado semestralmente)';
+            if (periodoAtual === 'Anual') info = '(cobrado anualmente)';
+            if(infoFaturamento) infoFaturamento.textContent = info;
+
             planoSelecionado = plano;
-
-            // Recursos extras para consignado
-            // if (prefix === 'consignado') {
-            //     document.getElementById('armazenamento').innerHTML = plano.armazenamento + 'GB de armazenamento';
-            //     document.getElementById('indicador').innerHTML = plano.indicadores + ' indicadores';
-            //     document.getElementById('relatorio').innerHTML = plano.relatorio + ' relatórios';
-            // }
         }
-
-        // Tabs
-        document.getElementById('tab-saude').onclick = () => {
-            document.getElementById('tab-saude').classList.add('tab-active', 'border-b-2', 'border-primary-700', 'text-primary-700');
-            document.getElementById('tab-saude').classList.remove('border-transparent', 'text-neutral-700');
-            document.getElementById('tab-consignado').classList.remove('tab-active', 'border-b-2', 'border-primary-700', 'text-primary-700');
-            document.getElementById('tab-consignado').classList.add('border-transparent', 'text-neutral-700');
-            document.getElementById('content-saude').style.display = '';
-            document.getElementById('content-consignado').style.display = 'none';
-            document.getElementById('indicator-saude').style.display = 'inline';
-            document.getElementById('indicator-consignado').style.display = 'none';
-            document.title = "Preços | Plano de Saúde";
-        }
-        document.getElementById('tab-consignado').onclick = () => {
-            document.getElementById('tab-consignado').classList.add('tab-active', 'border-b-2', 'border-primary-700', 'text-primary-700');
-            document.getElementById('tab-consignado').classList.remove('border-transparent', 'text-neutral-700');
-            document.getElementById('tab-saude').classList.remove('tab-active', 'border-b-2', 'border-primary-700', 'text-primary-700');
-            document.getElementById('tab-saude').classList.add('border-transparent', 'text-neutral-700');
-            document.getElementById('content-saude').style.display = 'none';
-            document.getElementById('content-consignado').style.display = '';
-            document.getElementById('indicator-saude').style.display = 'none';
-            document.getElementById('indicator-consignado').style.display = 'inline';
-            document.title = "Preços | Consignado";
-        };
 
         // Inicialização
-        renderPlanButtons('saude');
         renderPlanButtons('consignado');
-        trocaValor('saude', 3); // padrão: 15 usuários
         trocaValor('consignado', 3); // padrão: 15 usuários
 
     </script>
