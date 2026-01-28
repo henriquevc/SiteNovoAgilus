@@ -45,7 +45,7 @@ module.exports = {
                 },
                 'primary-light': "rgba(73, 13, 163, 0.05)",
                 title: '#2D1D61',
-                grey: '#363049',
+                grey: 'rgba(54, 48, 73, 0.85)',
                 dark: '#2d2d2d',
                 background: '#333333',
                 accent: '#909090'
