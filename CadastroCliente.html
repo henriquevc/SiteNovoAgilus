@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/assets/css/build.css">
+    <!-- <link rel="stylesheet" href="/assets/css/output.css"> -->
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -87,7 +88,13 @@
             </p>
             <p class="max-w-md p-2 text-lg text-center lg:max-w-xl lg:text-left text-slate-700">
     	        Você poderá contar com o nosso suporte para solucionar quaisquer dúvidas ou auxiliá-lo no uso da 
-                ferramenta através do número (11) 4040-8065, através do chat disponível dentro do sistema, pelo chat em nosso site www.agilus.com.br ou através do atendimento pelo e-mail suporte@agilus.com.br.
+                ferramenta através do whatsapp 
+                <a href="https://wa.me/5511930426110" target="_blank" rel="noopener noreferrer" 
+                    class="font-bold text-green-600 underline">
+                    (11) 93042-6110
+                </a>, 
+                através do chat disponível dentro do sistema, pelo chat em nosso site www.agilus.com.br 
+                ou através do atendimento pelo e-mail suporte@agilus.com.br.
             </p>
         </div>
         
@@ -181,26 +188,26 @@
             <!-- Planos -->
             <fieldset class="p-4 mb-8 bg-white rounded-lg shadow-xl lg:p-8">
                 <legend class="px-4 text-lg font-bold text-white rounded-full bg-primary-600">Planos</legend>
-                <div class="mb-3 required">Qual vai ser o ramo trabalhado?</div>
+                <!-- <div class="mb-3 required">Qual vai ser o ramo trabalhado?</div>
                 <div class="flex flex-row space-x-4" id="ramo_error">
                     <div class="flex flex-row items-center space-x-2">
                         <input type="checkbox" name="ramo" id="consignado" class="cursor-pointer relative w-6 h-6 aspect-square !appearance-none !bg-none checked:bg-primary-600 bg-white border border-gray-300 shadow-sm rounded !outline-none !ring-0 !text-transparent !ring-offset-0 checked:!border-primary-600 hover:!border-primary-600 focus-visible:!outline-offset-2 focus-visible:!outline-2 focus-visible:!outline-primary-400/30 focus-visible:border-primary-400 after:w-[35%] after:h-[53%] after:absolute after:opacity-0 after:top-[40%] after:left-[50%] after:-translate-x-2/4 after:-translate-y-2/4 after:rotate-[25deg] after:drop-shadow-[1px_0.5px_1px_rgba(56,149,248,0.5)] after:border-r-[0.17em] after:border-r-white after:border-b-[0.17em] after:border-b-white checked:after:opacity-100 checked:after:rotate-45">
                         <label for="consignado" class="cursor-pointer">Consignado</label>
                     </div>
-                </div>
-                <div class="mt-8 mb-2 required">Escolha a recorrência:</div>
+                </div> -->
+                <div class="mb-2 required">Escolha a recorrência:</div>
                 <div class="flex flex-row mb-8 space-x-6">
                     <div class="flex items-center">
-                        <input type="radio" id="mensal" name="recorrencia" value="mensal" checked class="cursor-pointer">
-                        <label for="mensal" class="ml-2 cursor-pointer">Mensal</label>
+                        <input type="radio" id="mensal" name="recorrencia" value="mensal" checked class="hidden cursor-pointer">
+                        <label for="mensal" class="px-4 py-2 ml-2 border border-gray-300 cursor-pointer rounded-xl">Mensal</label>
                     </div>
                     <div class="flex items-center">
-                        <input type="radio" id="semestral" name="recorrencia" value="semestral" class="cursor-pointer">
-                        <label for="semestral" class="ml-2 cursor-pointer">Semestral</label>
+                        <input type="radio" id="semestral" name="recorrencia" value="semestral" class="hidden cursor-pointer">
+                        <label for="semestral" class="px-4 py-2 ml-2 border border-gray-300 cursor-pointer rounded-xl">Semestral</label>
                     </div>
                     <div class="flex items-center">
-                        <input type="radio" id="anual" name="recorrencia" value="anual" class="cursor-pointer">
-                        <label for="anual" class="ml-2 cursor-pointer">Anual</label>
+                        <input type="radio" id="anual" name="recorrencia" value="anual" class="hidden cursor-pointer">
+                        <label for="anual" class="px-4 py-2 ml-2 border border-gray-300 cursor-pointer rounded-xl">Anual</label>
                     </div>
                 </div>
                 <div class="mt-8 mb-2 required">Escolha o plano desejado:</div>
@@ -236,8 +243,8 @@
                             <span class="mt-2 text-xl font-bold price-value">R$1.400,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>100 mil registros<sup>2</sup></li>
-                                <li>5GB de Armazenamento<sup>1</sup></li>
+                                <li>100 mil registros<sup>1</sup></li>
+                                <li>5GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -249,7 +256,7 @@
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
                                 <li>150 mil registros<sup>1</sup></li>
-                                <li>10GB de Armazenamento<sup>2</sup></li>
+                                <li>10GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -260,9 +267,8 @@
                             <span class="mt-2 text-xl font-bold price-value">R$2.600,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento<sup>1</sup></li>
-                                <li>5 relatórios customizados<sup>2</sup></li>
-                                <li>5 indicadores customizados<sup>3</sup></li>
+                                <li>200 mil registros<sup>1</sup></li>
+                                <li>15GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -273,9 +279,8 @@
                             <span class="mt-2 text-xl font-bold price-value">R$3.750,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento<sup>1</sup></li>
-                                <li>6 relatórios customizados<sup>2</sup></li>
-                                <li>6 indicadores customizados<sup>3</sup></li>
+                                <li>300 mil registros<sup>1</sup></li>
+                                <li>20GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -286,9 +291,8 @@
                             <span class="mt-2 text-xl font-bold price-value">R$4.800,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento<sup>1</sup></li>
-                                <li>7 relatórios customizados<sup>2</sup></li>
-                                <li>7 indicadores customizados<sup>3</sup></li>
+                                <li>400 mil registros<sup>1</sup></li>
+                                <li>25GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -299,9 +303,8 @@
                             <span class="mt-2 text-xl font-bold price-value">R$5.750,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento<sup>1</sup></li>
-                                <li>10 relatórios customizados<sup>2</sup></li>
-                                <li>10 indicadores customizados<sup>3</sup></li>
+                                <li>500 mil registros<sup>1</sup></li>
+                                <li>30GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -312,9 +315,8 @@
                             <span class="mt-2 text-xl font-bold price-value">R$8.250,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>5GB de Armazenamento<sup>1</sup></li>
-                                <li>15 relatórios customizados<sup>2</sup></li>
-                                <li>15 indicadores customizados<sup>3</sup></li>
+                                <li>700 mil registros<sup>1</sup></li>
+                                <li>40GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -325,9 +327,8 @@
                             <span class="mt-2 text-xl font-bold price-value">R$10.500,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>10GB de Armazenamento<sup>1</sup></li>
-                                <li>20 relatórios customizados<sup>2</sup></li>
-                                <li>20 indicadores customizados<sup>3</sup></li>
+                                <li>900 mil registros<sup>1</sup></li>
+                                <li>50GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -338,9 +339,8 @@
                             <span class="mt-2 text-xl font-bold price-value">R$15.000,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>15GB de Armazenamento<sup>1</sup></li>
-                                <li>30 relatórios customizados<sup>2</sup></li>
-                                <li>30 indicadores customizados<sup>3</sup></li>
+                                <li>1.200.000 registros<sup>1</sup></li>
+                                <li>70GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -351,9 +351,8 @@
                             <span class="mt-2 text-xl font-bold price-value">R$19.000,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>20GB de Armazenamento<sup>1</sup></li>
-                                <li>50 relatórios customizados<sup>2</sup></li>
-                                <li>50 indicadores customizados<sup>3</sup></li>
+                                <li>1.500.000 registros<sup>1</sup></li>
+                                <li>80GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
@@ -364,18 +363,15 @@
                             <span class="mt-2 text-xl font-bold price-value">R$27.000,00</span>
                             <span class="text-xs text-gray-500 recurrence-label">/mês</span>
                             <ul class="mt-2 text-sm">
-                                <li>30GB de Armazenamento<sup>1</sup></li>
-                                <li>70 relatórios customizados<sup>2</sup></li>
-                                <li>70 indicadores customizados<sup>3</sup></li>
+                                <li>2.000.000 registros<sup>1</sup></li>
+                                <li>100GB de anexos<sup>2</sup></li>
                             </ul>
                         </label>
                     </div>
                 </div>
                 <div class="mt-4 text-xs">
-                    <div class="mb-1">1 - Adicional: 5GB -R$20,00</div>
-                    <div class="mb-1">2 - Excedente: a partir de R$50,00 por relatório</div>
-                    <div class="mb-1">3 - Excedente: a partir de R$50,00 por indicador</div>
-                    <div class="mb-1">4 - Excedente: R$300,00 pacote de 10 usuários</div>
+                    <div class="mb-1">1 - Excedente: 30.000 registros - R$30,00</div>
+                    <div class="mb-1">2 - Adicional: 5GB - R$50,00</div>
                 </div>
             </fieldset>
 
@@ -496,13 +492,15 @@
 
         $('form').on('submit', event => {
             event.preventDefault()
+            const data = Object.fromEntries(new FormData(event.target).entries())
             if ($('form').valid()) {
                 toggleButtonEnviar()
                 const data = Object.fromEntries(new FormData(event.target).entries())
-                data.ramos = [
-                    $('#plano_saude').is(':checked') ? 'Plano de Saúde' : null,
-                    $('#consignado').is(':checked') ? 'Consignado' : null
-                ].filter(item => item != null).toString()
+                // data.ramos = [
+                //     $('#plano_saude').is(':checked') ? 'Plano de Saúde' : null,
+                //     $('#consignado').is(':checked') ? 'Consignado' : null
+                // ].filter(item => item != null).toString()
+                data.ramos = ['Consignado']
                 let arraySocios = []
                 for (let i = 1; i <= numSocios; i++) {
                     arraySocios.push({

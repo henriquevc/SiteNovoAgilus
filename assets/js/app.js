@@ -101,7 +101,7 @@ btnCtaEnviar.addEventListener('click', () => {
         alert('Recebemos os seus dados e já entraremos em contato! Obrigado')
     }).catch(error => {
         toggleButtonEnviar()
-        alert('Não foi possível enviar o contato. Fale com a gente pelo número (11) 4040-8065')
+        alert('Não foi possível enviar o contato. Fale com a gente pelo whatsapp no número (11) 93042-6110')
         console.error('Email não enviado. Erro: ' + error)
     })
 
