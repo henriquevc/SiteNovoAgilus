@@ -318,7 +318,7 @@
             </aside>
         </div>
     </section>
-    <section class="container py-12 sm:py-24">
+    <section class="container py-12 border-b border-primary-100 sm:py-24">
         <div class="flex flex-col-reverse md:flex-row" data-aos="fade-right" data-aos-duration="600">
             <aside class="flex flex-col items-center justify-center w-full space-y-6 lg:flex-col md:w-1/2">
                 <h3 class="text-2xl font-bold md:w-2/3 lg:text-3xl text-title">Por telefone, e-mail, sms ou whatsapp! Conecte-se com o seu cliente.</h3>
@@ -464,7 +464,7 @@
                                 </div>    
                             </td>
                             <td class="flex flex-col items-center h-24 gap-2 px-4 py-4 font-semibold text-center text-primary-600 bg-primary-light">
-                                R$ 345,00
+                                R$ 1.500,00
                                 <span class="px-2 py-1 text-xs font-semibold rounded bg-secondary-100 text-secondary-700">-23%</span>
                             </td>
                         </tr>
@@ -602,7 +602,7 @@
                     Carregar mais planos
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 lucide lucide-chevron-down" data-loc="client\src\components\PricingTable.tsx:128"><path d="m6 9 6 6 6-6"></path></svg>
                 </button>
-                <button id="btn-show-less-prices" class="inline-flex items-center hidden gap-3 px-4 py-2 text-sm font-semibold text-primary-600">
+                <button id="btn-show-less-prices" class="items-center hidden gap-3 px-4 py-2 text-sm font-semibold text-primary-600">
                     Mostrar menos
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 rotate-180 lucide lucide-chevron-down" data-loc="client\src\components\PricingTable.tsx:142"><path d="m6 9 6 6 6-6"></path></svg>
                 </button>
@@ -879,6 +879,7 @@
                 });
                 btnShowMore.classList.add('hidden');
                 btnShowLess.classList.remove('hidden');
+                btnShowLess.classList.add('inline-flex');
             });
         }
 
